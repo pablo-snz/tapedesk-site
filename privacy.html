@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — TapeDesk</title>
+<meta name="description" content="TapeDesk collects no data. No analytics, no tracking, no accounts. Your recordings stay on your device.">
+<link rel="icon" href="img/mark.svg">
+<link rel="apple-touch-icon" href="img/mark-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F1EFE9; --bone-2:#E8E5DC; --panel:#1A1A1A;
+    --ink:#1A1A1A; --ink-2:#6F6F6F; --ink-3:#9B9B9B; --on-panel:#F1EFE9;
+    --rec:#E84D1F; --live:#2E7D75; --lock:#C9993D;
+    --hair:#1A1A1A; --rule:#C9C5BB;
+    --serif:'Space Grotesk',system-ui,sans-serif;
+    --mono:'Space Mono','SF Mono',Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);background:var(--bone);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:840px;margin:0 auto;padding:0 28px}
+
+  /* ---- ledger bar (matches the cover page) ---- */
+  .ledger{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);border-bottom:1.5px solid var(--hair);padding:10px 0}
+  .ledger .lwrap{max-width:840px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .ledger .lhs{display:flex;align-items:center;gap:9px}
+  .ledger .lhs img{width:22px;height:22px}
+  .ledger b{color:var(--ink)}
+
+  /* ---- back link ---- */
+  .back{padding:26px 0 0}
+  .back a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+  .back a:hover{color:var(--ink)}
+  .back a span{color:var(--live);font-weight:700}
+
+  /* ---- hero statement ---- */
+  .hero{padding:40px 0 30px;border-bottom:1px solid var(--rule)}
+  .hero .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--live)}
+  .hero h1{font-size:clamp(34px,7vw,64px);line-height:1.0;letter-spacing:-.035em;font-weight:700;margin:18px 0 0;max-width:640px}
+  .hero h1 span{color:var(--live)}
+  .hero .meta{font-family:var(--mono);font-size:12px;color:var(--ink-2);margin-top:22px}
+
+  /* ---- spec ledger (echoes the cover) ---- */
+  .specledger{display:flex;flex-wrap:wrap;border:1.5px solid var(--hair);border-radius:8px;overflow:hidden;margin:30px 0 0;background:var(--bone-2)}
+  .specledger .cell{flex:1 1 160px;padding:11px 15px;border-right:1px solid var(--rule);font-family:var(--mono)}
+  .specledger .cell:last-child{border-right:none}
+  .specledger .k{color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em;font-size:10px}
+  .specledger .v{color:var(--ink);font-weight:700;font-size:12.5px;margin-top:2px}
+  .specledger .v.live{color:var(--live)}
+
+  /* ---- numbered sections ---- */
+  .doc{padding:8px 0 0}
+  .sec{display:grid;grid-template-columns:64px 1fr;gap:24px;padding:30px 0;border-bottom:1px solid var(--rule);align-items:start}
+  @media(max-width:600px){.sec{grid-template-columns:1fr;gap:8px;padding:26px 0}}
+  .sec .num{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--rec);padding-top:3px}
+  .sec h2{font-size:13px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);font-weight:400;margin-bottom:12px}
+  .sec p{margin-bottom:13px;color:#2c2925;font-size:16.5px;line-height:1.62}
+  .sec p:last-child{margin-bottom:0}
+  .sec strong{color:var(--ink);font-weight:700}
+  .sec a{color:var(--live);text-decoration:none;border-bottom:1px solid var(--rule)}
+  .sec a:hover{border-color:var(--live)}
+
+  /* ---- footer (dark, matches colophon) ---- */
+  .foot{background:var(--panel);color:var(--on-panel);padding:44px 0;margin-top:48px}
+  .foot .fwrap{max-width:840px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.02em}
+  .foot .brand img{width:28px;height:28px}
+  .foot .badge{display:inline-block;border:1px solid #3a3a3a;border-radius:6px;padding:6px 11px;font-family:var(--mono);font-size:11px;color:var(--live)}
+  .foot .legal{font-family:var(--mono);font-size:11px;color:#6f6a60;width:100%;margin-top:8px}
+  .foot a{color:var(--on-panel);text-decoration:none;border-bottom:1px solid #444}
+  .foot a:hover{border-color:var(--live);color:var(--live)}
+</style>
+</head>
+<body>
+
+<div class="ledger"><div class="lwrap">
+  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> — a 4-track tape recorder</span>
+  <span>No. 01 · MMXXVI · iPhone / iOS 17+</span>
+</div></div>
+
+<div class="wrap">
+  <div class="back"><a href="index.html"><span>←</span> Back to TapeDesk</a></div>
+
+  <!-- ---- hero statement ---- -->
+  <section class="hero">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>TapeDesk collects <span>no data.</span> None. There is nothing to opt out of.</h1>
+    <p class="meta">Last updated: 2 June 2026</p>
+    <div class="specledger">
+      <div class="cell"><div class="k">Collected</div><div class="v live">Nothing</div></div>
+      <div class="cell"><div class="k">Analytics</div><div class="v">None</div></div>
+      <div class="cell"><div class="k">Accounts</div><div class="v">None</div></div>
+      <div class="cell"><div class="k">Network</div><div class="v">Ableton Link · local only</div></div>
+    </div>
+  </section>
+
+  <!-- ---- numbered document ---- -->
+  <div class="doc">
+
+    <section class="sec">
+      <div class="num">01</div>
+      <div>
+        <h2>The short version</h2>
+        <p>TapeDesk is a recording app that runs entirely on your device. We do not collect, store, transmit, sell, or share any personal information or usage data. There are no analytics, no advertising, no tracking, and no user accounts. We never see your recordings, and neither does anyone else.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="num">02</div>
+      <div>
+        <h2>What we collect</h2>
+        <p>Nothing. The App Store privacy label for TapeDesk is "Data Not Collected", and that is literally true.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="num">03</div>
+      <div>
+        <h2>Your recordings &amp; projects</h2>
+        <p>Everything you record and every project you create is stored locally on your device (and in your own iCloud/device backups if you have those enabled — that is between you and Apple, not us). Your audio never leaves your device through TapeDesk.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="num">04</div>
+      <div>
+        <h2>Microphone</h2>
+        <p>TapeDesk asks for microphone access for one reason: to record audio onto its tracks. Audio is written to files on your device only. It is never uploaded anywhere.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="num">05</div>
+      <div>
+        <h2>Network access</h2>
+        <p>TapeDesk does not connect to any servers we operate. The only network activity is <strong>Ableton Link</strong>, which uses your local network to sync tempo with other music apps and devices around you. That stays on your local network. It is never sent to us or to the internet.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="num">06</div>
+      <div>
+        <h2>Children</h2>
+        <p>Because TapeDesk collects no data from anyone, it collects no data from children.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="num">07</div>
+      <div>
+        <h2>Changes</h2>
+        <p>If this policy ever changes, the updated version will be posted on this page with a new date. Since the app collects no data, we do not expect meaningful changes.</p>
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="num">08</div>
+      <div>
+        <h2>Contact</h2>
+        <p>Questions about privacy or anything else: <a href="mailto:tape.desk.admin@gmail.com">tape.desk.admin@gmail.com</a>.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer class="foot"><div class="fwrap">
+  <span class="brand"><img src="img/mark-1024.png" alt=""> TapeDesk</span>
+  <span class="badge">● DATA NOT COLLECTED</span>
+  <div class="legal">© MMXXVI TapeDesk · A four-track tape recorder for iPhone · <a href="index.html">Home</a> · <a href="manual.html">Manual</a></div>
+</div></footer>
+
+</body>
+</html>

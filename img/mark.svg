@@ -1,0 +1,13 @@
+<svg width="120" height="120" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TapeDesk">
+  <title>TapeDesk</title>
+  <!-- transparent ground; strokes blend with page background -->
+  <rect x="112" y="112" width="800" height="800" rx="180" ry="180" fill="none" stroke="#1A1A1A" stroke-width="16"/>
+  <rect x="236" y="288" width="552" height="284" rx="28" ry="28" fill="none" stroke="#1A1A1A" stroke-width="13"/>
+  <circle cx="388" cy="430" r="98" fill="none" stroke="#1A1A1A" stroke-width="15"/>
+  <circle cx="388" cy="430" r="27" fill="#3D5365"/>
+  <circle cx="636" cy="430" r="98" fill="none" stroke="#1A1A1A" stroke-width="15"/>
+  <circle cx="636" cy="430" r="27" fill="#A35B3D"/>
+  <line x1="486" y1="430" x2="538" y2="430" stroke="#1A1A1A" stroke-width="13"/>
+  <rect x="392" y="668" width="240" height="56" rx="18" ry="18" fill="none" stroke="#1A1A1A" stroke-width="11"/>
+  <circle cx="724" cy="288" r="44" fill="#E84D1F"/>
+</svg>

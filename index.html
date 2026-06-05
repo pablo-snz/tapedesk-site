@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TapeDesk — a 4-track tape recorder for iPhone</title>
+<meta name="description" content="A 4-track cassette recorder for iPhone. Hit rec and the idea's on tape. Real varispeed where the pitch bends, a live looper, three tape effects built by hand. €2.99 once — no subscription, no tracking.">
+<meta property="og:title" content="TapeDesk — a 4-track tape recorder for iPhone">
+<meta property="og:description" content="An instrument, not a studio. Drag the speed and the pitch bends with it, the looper stacks live, three tape effects built in-house. €2.99 once, no subscription, nothing tracked.">
+<meta property="og:image" content="img/app-tracks.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/mark.svg">
+<link rel="apple-touch-icon" href="img/mark-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F1EFE9; --bone-2:#E8E5DC; --panel:#1A1A1A;
+    --ink:#1A1A1A; --ink-2:#6F6F6F; --ink-3:#9B9B9B; --on-panel:#F1EFE9;
+    --rec:#E84D1F; --live:#2E7D75; --lock:#C9993D;
+    --t1:#3D5365; --t2:#A35B3D; --t3:#7A8A5A; --t4:#8E5060;
+    --hair:#1A1A1A; --rule:#C9C5BB;
+    --serif:'Space Grotesk',system-ui,sans-serif;
+    --mono:'Space Mono','SF Mono',Menlo,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);background:var(--bone);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .mono{font-family:var(--mono)}
+
+  /* ---- device frame (chunky bezel, crisp at native res) ---- */
+  .phone{background:#111;border:1px solid #000;border-radius:34px;padding:8px;box-shadow:0 22px 44px -22px rgba(26,26,26,.5)}
+  .phone img{display:block;width:100%;border-radius:26px}
+
+  /* ---- ledger bar ---- */
+  .ledger{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);border-bottom:1.5px solid var(--hair);padding:10px 0}
+  .ledger .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .ledger .lhs{display:flex;align-items:center;gap:9px}
+  .ledger .lhs img{width:22px;height:22px}
+  .ledger b{color:var(--ink)}
+
+  /* ---- hero ---- */
+  .cover{padding:58px 0 40px}
+  .covergrid{display:grid;grid-template-columns:1fr 330px;gap:48px;align-items:center}
+  @media(max-width:820px){.covergrid{grid-template-columns:1fr;gap:38px}}
+  .tag{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--live);font-family:var(--mono)}
+  h1.title{font-size:clamp(56px,11vw,128px);line-height:.86;letter-spacing:-.045em;font-weight:700;margin:14px 0 0;display:flex;align-items:center;gap:.22em}
+  h1.title img{width:.82em;height:.82em;flex:0 0 auto;margin-top:.04em}
+  .sub{font-size:clamp(18px,2.5vw,25px);max-width:540px;margin:24px 0 0;font-weight:500;line-height:1.32}
+  .sub em{font-style:normal;color:var(--rec)}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+  .chip{font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-2);border:1.5px solid var(--hair);border-radius:999px;padding:7px 13px;display:inline-flex;align-items:center;gap:7px;background:var(--bone-2)}
+  .chip b{color:var(--ink)}
+  .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--live);flex:0 0 auto}
+  .chip.price{background:var(--ink);color:var(--on-panel);border-color:var(--ink);font-weight:700}
+  .cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .btn{font-family:var(--mono);font-size:13px;letter-spacing:.04em;text-transform:uppercase;background:var(--ink);color:var(--on-panel);border:1.5px solid var(--ink);border-radius:8px;padding:13px 19px;text-decoration:none;font-weight:700;display:inline-block}
+  .btn.soon{opacity:.55;cursor:default}
+  .cta .note{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);max-width:210px;line-height:1.5}
+  .manualcta{margin-top:18px;font-family:var(--mono);font-size:12.5px}
+  .manualcta a{color:var(--live);text-decoration:none;border-bottom:1px solid var(--rule);letter-spacing:.02em}
+  .manualcta a:hover{border-color:var(--live)}
+
+  /* ---- demo slot ---- */
+  .demo{max-width:310px;margin:0 auto;width:100%}
+  .demo .frame{position:relative;background:#111;border:1px solid #000;border-radius:34px;padding:8px;box-shadow:0 22px 44px -22px rgba(26,26,26,.5);overflow:hidden}
+  .demo .frame img,.demo .frame video{display:block;width:100%;border-radius:26px}
+  .demo .play{position:absolute;inset:8px;border-radius:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;background:linear-gradient(180deg,rgba(17,17,17,.12),rgba(17,17,17,.34))}
+  .demo .play .disc{width:60px;height:60px;border-radius:50%;background:rgba(232,77,31,.94);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px -6px rgba(0,0,0,.6)}
+  .demo .play .disc svg{width:22px;height:22px;margin-left:3px}
+  .demo .play .lab{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#F1EFE9;background:rgba(17,17,17,.74);padding:6px 10px;border-radius:5px}
+  .democap{font-family:var(--mono);font-size:11px;color:var(--ink-2);margin-top:14px;line-height:1.65;text-align:center;max-width:330px;margin-left:auto;margin-right:auto}
+  .democap b{color:var(--ink)}
+
+  /* ---- spec ledger strip ---- */
+  .specledger{display:flex;flex-wrap:wrap;border:1.5px solid var(--hair);border-radius:8px;overflow:hidden;margin:40px 0 0;background:var(--bone-2)}
+  .specledger .cell{flex:1 1 150px;padding:11px 15px;border-right:1px solid var(--rule);font-family:var(--mono)}
+  .specledger .cell:last-child{border-right:none}
+  .specledger .k{color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em;font-size:10px}
+  .specledger .v{color:var(--ink);font-weight:700;font-size:12.5px;margin-top:2px}
+
+  /* ---- truth ---- */
+  .truth{padding:70px 0;border-bottom:1px solid var(--rule)}
+  .truthgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+  @media(max-width:760px){.truthgrid{grid-template-columns:1fr;gap:30px}}
+  .truth h2{font-size:13px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:20px;font-weight:400}
+  .truth ul{list-style:none;display:grid;gap:12px}
+  .truth li{font-size:16.5px;display:flex;gap:12px;align-items:baseline;line-height:1.4}
+  .truth li .mk{font-family:var(--mono);font-weight:700;flex:0 0 auto}
+  .is li .mk{color:var(--live)} .isnt li .mk{color:var(--rec)}
+
+  /* ---- why-buy ---- */
+  .why{padding:74px 0;border-bottom:1px solid var(--rule)}
+  .secthead{display:flex;align-items:baseline;gap:18px;margin-bottom:10px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--rec);text-transform:uppercase;white-space:nowrap}
+  h2.big{font-size:clamp(28px,4.6vw,46px);letter-spacing:-.03em;line-height:1.03;font-weight:700}
+  .lede{font-size:16.5px;color:var(--ink-2);max-width:600px;margin:14px 0 0;line-height:1.55}
+  .lede strong{color:var(--ink);font-weight:500}
+  .lede code{font-family:var(--mono);font-size:.9em;color:var(--ink);background:var(--bone-2);padding:1px 5px;border-radius:4px}
+  .whygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:46px}
+  @media(max-width:820px){.whygrid{grid-template-columns:1fr 1fr;gap:30px 28px}}
+  @media(max-width:520px){.whygrid{grid-template-columns:1fr}}
+  .why .item .n{font-family:var(--mono);font-size:12px;color:var(--live);letter-spacing:.04em}
+  .why .item h3{font-size:18.5px;font-weight:700;margin:9px 0 6px;line-height:1.16}
+  .why .item p{font-size:14px;color:var(--ink-2);line-height:1.55}
+  .why .item p code{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--bone-2);padding:1px 5px;border-radius:4px}
+
+  /* ---- gallery ---- */
+  .gallery{padding:74px 0 64px;border-bottom:1px solid var(--rule)}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:48px}
+  @media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr);gap:30px 26px}}
+  @media(max-width:480px){.grid4{grid-template-columns:1fr;max-width:300px;margin-left:auto;margin-right:auto}}
+  .shot h3{font-family:var(--mono);font-size:12px;letter-spacing:.04em;margin:16px 0 4px;font-weight:700}
+  .shot p{font-size:13px;color:var(--ink-2);line-height:1.5}
+
+  /* ---- effects (product half) ---- */
+  .fx{padding:78px 0 70px;border-bottom:1px solid var(--rule)}
+  .fxpick{margin:46px auto 0;max-width:320px}
+  .fxpick figcaption{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);margin:14px auto 0;line-height:1.6;text-align:center;max-width:360px}
+  .fxproof{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:30px}
+  @media(max-width:900px){.fxproof{grid-template-columns:1fr;max-width:300px;margin:30px auto 0;gap:42px}}
+  .fxproof h3{font-family:var(--mono);font-size:13px;margin:16px 0 4px;font-weight:700;letter-spacing:.02em}
+  .fxproof p{font-size:13px;color:var(--ink-2);line-height:1.5}
+  .fxparams{color:var(--ink)!important;font-size:12px;letter-spacing:.02em;margin-bottom:7px}
+  .fx code{font-family:var(--mono);font-size:.9em;color:var(--ink);background:var(--bone-2);padding:1px 5px;border-radius:4px}
+  .fxprint{margin-top:54px;font-size:16.5px;line-height:1.55;color:var(--ink-2);max-width:760px;border-top:1.5px solid var(--hair);padding-top:26px}
+  .fxprint b{color:var(--ink)}
+
+  /* ---- plates ---- */
+  .plate{padding:74px 0;border-bottom:1px solid var(--rule)}
+  figure{margin:0}
+  .figcap{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);margin-top:12px;line-height:1.6;letter-spacing:.02em}
+  .figcap b{color:var(--ink)}
+  .full img{width:100%;display:block;border:1.5px solid var(--hair);border-radius:8px}
+  .triptych{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+  @media(max-width:760px){.triptych{grid-template-columns:1fr}}
+  .triptych img{width:100%;display:block;border:1.5px solid var(--hair);border-radius:8px}
+  .swatches{display:flex;flex-wrap:wrap;gap:0;margin-top:36px;border:1.5px solid var(--hair);border-radius:8px;overflow:hidden}
+  .sw{flex:1 1 92px;min-width:92px;padding:13px 11px 11px;color:#fff;font-family:var(--mono);font-size:11px;line-height:1.5;border-right:1px solid rgba(255,255,255,.18)}
+  .sw:last-child{border-right:none}
+  .sw .lab{opacity:.85;text-transform:uppercase;letter-spacing:.05em}
+  .sw .hex{font-weight:700;font-size:12.5px}
+  .sw.light{color:var(--ink)}
+
+  .faderlayout{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:8px}
+  @media(max-width:760px){.faderlayout{grid-template-columns:1fr;gap:30px}}
+  .steps{list-style:none;display:grid;gap:16px}
+  .steps li{display:grid;grid-template-columns:auto 1fr;gap:15px;align-items:baseline}
+  .steps .s{font-family:var(--mono);font-size:12px;color:var(--rec);font-weight:700;white-space:nowrap}
+  .steps h4{font-size:16px;font-weight:700;margin-bottom:3px}
+  .steps p{font-size:13.5px;color:var(--ink-2);line-height:1.5}
+  .steps code{font-family:var(--mono);font-size:12.5px;color:var(--ink);background:var(--bone-2);padding:1px 5px;border-radius:4px}
+
+  .splitfig{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;margin-top:8px}
+  @media(max-width:680px){.splitfig{grid-template-columns:1fr}}
+  .splitfig img{width:100%;display:block;border:1.5px solid var(--hair);border-radius:8px}
+
+  /* ---- b-side / notebook opener (dark) ---- */
+  .manifesto{background:var(--panel);color:var(--on-panel);padding:64px 0}
+  .manifesto .kick{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--lock)}
+  .manifesto .bsidedeck{font-size:17px;color:#b8b2a6;line-height:1.55;margin:14px 0 38px;max-width:700px}
+  .manifesto .bsidedeck em{font-style:normal;color:var(--on-panel)}
+  .manifesto h2{font-size:clamp(26px,5vw,46px);line-height:1.05;letter-spacing:-.03em;font-weight:700;margin:0;max-width:880px}
+  .manifesto h2 em{font-style:normal;color:var(--rec)}
+  .principles{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+  @media(max-width:760px){.principles{grid-template-columns:1fr;gap:26px}}
+  .principles .p .n{font-family:var(--mono);font-size:12px;color:var(--live);letter-spacing:.06em}
+  .principles .p h3{font-size:19px;margin:8px 0 6px;font-weight:700}
+  .principles .p p{font-size:14.5px;color:#b8b2a6;line-height:1.55}
+
+  /* ---- colophon ---- */
+  .colophon{background:var(--panel);color:var(--on-panel);padding:60px 0;border-top:1px solid #333}
+  .closing{padding:0 0 44px;border-bottom:1px solid #333;margin-bottom:48px}
+  .closing h3{font-size:clamp(22px,3.4vw,34px);letter-spacing:-.02em;font-weight:700;max-width:640px;line-height:1.1}
+  .closing .ask{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+  .closing .price{font-family:var(--mono);font-size:13px;color:#b8b2a6}
+  .closing .price b{color:var(--on-panel)}
+  .colophon .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+  @media(max-width:760px){.colophon .grid{grid-template-columns:1fr;gap:28px}}
+  .colophon .brand{display:flex;align-items:center;gap:11px;font-weight:700;font-size:22px;letter-spacing:-.02em;margin-bottom:14px}
+  .colophon .brand img{width:34px;height:34px}
+  .colophon p{color:#b8b2a6;font-size:14px;line-height:1.6;max-width:340px}
+  .colophon h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lock);margin-bottom:14px;font-weight:400}
+  .colophon a{color:var(--on-panel);text-decoration:none;border-bottom:1px solid #444;display:inline-block;margin-bottom:9px;font-size:14.5px}
+  .colophon a:hover{border-color:var(--live);color:var(--live)}
+  .colophon .legal{font-family:var(--mono);font-size:11px;color:#6f6a60;line-height:1.7}
+  .colophon .privacy-badge{display:inline-block;border:1px solid #3a3a3a;border-radius:6px;padding:6px 10px;font-family:var(--mono);font-size:11px;color:var(--live);margin-top:8px}
+</style>
+</head>
+<body>
+
+<div class="ledger"><div class="wrap">
+  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> — a 4-track tape recorder</span>
+  <span>No. 01 · MMXXVI · iPhone / iOS 17+</span>
+</div></div>
+
+<!-- ============ HERO ============ -->
+<div class="wrap">
+<section class="cover">
+  <div class="covergrid">
+    <div>
+      <p class="tag">A four-track tape recorder · iPhone</p>
+      <h1 class="title"><img src="img/mark.svg" alt="">TapeDesk</h1>
+      <p class="sub">An instrument, <em>not a studio.</em> Open it, hit rec — the idea's on tape before you've thought about it.</p>
+      <div class="chips">
+        <span class="chip"><span class="dot"></span>Native iOS · no accounts</span>
+        <span class="chip"><span class="dot"></span>3 tape effects · built by hand</span>
+        <span class="chip"><span class="dot"></span>Data Not Collected</span>
+        <span class="chip price">€2.99 · once</span>
+      </div>
+      <div class="cta">
+        <span class="btn soon">On the App Store soon</span>
+        <span class="note">Built and tested on a real iPhone.</span>
+      </div>
+      <p class="manualcta"><a href="manual.html">Everything it does → the manual</a></p>
+    </div>
+    <div class="demo">
+      <div class="frame">
+        <img src="img/app-tracks.png" alt="TapeDesk tape view — four tracks of recorded regions">
+        <div class="play">
+          <span class="disc"><svg viewBox="0 0 24 24" fill="#F1EFE9"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="lab">Demo at launch · with sound</span>
+        </div>
+      </div>
+      <p class="democap"><b>DEMO —</b> 16s, real screen, real sound. Drag the tape to 0.5× and the pitch sinks with it — no "keep pitch" switch, that's the point. Then the looper stacks two passes live. Lands with the app.</p>
+    </div>
+  </div>
+  <div class="specledger">
+    <div class="cell"><div class="k">Format</div><div class="v">4-track tape</div></div>
+    <div class="cell"><div class="k">Platform</div><div class="v">iOS 17+ · native</div></div>
+    <div class="cell"><div class="k">Varispeed</div><div class="v">0.25× — 2.0×</div></div>
+    <div class="cell"><div class="k">Sync</div><div class="v">Ableton Link · MIDI</div></div>
+    <div class="cell"><div class="k">Edits</div><div class="v">cut · join · undo</div></div>
+    <div class="cell"><div class="k">Privacy</div><div class="v">Data Not Collected</div></div>
+  </div>
+</section>
+</div>
+
+<!-- ============ WHAT IT IS / ISN'T ============ -->
+<section class="truth"><div class="wrap">
+  <div class="truthgrid">
+    <div class="is">
+      <h2>What it is</h2>
+      <ul>
+        <li><span class="mk">+</span> A native 4-track tape recorder for iPhone</li>
+        <li><span class="mk">+</span> Record, overdub, live-loop and bounce across four tracks</li>
+        <li><span class="mk">+</span> Real tape varispeed with pitch that bends, 0.25×–2×</li>
+        <li><span class="mk">+</span> Three in-house tape effects: saturation, delay, reverb</li>
+        <li><span class="mk">+</span> Ableton Link &amp; MIDI Clock sync</li>
+        <li><span class="mk">+</span> Non-destructive edits: cut, join, instant undo</li>
+        <li><span class="mk">+</span> Haptic transport, lock-screen control, 120 fps meters</li>
+      </ul>
+    </div>
+    <div class="isnt">
+      <h2>What it isn't</h2>
+      <ul>
+        <li><span class="mk">×</span> Not a DAW — no infinite tracks, no project ceremony</li>
+        <li><span class="mk">×</span> No subscription. One price.</li>
+        <li><span class="mk">×</span> No accounts, no sign-ups, no email wall</li>
+        <li><span class="mk">×</span> No analytics, no tracking. Nothing leaves the device.</li>
+        <li><span class="mk">×</span> Not free, not freemium, not free-with-a-catch. You buy it once. That's the catch.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ WHY IT FEELS LIKE AN INSTRUMENT ============ -->
+<section class="why"><div class="wrap">
+  <div class="secthead"><span class="kicker">Why it feels like one</span><h2 class="big">Six reasons it plays like an instrument.</h2></div>
+  <p class="lede">Not a spec sheet. The handful of things that make it feel like gear, not software.</p>
+  <div class="whygrid">
+    <div class="item">
+      <div class="n">01</div>
+      <h3>The deck, not the DAW</h3>
+      <p>Four tracks, a tape ruler, a hard playhead. Hit rec and the region's just <em>there</em> — no arming, no project setup, no ceremony.</p>
+    </div>
+    <div class="item">
+      <div class="n">02</div>
+      <h3>Drag the speed, the pitch goes with it</h3>
+      <p><code>0.25× to 2×</code>, across the whole tape. Slow it and the voice sinks; speed it and it climbs, like the cassette decks this grew out of. There is no "keep pitch" switch. That's the point.</p>
+    </div>
+    <div class="item">
+      <div class="n">03</div>
+      <h3>Loop on, and it's a live looper</h3>
+      <p>Turn loop on, play a part, play another over it. It stacks while you listen. Hear the layers build, commit when it's right.</p>
+    </div>
+    <div class="item">
+      <div class="n">04</div>
+      <h3>Three handmade tape effects</h3>
+      <p>Magnetic-tape saturation, a tape delay, an 8-line reverb — three effects, not licensed plugins. They print into the take: once it's down, it's down, like a cassette. Most apps license a plugin and call it tape. These three are ours, in C++.</p>
+    </div>
+    <div class="item">
+      <div class="n">05</div>
+      <h3>It locks to the room</h3>
+      <p>Ableton Link or MIDI Clock — start your gear, TapeDesk falls into step and rides the tempo. Wireless, no cables, no setup screen.</p>
+    </div>
+    <div class="item">
+      <div class="n">06</div>
+      <h3>€2.99, once. Then it's yours</h3>
+      <p>No subscription, no account, no email wall. No analytics, no tracking. Your recordings never leave the phone. We mean it literally.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery"><div class="wrap">
+  <div class="secthead"><span class="kicker">The instrument</span><h2 class="big">Four screens, one machine.</h2></div>
+  <p class="lede">No nested menus, no mode soup. The whole app is a <strong>tape view</strong> and a <strong>mixer</strong>, with everything else one tap away. Here it is, running — and one screen earns its own page. It's next.</p>
+  <div class="grid4">
+    <figure class="shot">
+      <div class="phone"><img src="img/app-tracks.png" alt="Tape view with four tracks of regions"></div>
+      <h3>TAPE</h3>
+      <p>Four tracks, a tape ruler, a hard orange playhead. Record and the region just appears.</p>
+    </figure>
+    <figure class="shot">
+      <div class="phone"><img src="img/app-mix.png" alt="Mixer with four channel strips"></div>
+      <h3>MIX</h3>
+      <p>Four channel strips: gain, pan, two sends, a teal fader, a 120 fps meter. Mute lives right there.</p>
+    </figure>
+    <figure class="shot">
+      <div class="phone"><img src="img/app-tapes.png" alt="Tapes menu listing projects"></div>
+      <h3>TAPES</h3>
+      <p>Every take is a tape. Name it, duplicate it, bin it. The active one glows teal.</p>
+    </figure>
+    <figure class="shot">
+      <div class="phone"><img src="img/app-settings.png" alt="Settings screen"></div>
+      <h3>SETTINGS</h3>
+      <p>Tempo, time signature, metronome, language — and four icon skins. "Data Not Collected", in writing.</p>
+    </figure>
+  </div>
+</div></section>
+
+<!-- ============ THE EFFECTS — promoted to the product half ============ -->
+<section class="fx"><div class="wrap">
+  <div class="secthead"><span class="kicker">Fig — the effects</span><h2 class="big">This is what saturation looks like.</h2></div>
+  <p class="lede">Most apps reach for a plugin and call it a tape sound. We drew three of our own, then wrote them in C++ inside the engine. The picture on each one isn't a label — it's the shape of what it does to your signal.</p>
+  <figure class="fxpick">
+    <div class="phone"><img src="img/app-fx-pick.png" alt="The effect picker: tapesat, delay and reverb, each a hand-drawn glyph"></div>
+    <figcaption>Pick a sound. A bar scattering into noise, a wave leaving, a room opening — each glyph is the shape of what it does.</figcaption>
+  </figure>
+  <p class="lede" style="margin-top:54px">Open one and it's not a toggle — it's an instrument with its own face and its own four hands.</p>
+  <div class="fxproof">
+    <figure class="shot">
+      <div class="phone"><img src="img/app-fx-tapesat.png" alt="TapeSat effect panel"></div>
+      <h3>tapesat</h3>
+      <p class="fxparams mono">drive 35 · tone 59 · bias 20 · age 25</p>
+      <p>Magnetic saturation by Jiles–Atherton hysteresis. Push <code>age</code> and the tape gets tired; <code>bias</code> is the magnetic sweet-spot you'd set by ear on a real deck.</p>
+    </figure>
+    <figure class="shot">
+      <div class="phone"><img src="img/app-fx-delay.png" alt="Delay effect panel, active"></div>
+      <h3>delay</h3>
+      <p class="fxparams mono">time 99 · fbk 99 · tone 14 · wow 14</p>
+      <p><code>wow</code> is the pitch waver — because real tape wavered. Crank <code>fbk</code> and it smears instead of repeats. Lit amber because it's live on the bus.</p>
+    </figure>
+    <figure class="shot">
+      <div class="phone"><img src="img/app-fx-reverb.png" alt="Reverb effect panel"></div>
+      <h3>reverb</h3>
+      <p class="fxparams mono">decay 59 · tone 69 · drip 35 · damp 30</p>
+      <p>An 8-line Jot FDN — a room built from feedback, not a sample of someone else's hall. <code>drip</code> is the wet character; <code>damp</code> is how fast it loses its highs.</p>
+    </figure>
+  </div>
+  <p class="fxprint"><b>Printed, not previewed.</b> No latency you can feel: it runs in the same place as everything else, live. Bounce, and what you heard is on the tape — wow, hiss, room and all. No render step where it comes out different. It already sounded like that.</p>
+</div></section>
+
+<!-- ============ EJECT — the finish ============ -->
+<section class="fx" style="padding:62px 0 66px"><div class="wrap">
+  <div class="secthead"><span class="kicker">The finish</span><h2 class="big">It ends the way a deck ends.</h2></div>
+  <p class="lede">Make the thing, then press eject. The master or the stems, <code>WAV</code> or <code>M4A</code>, the whole tape or one clean loop — straight to the share sheet. No DAW, no export ceremony.</p>
+  <figure class="fxpick">
+    <div class="phone"><img src="img/app-export.png" alt="The eject panel: master or stems, WAV or M4A, whole tape or loop"></div>
+    <figcaption>master or stems · WAV or M4A · the whole tape or one loop · then eject.</figcaption>
+  </figure>
+</div></section>
+
+<!-- ============ B-SIDE — the notebook opens (dark) ============ -->
+<section class="manifesto"><div class="wrap">
+  <p class="kick">The B-side</p>
+  <p class="bsidedeck">Below here is the notebook: the mark, the colours, the mixer that took four passes to get right. You met the effects upstairs; this is the physics under them. Skip it and just buy the deck. But <em>this is where it came from.</em></p>
+  <h2>A studio asks you to set it up. An instrument asks you to <em>play.</em> TapeDesk is the second kind.</h2>
+  <div class="principles">
+    <div class="p"><div class="n">01 / FEEL</div><h3>Impossibly solid</h3><p>Zero perceptible latency, no hitches, no dropouts. If everything else fails, the physical feel must hold. The audio thread is sacred ground.</p></div>
+    <div class="p"><div class="n">02 / FOCUS</div><h3>No menus to learn</h3><p>One screen, two modes: tape and mix. Everything else is one tap away. There is no fourth menu hiding behind the third.</p></div>
+    <div class="p"><div class="n">03 / FOREVER</div><h3>Bought, not rented</h3><p>One price. No accounts, no ads, no analytics, no tracking. Your recordings never leave the device.</p></div>
+  </div>
+</div></section>
+
+<div class="wrap">
+
+<!-- ============ FIG 01 — MARK ============ -->
+<section class="plate">
+  <div class="secthead"><span class="kicker">Fig. 01</span><h2 class="big">The mark is a face.</h2></div>
+  <p class="lede">Look again: two tape reels become eyes, the record lamp becomes a warm orange freckle, the cassette window becomes a mouth. A machine that looks back. <strong>Six skins were drawn from the track palette</strong> — and the palette tells you which two had to go.</p>
+  <figure class="full" style="margin-top:40px">
+    <img src="img/plate-mark-skins.png" alt="Six TapeDesk icon skins: Cream, Dark, Petrol, Terracotta, Olive, Wine">
+    <figcaption class="figcap"><b>PLATE 01 —</b> six skins, one mark. <b>Cream · Dark · Petrol · Terracotta · Olive · Wine.</b> Petrol and Terracotta were cut from the shipping set: against their own mid-tone the reel-eyes lost contrast and the face went blank. Four survive — the ones where the eyes still hold.</figcaption>
+  </figure>
+</section>
+
+<!-- ============ FIG 02 — COLOUR ============ -->
+<section class="plate">
+  <div class="secthead"><span class="kicker">Fig. 02</span><h2 class="big">A grammar of colour.</h2></div>
+  <p class="lede">Colour here is not decoration — it is <strong>state</strong>. The four track hues belong to the tracks and nothing else. So a control needs its own language: one colour for <strong>live &amp; movable</strong>, one for <strong>held &amp; locked</strong>. Three pairings were rendered onto the real fader — not abstract swatches — and judged in place.</p>
+  <div class="triptych" style="margin-top:40px">
+    <figure><img src="img/plate-color-a.png" alt="Control palette A: teal and amber"><figcaption class="figcap"><b>A · TEAL + AMBER</b><br>chosen — reads as state, never as a track</figcaption></figure>
+    <figure><img src="img/plate-color-b.png" alt="Control palette B: indigo and mustard"><figcaption class="figcap"><b>B · INDIGO + MUSTARD</b><br>indigo drifted toward the petrol track</figcaption></figure>
+    <figure><img src="img/plate-color-c.png" alt="Control palette C: azure and gold"><figcaption class="figcap"><b>C · AZURE + GOLD</b><br>too bright; fought the warm paper</figcaption></figure>
+  </div>
+  <p class="lede" style="margin-top:42px">The rule, then the rule moving. The speed control had to show its state without a word — <strong>resting</strong> at 1.00×, <strong>bending</strong> live in teal, <strong>locked</strong> in amber. Same two colours, doing their one job. The label burned into the plate ("REAL component") is the workshop's, not yours.</p>
+  <figure class="full" style="max-width:560px;margin:34px auto 0">
+    <img src="img/plate-speed.png" alt="The speed control drawn in three states: resting, bending, locked">
+    <figcaption class="figcap"><b>PLATE 02b —</b> teal moves, amber holds, 1.00× rests. Pitch always follows the speed; there was never a switch to keep it.</figcaption>
+  </figure>
+  <div class="swatches">
+    <div class="sw" style="background:#3D5365"><div class="lab">trk 01</div><div class="hex">#3D5365</div></div>
+    <div class="sw" style="background:#A35B3D"><div class="lab">trk 02</div><div class="hex">#A35B3D</div></div>
+    <div class="sw" style="background:#7A8A5A"><div class="lab">trk 03</div><div class="hex">#7A8A5A</div></div>
+    <div class="sw" style="background:#8E5060"><div class="lab">trk 04</div><div class="hex">#8E5060</div></div>
+    <div class="sw" style="background:#2E7D75"><div class="lab">live</div><div class="hex">#2E7D75</div></div>
+    <div class="sw" style="background:#C9993D"><div class="lab">lock</div><div class="hex">#C9993D</div></div>
+    <div class="sw" style="background:#E84D1F"><div class="lab">rec</div><div class="hex">#E84D1F</div></div>
+    <div class="sw light" style="background:#F1EFE9"><div class="lab">paper</div><div class="hex">#F1EFE9</div></div>
+  </div>
+</section>
+
+<!-- ============ FIG 03 — FADERS ============ -->
+<section class="plate">
+  <div class="secthead"><span class="kicker">Fig. 03</span><h2 class="big">On faders.</h2></div>
+  <p class="lede">A fader can't lie about where it is. That's the whole point of one. The mixer took four passes to keep it that honest: every strip reads at a glance, and the live colour is reserved for the one thing you can move.</p>
+  <div class="faderlayout">
+    <div class="phone" style="max-width:300px;margin:0 auto"><img src="img/app-mix.png" alt="The shipped mixer"></div>
+    <div>
+      <ol class="steps">
+        <li><span class="s">A.1</span><div><h4>The strip appears</h4><p>Fader plus meter. Right idea, no grammar yet — everything competing for attention.</p></div></li>
+        <li><span class="s">A.2</span><div><h4>Into the mix tab</h4><p>Gain and pan knobs, two send returns. A channel becomes a channel.</p></div></li>
+        <li><span class="s">A.3</span><div><h4>Tightened</h4><p>Spacing pulled in, meters quieted, mute given a home. The eye stops wandering.</p></div></li>
+        <li><span class="s">A.4</span><div><h4>Ships</h4><p>Teal cap = the movable truth. Track names keep their identity colour; a muted track greys out, struck through.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FIG 04 — THE DSP FINE PRINT ============ -->
+<section class="plate" style="border-bottom:none">
+  <div class="secthead"><span class="kicker">Fig. 04</span><h2 class="big">The fine print on the tape.</h2></div>
+  <p class="lede">You met the effects upstairs. Here's the physics under them — for whoever scrolled this far.</p>
+  <ol class="steps" style="margin-top:34px;max-width:780px">
+    <li><span class="s">tape_sat</span><div><p><strong>Jiles–Atherton magnetic hysteresis</strong> — the actual physics of how iron remembers a signal, not a soft-clip curve pretending.</p></div></li>
+    <li><span class="s">tape_delay</span><div><p>A delay line carrying the transport's own drag and wow — the pitch wavers because real tape did.</p></div></li>
+    <li><span class="s">reverb</span><div><p>An <strong>8-line Jot FDN</strong> — a feedback delay network, the grown-up way to build a room.</p></div></li>
+  </ol>
+</section>
+
+</div>
+
+<!-- ============ COLOPHON ============ -->
+<footer class="colophon"><div class="wrap">
+  <div class="closing">
+    <h3>That's the deck. €2.99 — and then I'm out of your way.</h3>
+    <div class="ask">
+      <span class="btn soon">On the App Store soon</span>
+      <span class="price">One price, no subscription, no account. <b>Nothing leaves the phone.</b></span>
+    </div>
+  </div>
+  <div class="grid">
+    <div>
+      <div class="brand"><img src="img/mark-1024.png" alt=""> TapeDesk</div>
+      <p>A four-track tape recorder for iPhone. Designed and built by one person, on a real iPhone, over too many evenings. If it feels solid, that was the point. Coming to the App Store.</p>
+      <div class="privacy-badge">● DATA NOT COLLECTED</div>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <a href="manual.html">The Manual</a><br>
+      <a href="privacy.html">Privacy Policy</a><br>
+      <a href="mailto:tape.desk.admin@gmail.com">Support &amp; contact</a>
+    </div>
+    <div>
+      <h4>Colophon</h4>
+      <div class="legal">
+        Native Swift + C++ DSP<br>
+        AVAudioEngine · in-house render kernel<br>
+        Three tape effects, modelled from the physics up<br>
+        Type: Space Grotesk / Space Mono<br>
+        Palette tuned by hand<br>
+        © MMXXVI TapeDesk
+      </div>
+    </div>
+  </div>
+</div></footer>
+
+</body>
+</html>
