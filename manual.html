@@ -9,6 +9,19 @@
 <meta property="og:description" content="The whole machine, written down. Every screen, every control, exactly what it does.">
 <link rel="icon" href="img/mark.svg">
 <link rel="apple-touch-icon" href="img/mark-1024.png">
+<link rel="alternate" hreflang="en" href="manual.html">
+<link rel="alternate" hreflang="es" href="manual.es.html">
+<link rel="alternate" hreflang="fr" href="manual.fr.html">
+<link rel="alternate" hreflang="de" href="manual.de.html">
+<link rel="alternate" hreflang="it" href="manual.it.html">
+<link rel="alternate" hreflang="ja" href="manual.ja.html">
+<link rel="alternate" hreflang="x-default" href="manual.html">
+<script>
+  // The app's MANUAL button passes ?theme=dark — same machine, lights off.
+  // On <html> (not <body>) so the class lands before first paint: no flash.
+  if (new URLSearchParams(location.search).get('theme') === 'dark')
+    document.documentElement.classList.add('dark');
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -18,8 +31,18 @@
     --ink:#1A1A1A; --ink-2:#6F6F6F; --ink-3:#9B9B9B; --on-panel:#F1EFE9;
     --rec:#E84D1F; --live:#2E7D75; --lock:#C9993D;
     --hair:#1A1A1A; --rule:#C9C5BB;
+    --desc:#2c2925; --badge-rule:#3a3a3a; --legal:#6f6a60; --foot-rule:#444;
     --serif:'Space Grotesk',system-ui,sans-serif;
     --mono:'Space Mono','SF Mono',Menlo,monospace;
+  }
+  /* dark = the app's FB-10 palette: warm bakelite, muted-bone silkscreen,
+     REC orange untouched, the footer panel INVERTS (bone tile). */
+  html.dark{
+    --bone:#191815; --bone-2:#211F1B; --panel:#D5D1C6;
+    --ink:#D5D1C6; --ink-2:#A39F94; --ink-3:#6E6B62; --on-panel:#191815;
+    --rec:#F25A2A; --live:#3FA396; --lock:#D9AC52;
+    --hair:#D5D1C6; --rule:#3B3933;
+    --desc:#C7C2B6; --badge-rule:#8d887c; --legal:#6E6B62; --foot-rule:#8d887c;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -33,10 +56,10 @@
   .ledger .lhs img{width:22px;height:22px}
   .ledger b{color:var(--ink)}
 
-  .back{padding:26px 0 0}
-  .back a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
-  .back a:hover{color:var(--ink)}
-  .back a span{color:var(--live);font-weight:700}
+  .back{padding:26px 0 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .back>a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+  .back>a:hover{color:var(--ink)}
+  .back>a span{color:var(--live);font-weight:700}
 
   /* ---- hero ---- */
   .hero{padding:38px 0 30px;border-bottom:1px solid var(--rule)}
@@ -68,7 +91,7 @@
   .row{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:14px 0;border-top:1px solid var(--rule);align-items:baseline}
   @media(max-width:600px){.row{grid-template-columns:1fr;gap:5px;padding:13px 0}}
   .row .term{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.01em}
-  .row .desc{font-size:15.5px;color:#2c2925;line-height:1.55}
+  .row .desc{font-size:15.5px;color:var(--desc);line-height:1.55}
   .row .desc strong{color:var(--ink);font-weight:600}
   .row .desc code,.row .term code{font-family:var(--mono);font-size:.9em;color:var(--ink);background:var(--bone-2);padding:1px 5px;border-radius:4px}
   .row .desc a{color:var(--live);text-decoration:none;border-bottom:1px solid var(--rule)}
@@ -90,9 +113,17 @@
   .foot .fwrap{max-width:860px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
   .foot .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.02em}
   .foot .brand img{width:28px;height:28px}
-  .foot .badge{display:inline-block;border:1px solid #3a3a3a;border-radius:6px;padding:6px 11px;font-family:var(--mono);font-size:11px;color:var(--live)}
-  .foot .legal{font-family:var(--mono);font-size:11px;color:#6f6a60;width:100%;margin-top:8px}
-  .foot a{color:var(--on-panel);text-decoration:none;border-bottom:1px solid #444}
+  .foot .badge{display:inline-block;border:1px solid var(--badge-rule);border-radius:6px;padding:6px 11px;font-family:var(--mono);font-size:11px;color:var(--live)}
+  .foot .legal{font-family:var(--mono);font-size:11px;color:var(--legal);width:100%;margin-top:8px}
+  .foot a{color:var(--on-panel);text-decoration:none;border-bottom:1px solid var(--foot-rule)}
+  html.dark .foot .badge{color:#2E7D75}
+  html.dark .foot a:hover{border-color:#2E7D75;color:#2E7D75}
+
+  /* ---- language row ---- */
+  .langs{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:12px;flex-wrap:wrap}
+  .langs a{color:var(--ink-3);text-decoration:none}
+  .langs a:hover{color:var(--live)}
+  .langs a.cur{color:var(--ink);font-weight:700;border-bottom:1.5px solid var(--rec)}
   .foot a:hover{border-color:var(--live);color:var(--live)}
 </style>
 </head>
@@ -104,7 +135,24 @@
 </div></div>
 
 <div class="wrap">
-  <div class="back"><a href="index.html"><span>←</span> Back to TapeDesk</a></div>
+  <div class="back">
+    <a href="index.html"><span>←</span> Back to TapeDesk</a>
+    <nav class="langs" aria-label="Languages">
+      <a href="manual.html" class="cur">EN</a>
+      <a href="manual.es.html">ES</a>
+      <a href="manual.fr.html">FR</a>
+      <a href="manual.de.html">DE</a>
+      <a href="manual.it.html">IT</a>
+      <a href="manual.ja.html">JA</a>
+    </nav>
+  </div>
+  <script>
+    // Switching language keeps the theme the app sent you in with.
+    if (location.search)
+      document.querySelectorAll('.langs a').forEach(function (a) {
+        a.href += location.search;
+      });
+  </script>
 
   <section class="hero">
     <p class="eyebrow">The Manual</p>

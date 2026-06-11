@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le manuel — TapeDesk</title>
+<meta name="description" content="Tout ce que fait TapeDesk, écran par écran : enregistrement, varispeed, montage, mixage, trois effets bande, export, synchro MIDI et Ableton Link, réglages. La machine entière, mise par écrit.">
+<meta property="og:title" content="TapeDesk — Le manuel">
+<meta property="og:description" content="La machine entière, mise par écrit. Chaque écran, chaque commande, exactement ce qu'elle fait.">
+<link rel="icon" href="img/mark.svg">
+<link rel="apple-touch-icon" href="img/mark-1024.png">
+<link rel="alternate" hreflang="en" href="manual.html">
+<link rel="alternate" hreflang="es" href="manual.es.html">
+<link rel="alternate" hreflang="fr" href="manual.fr.html">
+<link rel="alternate" hreflang="de" href="manual.de.html">
+<link rel="alternate" hreflang="it" href="manual.it.html">
+<link rel="alternate" hreflang="ja" href="manual.ja.html">
+<link rel="alternate" hreflang="x-default" href="manual.html">
+<script>
+  // The app's MANUAL button passes ?theme=dark — same machine, lights off.
+  // On <html> (not <body>) so the class lands before first paint: no flash.
+  if (new URLSearchParams(location.search).get('theme') === 'dark')
+    document.documentElement.classList.add('dark');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F1EFE9; --bone-2:#E8E5DC; --panel:#1A1A1A;
+    --ink:#1A1A1A; --ink-2:#6F6F6F; --ink-3:#9B9B9B; --on-panel:#F1EFE9;
+    --rec:#E84D1F; --live:#2E7D75; --lock:#C9993D;
+    --hair:#1A1A1A; --rule:#C9C5BB;
+    --desc:#2c2925; --badge-rule:#3a3a3a; --legal:#6f6a60; --foot-rule:#444;
+    --serif:'Space Grotesk',system-ui,sans-serif;
+    --mono:'Space Mono','SF Mono',Menlo,monospace;
+  }
+  /* dark = the app's FB-10 palette: warm bakelite, muted-bone silkscreen,
+     REC orange untouched, the footer panel INVERTS (bone tile). */
+  html.dark{
+    --bone:#191815; --bone-2:#211F1B; --panel:#D5D1C6;
+    --ink:#D5D1C6; --ink-2:#A39F94; --ink-3:#6E6B62; --on-panel:#191815;
+    --rec:#F25A2A; --live:#3FA396; --lock:#D9AC52;
+    --hair:#D5D1C6; --rule:#3B3933;
+    --desc:#C7C2B6; --badge-rule:#8d887c; --legal:#6E6B62; --foot-rule:#8d887c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);background:var(--bone);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:860px;margin:0 auto;padding:0 28px}
+
+  /* ---- ledger bar ---- */
+  .ledger{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);border-bottom:1.5px solid var(--hair);padding:10px 0}
+  .ledger .lwrap{max-width:860px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .ledger .lhs{display:flex;align-items:center;gap:9px}
+  .ledger .lhs img{width:22px;height:22px}
+  .ledger b{color:var(--ink)}
+
+  .back{padding:26px 0 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .back>a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+  .back>a:hover{color:var(--ink)}
+  .back>a span{color:var(--live);font-weight:700}
+
+  /* ---- hero ---- */
+  .hero{padding:38px 0 30px;border-bottom:1px solid var(--rule)}
+  .hero .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--live)}
+  .hero h1{font-size:clamp(36px,8vw,72px);line-height:.96;letter-spacing:-.035em;font-weight:700;margin:16px 0 0}
+  .hero p{font-size:17px;color:var(--ink-2);max-width:620px;margin:20px 0 0;line-height:1.55}
+  .hero p strong{color:var(--ink);font-weight:500}
+
+  /* ---- contents ---- */
+  .toc{padding:30px 0;border-bottom:1px solid var(--rule)}
+  .toc h2{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:16px;font-weight:400}
+  .toc ol{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:7px 30px;counter-reset:c}
+  @media(max-width:620px){.toc ol{grid-template-columns:1fr}}
+  .toc li{counter-increment:c}
+  .toc a{font-family:var(--mono);font-size:13px;color:var(--ink);text-decoration:none;display:flex;gap:12px;padding:4px 0;border-bottom:1px dotted transparent}
+  .toc a:hover{color:var(--live)}
+  .toc a::before{content:counter(c,decimal-leading-zero);color:var(--rec);font-weight:700}
+
+  /* ---- section ---- */
+  .sec{padding:48px 0 8px;border-bottom:1px solid var(--rule)}
+  .sec:last-of-type{border-bottom:none}
+  .sec .head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+  .sec .no{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--rec)}
+  .sec h3{font-size:clamp(24px,4vw,36px);letter-spacing:-.03em;line-height:1.05;font-weight:700}
+  .sec .intro{font-size:16px;color:var(--ink-2);max-width:640px;margin:6px 0 0;line-height:1.55}
+  .sec .intro strong{color:var(--ink);font-weight:500}
+
+  .spec{margin-top:28px}
+  .row{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:14px 0;border-top:1px solid var(--rule);align-items:baseline}
+  @media(max-width:600px){.row{grid-template-columns:1fr;gap:5px;padding:13px 0}}
+  .row .term{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.01em}
+  .row .desc{font-size:15.5px;color:var(--desc);line-height:1.55}
+  .row .desc strong{color:var(--ink);font-weight:600}
+  .row .desc code,.row .term code{font-family:var(--mono);font-size:.9em;color:var(--ink);background:var(--bone-2);padding:1px 5px;border-radius:4px}
+  .row .desc a{color:var(--live);text-decoration:none;border-bottom:1px solid var(--rule)}
+  .row .desc a:hover{border-color:var(--live)}
+
+  .note{font-size:13.5px;color:var(--ink-3);font-family:var(--mono);margin-top:18px;line-height:1.6}
+
+  /* ---- screenshots ---- */
+  .phone{background:#111;border:1px solid #000;border-radius:30px;padding:7px;box-shadow:0 18px 38px -20px rgba(26,26,26,.5)}
+  .phone img{display:block;width:100%;border-radius:23px}
+  .secfig{max-width:278px;margin:32px auto 8px}
+  .secfig figcaption{font-family:var(--mono);font-size:11px;color:var(--ink-2);text-align:center;margin-top:13px;line-height:1.55}
+  .secrow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:32px auto 8px;max-width:660px}
+  @media(max-width:600px){.secrow{grid-template-columns:1fr;max-width:240px;gap:30px}}
+  .secrow figcaption{font-family:var(--mono);font-size:10.5px;color:var(--ink-2);text-align:center;margin-top:10px;letter-spacing:.04em}
+
+  /* ---- footer ---- */
+  .foot{background:var(--panel);color:var(--on-panel);padding:46px 0;margin-top:8px}
+  .foot .fwrap{max-width:860px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  .foot .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.02em}
+  .foot .brand img{width:28px;height:28px}
+  .foot .badge{display:inline-block;border:1px solid var(--badge-rule);border-radius:6px;padding:6px 11px;font-family:var(--mono);font-size:11px;color:var(--live)}
+  .foot .legal{font-family:var(--mono);font-size:11px;color:var(--legal);width:100%;margin-top:8px}
+  .foot a{color:var(--on-panel);text-decoration:none;border-bottom:1px solid var(--foot-rule)}
+  html.dark .foot .badge{color:#2E7D75}
+  html.dark .foot a:hover{border-color:#2E7D75;color:#2E7D75}
+
+  /* ---- language row ---- */
+  .langs{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:12px;flex-wrap:wrap}
+  .langs a{color:var(--ink-3);text-decoration:none}
+  .langs a:hover{color:var(--live)}
+  .langs a.cur{color:var(--ink);font-weight:700;border-bottom:1.5px solid var(--rec)}
+  .foot a:hover{border-color:var(--live);color:var(--live)}
+</style>
+</head>
+<body>
+
+<div class="ledger"><div class="lwrap">
+  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> — Le manuel</span>
+  <span>No. 02 · MMXXVI · iPhone / iOS 17+</span>
+</div></div>
+
+<div class="wrap">
+  <div class="back">
+    <a href="index.html"><span>←</span> Retour à TapeDesk</a>
+    <nav class="langs" aria-label="Langues">
+      <a href="manual.html">EN</a>
+      <a href="manual.es.html">ES</a>
+      <a href="manual.fr.html" class="cur">FR</a>
+      <a href="manual.de.html">DE</a>
+      <a href="manual.it.html">IT</a>
+      <a href="manual.ja.html">JA</a>
+    </nav>
+  </div>
+  <script>
+    // Switching language keeps the theme the app sent you in with.
+    if (location.search)
+      document.querySelectorAll('.langs a').forEach(function (a) {
+        a.href += location.search;
+      });
+  </script>
+
+  <section class="hero">
+    <p class="eyebrow">Le manuel</p>
+    <h1>Tout ce qu'il fait.</h1>
+    <p>TapeDesk ne cache rien derrière un menu : un écran pour la bande, un pour le mixage, et tout le reste à portée de doigt. Voici la machine entière, mise par écrit : chaque écran, chaque commande, exactement ce qu'elle fait. <strong>Aucun marketing ici. Juste le manuel.</strong></p>
+  </section>
+
+  <nav class="toc">
+    <h2>Sommaire</h2>
+    <ol>
+      <li><a href="#record">Enregistrement &amp; lecture</a></li>
+      <li><a href="#timeline">Quatre pistes &amp; la timeline</a></li>
+      <li><a href="#speed">Vitesse de bande</a></li>
+      <li><a href="#edit">Montage</a></li>
+      <li><a href="#mix">Le mixeur</a></li>
+      <li><a href="#fx">Les effets</a></li>
+      <li><a href="#tapes">Les bandes</a></li>
+      <li><a href="#export">Export</a></li>
+      <li><a href="#sync">Synchro avec vos machines</a></li>
+      <li><a href="#system">Écran verrouillé &amp; entrée</a></li>
+      <li><a href="#settings">Réglages</a></li>
+      <li><a href="#promises">Les promesses</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section class="sec" id="record">
+    <div class="head"><span class="no">01</span><h3>Enregistrement &amp; lecture</h3></div>
+    <p class="intro">Cinq boutons en bas de l'écran. C'est tout le transport. Rien à configurer avant de capter une idée.</p>
+    <div class="spec">
+      <div class="row"><div class="term">rec</div><div class="desc">Touchez pour enregistrer sur la piste armée. Touchez à nouveau pour arrêter. L'enregistrement est <strong>additif</strong> — jouez par-dessus ce qui est là et les couches s'empilent (sound-on-sound).</div></div>
+      <div class="row"><div class="term">play · stop · rew</div><div class="desc">La lecture repart d'où vous l'avez laissée ; stop fige le curseur ; rew saute au début de la bande. Vous reprenez exactement où vous vous êtes arrêté.</div></div>
+      <div class="row"><div class="term">décompte</div><div class="desc">Armez depuis une bande à l'arrêt et un décompte joue avant le début de l'enregistrement. Sa durée suit votre signature rythmique.</div></div>
+      <div class="row"><div class="term">rec par seuil</div><div class="desc">Maintenez <code>rec</code> pour régler un seuil de déclenchement (<code>-60…0 dB</code>). L'enregistrement démarre de lui-même dès que votre entrée le franchit — plus besoin de vous précipiter sur le bouton. Touchez <code>play</code> pour démarrer quand même.</div></div>
+      <div class="row"><div class="term">boucle</div><div class="desc">Le bouton le plus à droite arme la boucle. Boucle active, <code>rec</code> devient un looper en direct — voir <a href="#edit">Montage</a>.</div></div>
+      <div class="row"><div class="term">ça continue de jouer</div><div class="desc">L'audio continue en arrière-plan, écran éteint. Débranchez le casque, prenez un appel, changez de pièce. Il encaisse l'interruption et la bande continue de tourner.</div></div>
+      <div class="row"><div class="term">récupération après plantage</div><div class="desc">Si l'app meurt en pleine prise, elle vous propose l'enregistrement non sauvegardé au lancement suivant — récupérez-le ou jetez-le. Rien ne se perd en silence.</div></div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="sec" id="timeline">
+    <div class="head"><span class="no">02</span><h3>Quatre pistes &amp; la timeline</h3></div>
+    <p class="intro">Quatre pistes, une règle de bande, un curseur net. Chaque piste garde sa couleur : vous savez toujours à qui appartient l'audio que vous regardez.</p>
+    <div class="spec">
+      <div class="row"><div class="term">armer une piste</div><div class="desc">Touchez l'onglet d'une piste pour l'armer — une seule enregistre à la fois. La piste armée est celle où <code>rec</code> pose la prise.</div></div>
+      <div class="row"><div class="term">renommer une piste</div><div class="desc">Maintenez un onglet pour le renommer (1–32 caractères). Par défaut : <code>trk_01…trk_04</code>.</div></div>
+      <div class="row"><div class="term">deux bandes de zoom</div><div class="desc">Une vue d'ensemble des quatre pistes et une bande zoomée pour la piste active — chacune zoome de son côté. Pincez pour zoomer ; ça avance par paliers fixes, avec un cran haptique.</div></div>
+      <div class="row"><div class="term">scrub &amp; nudge</div><div class="desc">Faites glisser une bande pour faire du scrub — la bande est là pendant le geste, et la lecture repart de là. Touchez deux fois à gauche ou à droite du curseur pour le décaler d'un pas de grille.</div></div>
+      <div class="row"><div class="term">temps ou mesures</div><div class="desc">La règle se lit en <code>MM:SS</code> ou en <code>bar.beat</code> — à vous de choisir. Touchez le timecode pour basculer.</div></div>
+      <div class="row"><div class="term">les limites</div><div class="desc">Une bande dure jusqu'à <strong>10 minutes</strong>, avec jusqu'à <strong>128 régions</strong> par piste. Largement assez pour un instrument ; pas un DAW.</div></div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="sec" id="speed">
+    <div class="head"><span class="no">03</span><h3>Vitesse de bande</h3></div>
+    <p class="intro">Du vrai varispeed de bande. Ralentissez et la hauteur descend ; accélérez et elle monte. Il n'y a pas d'interrupteur « conserver la hauteur » — ça n'a jamais été le but.</p>
+    <div class="spec">
+      <div class="row"><div class="term">varispeed</div><div class="desc"><code>0.25× to 2×</code>, sur toute la bande, hauteur couplée. Touchez l'en-tête <code>SPEED</code> pour ouvrir le fader de bend — l'unité au centre, rapide en haut, lent en bas.</div></div>
+      <div class="row"><div class="term">verrou</div><div class="desc">Le cadenas sous le fader : ouvert = momentané (lâchez et il glisse vers 1×) ; fermé = fixe (la bande s'engage sur cette vitesse et s'en souvient).</div></div>
+      <div class="row"><div class="term">scratch</div><div class="desc">Faites glisser la bande comme un disque — vous la déplacez, elle est là, et elle repart d'où vous lâchez.</div></div>
+      <div class="row"><div class="term">enregistré à la vitesse</div><div class="desc">Enregistrez avec la vitesse pliée et c'est <strong>imprimé dans la prise</strong>. Enregistrez à mi-vitesse, relisez à vitesse normale : une octave au-dessus — le vieux truc du quatre-pistes, intact.</div></div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="sec" id="edit">
+    <div class="head"><span class="no">04</span><h3>Montage</h3></div>
+    <p class="intro">Non destructif, et ça survit à la fermeture de l'app. Sélectionnez une région et la barre de montage apparaît, avec seulement les gestes qui ont du sens à ce moment-là.</p>
+    <div class="spec">
+      <div class="row"><div class="term">couper</div><div class="desc">Les ciseaux coupent une région au curseur.</div></div>
+      <div class="row"><div class="term">joindre</div><div class="desc">Fusionnez une région avec sa voisine pour n'en refaire qu'une — la coupe se referme, sans couture. Pour vous c'est un geste ; en dessous, la région est entière à nouveau.</div></div>
+      <div class="row"><div class="term">rogner · déplacer</div><div class="desc">Faites glisser les bords d'une région pour la rogner ; faites glisser le bloc pour la déplacer, aimantée à la grille.</div></div>
+      <div class="row"><div class="term">dupliquer · supprimer</div><div class="desc">Dupliquez la région sélectionnée, ou supprimez-la. </div></div>
+      <div class="row"><div class="term">soulever · déposer</div><div class="desc">Soulevez une région vers le presse-papiers et déposez-la au curseur.</div></div>
+      <div class="row"><div class="term">annuler</div><div class="desc">Revenez en arrière sur le dernier montage ou la dernière prise.</div></div>
+      <div class="row"><div class="term">boucle</div><div class="desc">Faites glisser les poignées de boucle pour poser l'entrée et la sortie ; la boucle se referme avec un court crossfade à puissance constante — la couture ne claque jamais.</div></div>
+      <div class="row"><div class="term">live looper</div><div class="desc">Boucle active, <code>rec</code> n'enregistre que la partie que vous jouez et vous laisse entendre les couches s'empiler, passage après passage. Arrêtez : il valide une seule boucle, mixée. Du sound-on-sound, en direct.</div></div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="sec" id="mix">
+    <div class="head"><span class="no">05</span><h3>Le mixeur</h3></div>
+    <p class="intro">Passez sur <code>mix</code> et les quatre pistes deviennent quatre tranches de console. Pas de tranche master — les quatre occupent la largeur, du son par piste uniquement. Tout part au moteur en direct, sous le doigt.</p>
+    <div class="spec">
+      <div class="row"><div class="term">fader · vumètre</div><div class="desc">Un fader vertical avec son vumètre intégré. Le capuchon teal est la seule chose que vous pouvez déplacer — c'est la règle de couleur dans toute l'app.</div></div>
+      <div class="row"><div class="term">pan</div><div class="desc">Tout à gauche, au centre, tout à droite, et tout l'entre-deux.</div></div>
+      <div class="row"><div class="term">in</div><div class="desc">Gain d'entrée par piste — réglez le niveau d'enregistrement à la prise. À l'unité par défaut.</div></div>
+      <div class="row"><div class="term">sd1 · sd2</div><div class="desc">Deux potentiomètres de départ, un par bus d'effet — la part de la piste qui alimente <a href="#fx">FX1</a> et FX2.</div></div>
+      <div class="row"><div class="term">mute</div><div class="desc"><code>M</code> coupe la tranche ; le nom de la piste passe en gris et se barre.</div></div>
+      <div class="row"><div class="term">fusionner</div><div class="desc">Fusionnez deux pistes en une pour libérer une voie — le geste OP-1. Choisissez une destination : la source s'y replie à l'unité, puis se vide. Annulable.</div></div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="sec" id="fx">
+    <div class="head"><span class="no">06</span><h3>Les effets</h3></div>
+    <p class="intro">Deux bus de départ en parallèle, <code>FX1</code> et <code>FX2</code> ; chacun charge un des trois effets que nous avons écrits en C++. <a href="index.html#fx">Ils sont dessinés sur la page d'accueil.</a></p>
+    <div class="spec">
+      <div class="row"><div class="term">tapesat</div><div class="desc">Saturation de bande magnétique, modélisée sur la physique réelle de la distorsion de la bande. Macros <code>drive · tone · bias · age</code> — poussez <code>age</code> et la bande fatigue.</div></div>
+      <div class="row"><div class="term">delay</div><div class="desc">Un delay à bande qui traîne et vacille comme le vrai. Macros <code>time · fbk · tone · wow</code> — <code>wow</code> est le flottement de hauteur, <code>fbk</code> l'empâtement.</div></div>
+      <div class="row"><div class="term">reverb</div><div class="desc">Une réverbération à huit lignes. La pièce est construite par rétroaction — un réseau de délais à rétroaction — donc c'est un espace, pas l'enregistrement d'un espace. Macros <code>decay · tone · drip · damp</code>.</div></div>
+      <div class="row"><div class="term">active · bypass</div><div class="desc">Activez ou coupez un bus ; l'effet reste chargé en bypass. Le changement d'effet se fait en crossfade — pas de clic.</div></div>
+      <div class="row"><div class="term">imprimé dedans</div><div class="desc">Ce que vous entendez est ce que vous obtenez. À l'export, les effets sont gravés dans la prise — pas de rendu séparé qui sonnerait autrement.</div></div>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="sec" id="tapes">
+    <div class="head"><span class="no">07</span><h3>Les bandes</h3></div>
+    <p class="intro">Chaque projet est une bande. Gardez-en autant que vous voulez — chacune est sa propre petite machine, avec son tempo, ses montages et son mixage.</p>
+    <figure class="secfig">
+      <div class="phone"><img src="img/app-tapes-menu.png" alt="Le menu TAPES : nouvelle bande, dupliquer, renommer, supprimer"></div>
+      <figcaption>le menu TAPES — nouvelle, dupliquer, renommer, supprimer. la bande active s'allume en teal.</figcaption>
+    </figure>
+    <div class="spec">
+      <div class="row"><div class="term">nouvelle bande</div><div class="desc"><code>+ NEW TAPE</code> en lance une neuve, nommée automatiquement <code>tape_001</code>, <code>tape_002</code>…</div></div>
+      <div class="row"><div class="term">ouvrir</div><div class="desc">Touchez la carte d'une bande pour la charger. Chaque carte montre son nom et votre dernier passage.</div></div>
+      <div class="row"><div class="term">dupliquer · renommer · supprimer</div><div class="desc">Copiez une bande pour faire bifurquer une idée, renommez-la sur place, ou supprimez-la (avec une confirmation en deux temps — supprimer une bande est définitif).</div></div>
+      <div class="row"><div class="term">changer de bande</div><div class="desc">Changez de bande quand le transport est à l'arrêt. Vos montages, boucles et historique d'annulation sont sauvegardés avec chacune.</div></div>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="sec" id="export">
+    <div class="head"><span class="no">08</span><h3>Export</h3></div>
+    <p class="intro">Le bouton <code>eject</code> fait sortir votre travail — vers Fichiers, AirDrop, Voice Memos, un DAW, partout où porte la feuille de partage.</p>
+    <figure class="secfig">
+      <div class="phone"><img src="img/app-export.png" alt="Le panneau eject : master ou stems, WAV ou M4A, bande ou boucle"></div>
+      <figcaption>master ou stems, WAV ou M4A, bande entière ou une boucle. puis eject.</figcaption>
+    </figure>
+    <div class="spec">
+      <div class="row"><div class="term">master ou stems</div><div class="desc"><code>MASTER</code> pour le mixage stéréo complet, ou <code>STEMS</code> pour un fichier par piste, à finir ailleurs.</div></div>
+      <div class="row"><div class="term">wav ou m4a</div><div class="desc"><code>WAV</code> sans perte (24 bits) ou <code>M4A</code> compressé.</div></div>
+      <div class="row"><div class="term">bande entière ou boucle</div><div class="desc"><code>TAPE</code> rend la bande entière ; <code>LOOP</code> rend un cycle propre de votre boucle, prêt à poser dans un beat.</div></div>
+      <div class="row"><div class="term">partager</div><div class="desc"><code>EJECT</code> rend le ou les fichiers et les tend directement à la feuille de partage d'iOS.</div></div>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="sec" id="sync">
+    <div class="head"><span class="no">09</span><h3>Synchro avec vos machines</h3></div>
+    <p class="intro">TapeDesk se cale sur le reste de la pièce — en horloge maître, ou en suiveur.</p>
+    <figure class="secfig">
+      <div class="phone"><img src="img/app-settings-sync.png" alt="L'onglet SYNC : MIDI clock off/out/in et Ableton Link"></div>
+      <figcaption>l'onglet SYNC — MIDI clock <code>off / out / in</code>, et Ableton Link.</figcaption>
+    </figure>
+    <div class="spec">
+      <div class="row"><div class="term">midi clock</div><div class="desc"><code>OFF · OUT · IN</code>. <code>OUT</code> pilote vos machines externes ; <code>IN</code> les suit — le transport et le tempo de TapeDesk montent sur l'horloge entrante, avec start/stop et position dans le morceau. En USB ou en MIDI Bluetooth.</div></div>
+      <div class="row"><div class="term">ableton link</div><div class="desc">Tempo et start/stop, synchronisés sans fil avec les apps Link sur le même Wi-Fi. Pas de câble, pas d'écran de configuration.</div></div>
+      <div class="row"><div class="term">un à la fois</div><div class="desc">MIDI et Link sont mutuellement exclusifs — prenez celui que votre installation utilise. Quand une horloge externe tient le tempo, la commande de tempo s'efface.</div></div>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="sec" id="system">
+    <div class="head"><span class="no">10</span><h3>Écran verrouillé &amp; entrée</h3></div>
+    <p class="intro">Il se comporte comme une vraie app audio sur le téléphone — pilotable écran verrouillé, et content d'entendre l'interface que vous branchez.</p>
+    <div class="spec">
+      <div class="row"><div class="term">écran verrouillé</div><div class="desc">Le transport sur l'écran verrouillé et dans le centre de contrôle, avec l'illustration tirée de l'icône d'app que vous avez choisie. <code>Next</code> bascule la boucle ; <code>Previous</code> rembobine.</div></div>
+      <div class="row"><div class="term">monitoring live</div><div class="desc">Branchez une interface audio USB et iOS la fait entrer — TapeDesk la prend et vous la fait entendre en direct, mélangée à la bande, pendant que vous jouez.</div></div>
+      <div class="row"><div class="term">comment marche l'entrée</div><div class="desc">Vous ne choisissez pas l'entrée — iOS le fait. Micro intégré jusqu'à ce que vous branchiez une interface, qui prend alors la main. (En sortie Bluetooth, le monitoring retarde d'environ 200 ms — câblez-vous pour un timing serré.)</div></div>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="sec" id="settings">
+    <div class="head"><span class="no">11</span><h3>Réglages</h3></div>
+    <p class="intro">Un panneau plein écran, quatre onglets — <code>TIME · SYNC · APP · ABOUT</code>. Pas de compte, pas de cloud, rien où se connecter.</p>
+    <div class="spec">
+      <div class="row"><div class="term">time · affichage</div><div class="desc">Affichez la règle et le timecode en <code>TIME</code> ou en <code>BARS</code>.</div></div>
+      <div class="row"><div class="term">time · tempo</div><div class="desc">Réglez le BPM avec une molette ou en le tapant au doigt (<code>40–240</code>). Grisé quand une horloge externe commande.</div></div>
+      <div class="row"><div class="term">time · signature</div><div class="desc">N'importe quelle mesure depuis un double cadran — numérateur <code>1–16</code>, dénominateur <code>2 / 4 / 8 / 16</code>.</div></div>
+      <div class="row"><div class="term">time · métronome</div><div class="desc"><code>ON / OFF</code>. Il suit le varispeed, se tait pendant le scratch, et ne vous surprend jamais à l'ouverture.</div></div>
+      <div class="row"><div class="term">sync</div><div class="desc">MIDI Clock et Ableton Link — voir <a href="#sync">Synchro</a>.</div></div>
+      <div class="row"><div class="term">app · langue</div><div class="desc">Choisissez <code>System</code> pour suivre le téléphone, ou réglez-la à la main — entièrement localisé en <strong>English, Español, Français, Deutsch, Italiano et 日本語</strong>.</div></div>
+      <div class="row"><div class="term">app · icône</div><div class="desc">Quatre habillages d'icône pour l'écran d'accueil : <code>Cream · Dark · Olive · Wine</code>.</div></div>
+      <div class="row"><div class="term">about</div><div class="desc">Version et build, la plaque <code>Data Not Collected</code> (qui ouvre la page de confidentialité de ce site), plus <code>Rate</code> pour noter sur l'App Store et <code>Support</code> pour écrire à un humain.</div></div>
+    </div>
+    <div class="secrow">
+      <figure><div class="phone"><img src="img/app-settings-time.png" alt="Réglages, onglet TIME : affichage, tempo, signature rythmique, métronome"></div><figcaption>TIME</figcaption></figure>
+      <figure><div class="phone"><img src="img/app-settings-app.png" alt="Réglages, onglet APP : sélecteur de langue et quatre icônes d'app"></div><figcaption>APP</figcaption></figure>
+      <figure><div class="phone"><img src="img/app-settings-about.png" alt="Réglages, onglet ABOUT : version, confidentialité, note, support"></div><figcaption>ABOUT</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="sec" id="promises">
+    <div class="head"><span class="no">12</span><h3>Les promesses</h3></div>
+    <p class="intro">L'ennuyeux, mais le porteur — dit simplement.</p>
+    <div class="spec">
+      <div class="row"><div class="term">aucune donnée collectée</div><div class="desc">Aucune analytique, aucun pistage, aucune télémétrie, aucun compte. L'étiquette de confidentialité de l'App Store indique « Data Not Collected », et c'est littéralement vrai. <a href="privacy.html">Lire la politique.</a></div></div>
+      <div class="row"><div class="term">ça reste sur le téléphone</div><div class="desc">Vos enregistrements ne quittent jamais l'appareil via TapeDesk. Le seul réseau qu'il utilise, c'est Ableton Link, sur votre réseau local.</div></div>
+      <div class="row"><div class="term">acheté, pas loué</div><div class="desc">Un prix, une fois. Pas d'abonnement, pas de pub, pas de mur d'e-mail.</div></div>
+      <div class="row"><div class="term">natif et solide</div><div class="desc">Swift natif avec un moteur audio en C++, conçu pour une latence imperceptible et zéro coupure. Fait par une seule personne, sur un vrai iPhone.</div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="foot"><div class="fwrap">
+  <span class="brand"><img src="img/mark-1024.png" alt=""> TapeDesk</span>
+  <span class="badge">● DATA NOT COLLECTED</span>
+  <div class="legal">© MMXXVI TapeDesk · Un instrument à bande quatre pistes pour iPhone · <a href="index.html">Accueil</a> · <a href="privacy.html">Confidentialité</a></div>
+</div></footer>
+
+</body>
+</html>

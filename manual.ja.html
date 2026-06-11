@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マニュアル — TapeDesk</title>
+<meta name="description" content="TapeDesk のすべてを、画面ごとに。録音、バリスピード、編集、ミックス、3つのテープエフェクト、書き出し、MIDI と Ableton Link の同期、設定。機械の全体を、そのまま書き出したもの。">
+<meta property="og:title" content="TapeDesk — マニュアル">
+<meta property="og:description" content="機械の全体を、そのまま書き出したもの。どの画面も、どの操作も、何をするかを正確に。">
+<link rel="icon" href="img/mark.svg">
+<link rel="apple-touch-icon" href="img/mark-1024.png">
+<link rel="alternate" hreflang="en" href="manual.html">
+<link rel="alternate" hreflang="es" href="manual.es.html">
+<link rel="alternate" hreflang="fr" href="manual.fr.html">
+<link rel="alternate" hreflang="de" href="manual.de.html">
+<link rel="alternate" hreflang="it" href="manual.it.html">
+<link rel="alternate" hreflang="ja" href="manual.ja.html">
+<link rel="alternate" hreflang="x-default" href="manual.html">
+<script>
+  // The app's MANUAL button passes ?theme=dark — same machine, lights off.
+  // On <html> (not <body>) so the class lands before first paint: no flash.
+  if (new URLSearchParams(location.search).get('theme') === 'dark')
+    document.documentElement.classList.add('dark');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F1EFE9; --bone-2:#E8E5DC; --panel:#1A1A1A;
+    --ink:#1A1A1A; --ink-2:#6F6F6F; --ink-3:#9B9B9B; --on-panel:#F1EFE9;
+    --rec:#E84D1F; --live:#2E7D75; --lock:#C9993D;
+    --hair:#1A1A1A; --rule:#C9C5BB;
+    --desc:#2c2925; --badge-rule:#3a3a3a; --legal:#6f6a60; --foot-rule:#444;
+    --serif:'Space Grotesk',"Hiragino Sans","Hiragino Kaku Gothic ProN",system-ui,sans-serif;
+    --mono:'Space Mono','SF Mono',"Hiragino Sans",Menlo,monospace;
+  }
+  /* dark = the app's FB-10 palette: warm bakelite, muted-bone silkscreen,
+     REC orange untouched, the footer panel INVERTS (bone tile). */
+  html.dark{
+    --bone:#191815; --bone-2:#211F1B; --panel:#D5D1C6;
+    --ink:#D5D1C6; --ink-2:#A39F94; --ink-3:#6E6B62; --on-panel:#191815;
+    --rec:#F25A2A; --live:#3FA396; --lock:#D9AC52;
+    --hair:#D5D1C6; --rule:#3B3933;
+    --desc:#C7C2B6; --badge-rule:#8d887c; --legal:#6E6B62; --foot-rule:#8d887c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--serif);background:var(--bone);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:860px;margin:0 auto;padding:0 28px}
+
+  /* ---- ledger bar ---- */
+  .ledger{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);border-bottom:1.5px solid var(--hair);padding:10px 0}
+  .ledger .lwrap{max-width:860px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .ledger .lhs{display:flex;align-items:center;gap:9px}
+  .ledger .lhs img{width:22px;height:22px}
+  .ledger b{color:var(--ink)}
+
+  .back{padding:26px 0 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .back>a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+  .back>a:hover{color:var(--ink)}
+  .back>a span{color:var(--live);font-weight:700}
+
+  /* ---- hero ---- */
+  .hero{padding:38px 0 30px;border-bottom:1px solid var(--rule)}
+  .hero .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--live)}
+  .hero h1{font-size:clamp(36px,8vw,72px);line-height:.96;letter-spacing:-.035em;font-weight:700;margin:16px 0 0}
+  .hero p{font-size:17px;color:var(--ink-2);max-width:620px;margin:20px 0 0;line-height:1.55}
+  .hero p strong{color:var(--ink);font-weight:500}
+
+  /* ---- contents ---- */
+  .toc{padding:30px 0;border-bottom:1px solid var(--rule)}
+  .toc h2{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);margin-bottom:16px;font-weight:400}
+  .toc ol{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:7px 30px;counter-reset:c}
+  @media(max-width:620px){.toc ol{grid-template-columns:1fr}}
+  .toc li{counter-increment:c}
+  .toc a{font-family:var(--mono);font-size:13px;color:var(--ink);text-decoration:none;display:flex;gap:12px;padding:4px 0;border-bottom:1px dotted transparent}
+  .toc a:hover{color:var(--live)}
+  .toc a::before{content:counter(c,decimal-leading-zero);color:var(--rec);font-weight:700}
+
+  /* ---- section ---- */
+  .sec{padding:48px 0 8px;border-bottom:1px solid var(--rule)}
+  .sec:last-of-type{border-bottom:none}
+  .sec .head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+  .sec .no{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--rec)}
+  .sec h3{font-size:clamp(24px,4vw,36px);letter-spacing:-.03em;line-height:1.05;font-weight:700}
+  .sec .intro{font-size:16px;color:var(--ink-2);max-width:640px;margin:6px 0 0;line-height:1.55}
+  .sec .intro strong{color:var(--ink);font-weight:500}
+
+  .spec{margin-top:28px}
+  .row{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:14px 0;border-top:1px solid var(--rule);align-items:baseline}
+  @media(max-width:600px){.row{grid-template-columns:1fr;gap:5px;padding:13px 0}}
+  .row .term{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.01em}
+  .row .desc{font-size:15.5px;color:var(--desc);line-height:1.55}
+  .row .desc strong{color:var(--ink);font-weight:600}
+  .row .desc code,.row .term code{font-family:var(--mono);font-size:.9em;color:var(--ink);background:var(--bone-2);padding:1px 5px;border-radius:4px}
+  .row .desc a{color:var(--live);text-decoration:none;border-bottom:1px solid var(--rule)}
+  .row .desc a:hover{border-color:var(--live)}
+
+  .note{font-size:13.5px;color:var(--ink-3);font-family:var(--mono);margin-top:18px;line-height:1.6}
+
+  /* ---- screenshots ---- */
+  .phone{background:#111;border:1px solid #000;border-radius:30px;padding:7px;box-shadow:0 18px 38px -20px rgba(26,26,26,.5)}
+  .phone img{display:block;width:100%;border-radius:23px}
+  .secfig{max-width:278px;margin:32px auto 8px}
+  .secfig figcaption{font-family:var(--mono);font-size:11px;color:var(--ink-2);text-align:center;margin-top:13px;line-height:1.55}
+  .secrow{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:32px auto 8px;max-width:660px}
+  @media(max-width:600px){.secrow{grid-template-columns:1fr;max-width:240px;gap:30px}}
+  .secrow figcaption{font-family:var(--mono);font-size:10.5px;color:var(--ink-2);text-align:center;margin-top:10px;letter-spacing:.04em}
+
+  /* ---- footer ---- */
+  .foot{background:var(--panel);color:var(--on-panel);padding:46px 0;margin-top:8px}
+  .foot .fwrap{max-width:860px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+  .foot .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;letter-spacing:-.02em}
+  .foot .brand img{width:28px;height:28px}
+  .foot .badge{display:inline-block;border:1px solid var(--badge-rule);border-radius:6px;padding:6px 11px;font-family:var(--mono);font-size:11px;color:var(--live)}
+  .foot .legal{font-family:var(--mono);font-size:11px;color:var(--legal);width:100%;margin-top:8px}
+  .foot a{color:var(--on-panel);text-decoration:none;border-bottom:1px solid var(--foot-rule)}
+  html.dark .foot .badge{color:#2E7D75}
+  html.dark .foot a:hover{border-color:#2E7D75;color:#2E7D75}
+
+  /* ---- language row ---- */
+  .langs{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:12px;flex-wrap:wrap}
+  .langs a{color:var(--ink-3);text-decoration:none}
+  .langs a:hover{color:var(--live)}
+  .langs a.cur{color:var(--ink);font-weight:700;border-bottom:1.5px solid var(--rec)}
+  .foot a:hover{border-color:var(--live);color:var(--live)}
+</style>
+</head>
+<body>
+
+<div class="ledger"><div class="lwrap">
+  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> — マニュアル</span>
+  <span>No. 02 · MMXXVI · iPhone / iOS 17+</span>
+</div></div>
+
+<div class="wrap">
+  <div class="back">
+    <a href="index.html"><span>←</span> TapeDesk へ戻る</a>
+    <nav class="langs" aria-label="Languages">
+      <a href="manual.html">EN</a>
+      <a href="manual.es.html">ES</a>
+      <a href="manual.fr.html">FR</a>
+      <a href="manual.de.html">DE</a>
+      <a href="manual.it.html">IT</a>
+      <a href="manual.ja.html" class="cur">JA</a>
+    </nav>
+  </div>
+  <script>
+    // Switching language keeps the theme the app sent you in with.
+    if (location.search)
+      document.querySelectorAll('.langs a').forEach(function (a) {
+        a.href += location.search;
+      });
+  </script>
+
+  <section class="hero">
+    <p class="eyebrow">マニュアル</p>
+    <h1>できることのすべて。</h1>
+    <p>TapeDesk はメニューの奥に何も隠しません。テープ用に1画面、ミックス用に1画面、あとはすべてワンタップ先に。これは機械の全体を、そのまま書き出したものです。どの画面も、どの操作も、何をするかを正確に。<strong>ここに宣伝はありません。あるのはマニュアルだけ。</strong></p>
+  </section>
+
+  <nav class="toc">
+    <h2>目次</h2>
+    <ol>
+      <li><a href="#record">録音と再生</a></li>
+      <li><a href="#timeline">4トラックとタイムライン</a></li>
+      <li><a href="#speed">テープスピード</a></li>
+      <li><a href="#edit">編集</a></li>
+      <li><a href="#mix">ミキサー</a></li>
+      <li><a href="#fx">エフェクト</a></li>
+      <li><a href="#tapes">テープ</a></li>
+      <li><a href="#export">書き出し</a></li>
+      <li><a href="#sync">機材との同期</a></li>
+      <li><a href="#system">ロック画面と入力</a></li>
+      <li><a href="#settings">設定</a></li>
+      <li><a href="#promises">約束</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section class="sec" id="record">
+    <div class="head"><span class="no">01</span><h3>録音と再生</h3></div>
+    <p class="intro">画面下にボタンが5つ。トランスポートはそれだけです。アイデアを録る前に、設定するものは何もありません。</p>
+    <div class="spec">
+      <div class="row"><div class="term">rec</div><div class="desc">タップで、アームしたトラックに録音します。もう一度タップで停止。録音は<strong>加算式</strong>です。すでにある音の上に演奏すれば、レイヤーが重なります（サウンド・オン・サウンド）。</div></div>
+      <div class="row"><div class="term">play · stop · rew</div><div class="desc">止めた場所から再生します。停止は再生ヘッドをその場に固定し、巻き戻しはテープの頭へ。止めたところから、正確に再開できます。</div></div>
+      <div class="row"><div class="term">カウントイン</div><div class="desc">停止中のテープでアームすると、録音が始まる前にカウントインが鳴ります。長さは拍子に従います。</div></div>
+      <div class="row"><div class="term">しきい値 <code>rec</code></div><div class="desc"><code>rec</code> を長押しして、トリガーレベル（<code>-60…0 dB</code>）を設定します。入力がそれを越えた瞬間、録音は自分で始まります。ボタンに飛びつく必要はありません。待たずに始めたいときは <code>play</code> をタップ。</div></div>
+      <div class="row"><div class="term">ループ</div><div class="desc">一番右のボタンがループをアームします。ループが有効なとき、 <code>rec</code> はライブルーパーになります。詳しくは<a href="#edit">編集</a>へ。</div></div>
+      <div class="row"><div class="term">鳴り続けます</div><div class="desc">画面を消しても、バックグラウンドで音は続きます。ヘッドホンを抜いても、電話を取っても、別の部屋へ歩いても。割り込みを処理して、テープは回り続けます。</div></div>
+      <div class="row"><div class="term">クラッシュ復旧</div><div class="desc">テイクの途中でアプリが落ちても、次の起動時に未保存の録音を差し出します。復元するか、破棄するか。黙って失われるものはありません。</div></div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="sec" id="timeline">
+    <div class="head"><span class="no">02</span><h3>4トラックとタイムライン</h3></div>
+    <p class="intro">4つのトラック、テープのルーラー、ぶれない再生ヘッド。トラックごとに固有の色があり、どの音を見ているのか常にわかります。</p>
+    <div class="spec">
+      <div class="row"><div class="term">トラックをアーム</div><div class="desc">トラックのタブをタップしてアームします。録音できるのは一度に1つだけ。 <code>rec</code> がテイクを置くのは、アームしたトラックです。</div></div>
+      <div class="row"><div class="term">名前を変える</div><div class="desc">タブを長押しで名前を変更します（1〜32文字）。初期値は <code>trk_01…trk_04</code> です。</div></div>
+      <div class="row"><div class="term">2つのズームバンド</div><div class="desc">全4トラックのオーバービューと、アクティブトラックのズームバンド。それぞれ独立してズームします。ピンチでズーム。固定ステップを、ハプティクスのデテント付きで刻みます。</div></div>
+      <div class="row"><div class="term">スクラブとナッジ</div><div class="desc">バンドをドラッグしてテープをスクラブします。動かせばそこにあり、そこから再生が続きます。再生ヘッドの左右をダブルタップすると、グリッド1ステップ分ナッジします。</div></div>
+      <div class="row"><div class="term">時間か小節か</div><div class="desc">ルーラーは <code>MM:SS</code> でも <code>bar.beat</code> でも読めます。好きな方で。タイムコードをタップで切り替えます。</div></div>
+      <div class="row"><div class="term">上限</div><div class="desc">テープ1本は最長<strong>10分</strong>、トラックあたり最大<strong>128リージョン</strong>。楽器には十分です。DAW ではないので。</div></div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="sec" id="speed">
+    <div class="head"><span class="no">03</span><h3>テープスピード</h3></div>
+    <p class="intro">本物のテープのバリスピードです。遅くすればピッチは沈み、速くすれば上がります。「ピッチ維持」のスイッチはありません。それは最初から目的ではないからです。</p>
+    <div class="spec">
+      <div class="row"><div class="term">バリスピード</div><div class="desc">テープ全体に <code>0.25× to 2×</code> 、ピッチ連動。 <code>SPEED</code> ヘッダーをタップするとベンドフェーダーが開きます。中央がユニティ、上が速く、下が遅く。</div></div>
+      <div class="row"><div class="term">ロック</div><div class="desc">フェーダー下の南京錠。開＝モーメンタリー（手を離すと 1× へ滑り戻ります）、閉＝スティッキー（テープはそのスピードに固定され、記憶します）。</div></div>
+      <div class="row"><div class="term">スクラッチ</div><div class="desc">レコードのようにバンドをドラッグします。動かせばそこにあり、止めた場所から続きます。</div></div>
+      <div class="row"><div class="term">スピードごと録音</div><div class="desc">スピードを曲げたまま録音すると、それは<strong>テイクに焼き込まれます</strong>。半分のスピードで録って等速で再生すれば、1オクターブ上。昔ながらの4トラックの手口、そのままです。</div></div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="sec" id="edit">
+    <div class="head"><span class="no">04</span><h3>編集</h3></div>
+    <p class="intro">非破壊で、アプリを閉じても残ります。リージョンを選ぶと編集バーが現れ、その時点で意味のある操作だけが並びます。</p>
+    <div class="spec">
+      <div class="row"><div class="term">カット</div><div class="desc">ハサミは、再生ヘッドの位置でリージョンを2つに割ります。</div></div>
+      <div class="row"><div class="term">結合</div><div class="desc">リージョンを隣と融合して、ひとつに戻します。カットの跡を、継ぎ目なく治します。あなたにはワンタップ。中身は元どおりです。</div></div>
+      <div class="row"><div class="term">トリム · 移動</div><div class="desc">リージョンの端をドラッグでトリム。ブロックをドラッグで移動し、グリッドにスナップします。</div></div>
+      <div class="row"><div class="term">複製 · 削除</div><div class="desc">選択したリージョンを複製、または削除します。</div></div>
+      <div class="row"><div class="term">持ち上げる · 置く</div><div class="desc">リージョンを持ち上げてクリップボードへ。再生ヘッドの位置に置き直します。</div></div>
+      <div class="row"><div class="term">取り消し</div><div class="desc">直前の編集やテイクを一歩戻します。</div></div>
+      <div class="row"><div class="term">ループ</div><div class="desc">ループハンドルをドラッグして、インとアウトを設定します。ループの折り返しには短いイコールパワー・クロスフェードが入るので、継ぎ目は決してクリックしません。</div></div>
+      <div class="row"><div class="term">ライブルーパー</div><div class="desc">ループが有効なとき、 <code>rec</code> は弾いた部分だけを録音し、パスを重ねるごとにレイヤーが積み上がるのを聴かせます。停止すると、ミックス済みのひとつのループとして確定します。サウンド・オン・サウンド、ライブで。</div></div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="sec" id="mix">
+    <div class="head"><span class="no">05</span><h3>ミキサー</h3></div>
+    <p class="intro"><code>mix</code> に切り替えると、4つのトラックは4本のチャンネルストリップになります。マスターストリップはありません。4本が幅いっぱい、トラックごとの音だけ。触れたものはすべて、その場でエンジンに反映されます。</p>
+    <div class="spec">
+      <div class="row"><div class="term">フェーダー · メーター</div><div class="desc">レベルメーターを内蔵した縦フェーダー。動かせるのはティールのキャップだけ。これがアプリ全体の色のルールです。</div></div>
+      <div class="row"><div class="term">パン</div><div class="desc">左いっぱい、中央、右いっぱい、その間のすべて。</div></div>
+      <div class="row"><div class="term">in</div><div class="desc">トラックごとの入力トリム。録音に入るレベルを決めます。初期値はユニティ。</div></div>
+      <div class="row"><div class="term">sd1 · sd2</div><div class="desc">センドノブが2つ、エフェクトバスごとに1つ。トラックを <a href="#fx">FX1</a> と FX2 にどれだけ送るかです。</div></div>
+      <div class="row"><div class="term">ミュート</div><div class="desc"><code>M</code> でストリップをミュートします。トラック名はグレーになり、打ち消し線が入ります。</div></div>
+      <div class="row"><div class="term">統合</div><div class="desc">2つのトラックを1本に統合して、レーンを空けます。OP-1 の手です。送り先を選ぶと、ソースはユニティで折り込まれ、空になります。取り消し可能です。</div></div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="sec" id="fx">
+    <div class="head"><span class="no">06</span><h3>エフェクト</h3></div>
+    <p class="intro">並列のセンドバスが2つ、 <code>FX1</code> と <code>FX2</code> 。それぞれに、私たちが C++ で書いた3つのエフェクトのひとつを載せます。<a href="index.html#fx">ホームページの図解を見る。</a></p>
+    <div class="spec">
+      <div class="row"><div class="term">tapesat</div><div class="desc">磁気テープのサチュレーション。テープが歪む実際の物理をモデルにしています。マクロは <code>drive · tone · bias · age</code> 。 <code>age</code> を上げると、テープはくたびれていきます。</div></div>
+      <div class="row"><div class="term">delay</div><div class="desc">本物のように引きずり、揺れるテープディレイ。マクロは <code>time · fbk · tone · wow</code> 。 <code>wow</code> がピッチの揺れ、 <code>fbk</code> が滲みです。</div></div>
+      <div class="row"><div class="term">reverb</div><div class="desc">8ラインのリバーブ。部屋はフィードバックから組み上がります。フィードバック・ディレイ・ネットワーク。だからこれは空間そのものであって、空間の録音ではありません。マクロは <code>decay · tone · drip · damp</code> 。</div></div>
+      <div class="row"><div class="term">active · bypass</div><div class="desc">バスのオンとオフを切り替えます。バイパス中もエフェクトはロードされたまま。エフェクトの切り替えはクロスフェードします。ポップ音は出ません。</div></div>
+      <div class="row"><div class="term">焼き込み</div><div class="desc">聴こえている音が、そのまま出てきます。書き出しのとき、エフェクトはテイクに焼き込まれます。別のレンダーで音が変わる、ということがありません。</div></div>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="sec" id="tapes">
+    <div class="head"><span class="no">07</span><h3>テープ</h3></div>
+    <p class="intro">プロジェクトはすべて、1本のテープです。好きなだけ持てます。1本ごとに固有のテンポ、編集、ミックスを持つ、小さな機械です。</p>
+    <figure class="secfig">
+      <div class="phone"><img src="img/app-tapes-menu.png" alt="TAPES メニュー：新規テープ、複製、名前の変更、削除"></div>
+      <figcaption>TAPES メニュー。新規、複製、名前の変更、削除。アクティブな1本はティールに光ります。</figcaption>
+    </figure>
+    <div class="spec">
+      <div class="row"><div class="term">新しいテープ</div><div class="desc"><code>+ NEW TAPE</code> が新しい1本を立ち上げます。名前は自動で <code>tape_001</code> 、 <code>tape_002</code> …</div></div>
+      <div class="row"><div class="term">開く</div><div class="desc">テープのカードをタップで読み込みます。カードには名前と、最後に触れた日時。</div></div>
+      <div class="row"><div class="term">複製 · 名前 · 削除</div><div class="desc">テープをコピーしてアイデアを枝分かれさせる、その場で名前を変える、削除する（2段階の確認付き。テープの削除は元に戻せません）。</div></div>
+      <div class="row"><div class="term">切り替え</div><div class="desc">テープの入れ替えは、トランスポート停止中に。編集、ループ、取り消し履歴は1本ごとに保存されます。</div></div>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="sec" id="export">
+    <div class="head"><span class="no">08</span><h3>書き出し</h3></div>
+    <p class="intro"><code>eject</code> ボタンが作品を外へ出します。ファイルへ、AirDrop へ、ボイスメモへ、DAW へ。共有シートが届く場所なら、どこへでも。</p>
+    <figure class="secfig">
+      <div class="phone"><img src="img/app-export.png" alt="eject パネル：マスターかステム、WAV か M4A、テープかループ"></div>
+      <figcaption>マスターかステム、WAV か M4A、テープ全体かループ1周。そして eject。</figcaption>
+    </figure>
+    <div class="spec">
+      <div class="row"><div class="term">マスターかステム</div><div class="desc"><code>MASTER</code> はフルステレオミックス。 <code>STEMS</code> はトラックごとに1ファイル、仕上げは別の場所で。</div></div>
+      <div class="row"><div class="term">WAV か M4A</div><div class="desc">ロスレスの <code>WAV</code> （24-bit）か、圧縮の <code>M4A</code> 。</div></div>
+      <div class="row"><div class="term">テープ全体かループ</div><div class="desc"><code>TAPE</code> は全体をバウンスします。 <code>LOOP</code> はループのきれいな1周をレンダリングします。そのままビートに放り込めます。</div></div>
+      <div class="row"><div class="term">共有</div><div class="desc"><code>EJECT</code> がファイルをレンダリングし、iOS の共有シートへそのまま渡します。</div></div>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="sec" id="sync">
+    <div class="head"><span class="no">09</span><h3>機材との同期</h3></div>
+    <p class="intro">TapeDesk は部屋の残りとロックします。クロックとして、あるいはクロックに従って。</p>
+    <figure class="secfig">
+      <div class="phone"><img src="img/app-settings-sync.png" alt="SYNC タブ：MIDI クロック off/out/in と Ableton Link"></div>
+      <figcaption>SYNC タブ。MIDI クロック <code>off / out / in</code> 、そして Ableton Link。</figcaption>
+    </figure>
+    <div class="spec">
+      <div class="row"><div class="term">MIDI クロック</div><div class="desc"><code>OFF · OUT · IN</code> 。 <code>OUT</code> は外部機材を駆動し、 <code>IN</code> はそれに従います。TapeDesk のトランスポートとテンポが入力クロックに乗ります。スタート／ストップとソングポジション付き。USB か Bluetooth MIDI 経由で。</div></div>
+      <div class="row"><div class="term">Ableton Link</div><div class="desc">同じ Wi-Fi 上の Link アプリと、テンポとスタート／ストップをワイヤレスで同期します。ケーブルなし、設定画面なし。</div></div>
+      <div class="row"><div class="term">同時には1つ</div><div class="desc">MIDI と Link は排他です。セットアップに合う方を選んでください。外部クロックがテンポを握っている間、テンポコントロールは脇に退きます。</div></div>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="sec" id="system">
+    <div class="head"><span class="no">10</span><h3>ロック画面と入力</h3></div>
+    <p class="intro">電話の上で、まっとうなオーディオアプリとして振る舞います。画面をロックしたまま操作でき、挿したインターフェースはきちんと聴きます。</p>
+    <div class="spec">
+      <div class="row"><div class="term">ロック画面</div><div class="desc">ロック画面とコントロールセンターにトランスポート。アートワークは、選んだアプリアイコンから描かれます。 <code>Next</code> はループの切り替え、 <code>Previous</code> は巻き戻しです。</div></div>
+      <div class="row"><div class="term">ライブモニタリング</div><div class="desc">USB オーディオインターフェースを挿せば、iOS がルーティングします。TapeDesk はそれを拾い、テープとミックスしてライブで聴かせます。演奏しながら。</div></div>
+      <div class="row"><div class="term">入力の仕組み</div><div class="desc">入力はあなたが選ぶのではなく、iOS が選びます。インターフェースを挿すまでは内蔵マイク、挿せばそちらに切り替わります。（Bluetooth 出力ではモニタリングが約 200 ms 遅れます。タイトなタイミングには有線を。）</div></div>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="sec" id="settings">
+    <div class="head"><span class="no">11</span><h3>設定</h3></div>
+    <p class="intro">フルスクリーンのパネルが1枚、タブが4つ。 <code>TIME · SYNC · APP · ABOUT</code> 。アカウントなし、クラウドなし、ログインするものは何もありません。</p>
+    <div class="spec">
+      <div class="row"><div class="term">time · 表示</div><div class="desc">ルーラーとタイムコードを <code>TIME</code> か <code>BARS</code> で表示します。</div></div>
+      <div class="row"><div class="term">time · テンポ</div><div class="desc">BPM はジョグホイールで、またはタップで打ち込んで設定します（<code>40–240</code>）。外部クロックが主導しているときは、グレーアウトします。</div></div>
+      <div class="row"><div class="term">time · 拍子</div><div class="desc">デュアルダイヤルで任意の拍子に。分子 <code>1–16</code> 、分母 <code>2 / 4 / 8 / 16</code> 。</div></div>
+      <div class="row"><div class="term">time · メトロノーム</div><div class="desc"><code>ON / OFF</code> 。バリスピードに追従し、スクラッチ中は黙り、起動時に不意打ちはしません。</div></div>
+      <div class="row"><div class="term">sync</div><div class="desc">MIDI クロックと Ableton Link。<a href="#sync">同期</a>を参照。</div></div>
+      <div class="row"><div class="term">app · 言語</div><div class="desc"><code>System</code> で電話の設定に従うか、手動で選びます。<strong>English, Español, Français, Deutsch, Italiano, 日本語</strong>に完全対応しています。</div></div>
+      <div class="row"><div class="term">app · アイコン</div><div class="desc">ホーム画面のアイコンスキンは4種。 <code>Cream · Dark · Olive · Wine</code> 。</div></div>
+      <div class="row"><div class="term">about</div><div class="desc">バージョンとビルド、 <code>Data Not Collected</code> のプレート（このサイトのプライバシーページが開きます）、それに App Store で評価する <code>Rate</code> と、人間にメールが届く <code>Support</code> 。</div></div>
+    </div>
+    <div class="secrow">
+      <figure><div class="phone"><img src="img/app-settings-time.png" alt="設定の TIME タブ：表示、テンポ、拍子、メトロノーム"></div><figcaption>TIME</figcaption></figure>
+      <figure><div class="phone"><img src="img/app-settings-app.png" alt="設定の APP タブ：言語の選択と4つのアプリアイコン"></div><figcaption>APP</figcaption></figure>
+      <figure><div class="phone"><img src="img/app-settings-about.png" alt="設定の ABOUT タブ：バージョン、プライバシー、評価、サポート"></div><figcaption>ABOUT</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="sec" id="promises">
+    <div class="head"><span class="no">12</span><h3>約束</h3></div>
+    <p class="intro">退屈だが、土台になる部分。率直に。</p>
+    <div class="spec">
+      <div class="row"><div class="term">データは収集しません</div><div class="desc">解析なし、トラッキングなし、テレメトリなし、アカウントなし。App Store のプライバシー表示は「Data Not Collected」。文字どおりの意味です。<a href="privacy.html">ポリシーを読む。</a></div></div>
+      <div class="row"><div class="term">すべて電話の中に</div><div class="desc">あなたの録音が TapeDesk から端末の外へ出ることはありません。使うネットワークは Ableton Link だけ。それもローカルネットワーク上です。</div></div>
+      <div class="row"><div class="term">借りるのではなく、買う</div><div class="desc">一度きりの価格。サブスクなし、広告なし、メール登録の壁なし。</div></div>
+      <div class="row"><div class="term">ネイティブで、堅牢</div><div class="desc">ネイティブ Swift と C++ オーディオエンジン。知覚できない低レイテンシーと、ドロップアウトゼロのために作りました。ひとりの人間が、本物の iPhone で作ったものです。</div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer class="foot"><div class="fwrap">
+  <span class="brand"><img src="img/mark-1024.png" alt=""> TapeDesk</span>
+  <span class="badge">● DATA NOT COLLECTED</span>
+  <div class="legal">© MMXXVI TapeDesk · iPhone のための4トラック・テープ楽器 · <a href="index.html">ホーム</a> · <a href="privacy.html">プライバシー</a></div>
+</div></footer>
+
+</body>
+</html>
