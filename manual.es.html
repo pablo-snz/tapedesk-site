@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El manual — TapeDesk</title>
+<title>El manual · TapeDesk</title>
 <meta name="description" content="Todo lo que hace TapeDesk, pantalla a pantalla: grabar, varispeed, edición, mezcla, tres efectos de cinta, exportar, sincronización MIDI y Ableton Link, ajustes. La máquina entera, por escrito.">
-<meta property="og:title" content="TapeDesk — El manual">
+<meta property="og:title" content="TapeDesk · El manual">
 <meta property="og:description" content="La máquina entera, por escrito. Cada pantalla, cada control, exactamente lo que hace.">
 <link rel="icon" href="img/mark.svg">
 <link rel="apple-touch-icon" href="img/mark-1024.png">
@@ -17,7 +17,7 @@
 <link rel="alternate" hreflang="ja" href="manual.ja.html">
 <link rel="alternate" hreflang="x-default" href="manual.html">
 <script>
-  // The app's MANUAL button passes ?theme=dark — same machine, lights off.
+  // The app's MANUAL button passes ?theme=dark, same machine, lights off.
   // On <html> (not <body>) so the class lands before first paint: no flash.
   if (new URLSearchParams(location.search).get('theme') === 'dark')
     document.documentElement.classList.add('dark');
@@ -130,7 +130,7 @@
 <body>
 
 <div class="ledger"><div class="lwrap">
-  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> — El manual</span>
+  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> · El manual</span>
   <span>No. 02 · MMXXVI · iPhone / iOS 17+</span>
 </div></div>
 
@@ -186,10 +186,10 @@
       <div class="row"><div class="term">rec</div><div class="desc">Toca para grabar en la pista armada. Toca otra vez para parar. La grabación es <strong>aditiva</strong>: toca encima de lo que hay y las capas se apilan (sound-on-sound).</div></div>
       <div class="row"><div class="term">play · stop · rew</div><div class="desc">Play arranca desde donde lo dejaste; stop congela el cabezal; rew vuelve al inicio de la cinta. Retomas justo donde paraste.</div></div>
       <div class="row"><div class="term">cuenta de entrada</div><div class="desc">Arma con la cinta parada y suena una cuenta de entrada antes de empezar a grabar. Su duración sigue tu compás.</div></div>
-      <div class="row"><div class="term">rec por umbral</div><div class="desc">Mantén pulsado <code>rec</code> para fijar un nivel de disparo (<code>-60…0 dB</code>). La grabación arranca sola en cuanto tu entrada lo cruza — sin carreras para llegar al botón. Toca <code>play</code> para empezar igualmente.</div></div>
-      <div class="row"><div class="term">loop</div><div class="desc">El botón de la derecha arma el loop. Con un loop activo, <code>rec</code> se convierte en un looper en vivo — mira <a href="#edit">Edición</a>.</div></div>
+      <div class="row"><div class="term">rec por umbral</div><div class="desc">Mantén pulsado <code>rec</code> para fijar un nivel de disparo (<code>-60…0 dB</code>). La grabación arranca sola en cuanto tu entrada lo cruza, sin carreras para llegar al botón. Toca <code>play</code> para empezar igualmente.</div></div>
+      <div class="row"><div class="term">loop</div><div class="desc">El botón de la derecha arma el loop. Con un loop activo, <code>rec</code> se convierte en un looper en vivo, mira <a href="#edit">Edición</a>.</div></div>
       <div class="row"><div class="term">sigue sonando</div><div class="desc">El audio continúa en segundo plano con la pantalla apagada. Quita los auriculares, atiende una llamada, vete a otra habitación. Gestiona la interrupción y la cinta sigue rodando.</div></div>
-      <div class="row"><div class="term">recuperación tras fallo</div><div class="desc">Si la app muere a mitad de una toma, te ofrece la grabación sin guardar en el siguiente arranque — recupérala o descártala. Nada se pierde en silencio.</div></div>
+      <div class="row"><div class="term">recuperación tras fallo</div><div class="desc">Si la app muere a mitad de una toma, te ofrece la grabación sin guardar en el siguiente arranque, recupérala o descártala. Nada se pierde en silencio.</div></div>
     </div>
   </section>
 
@@ -198,11 +198,10 @@
     <div class="head"><span class="no">02</span><h3>Cuatro pistas y la línea de tiempo</h3></div>
     <p class="intro">Cuatro pistas, una regla de cinta, un cabezal firme. Cada pista conserva su color: siempre sabes de quién es el audio que estás mirando.</p>
     <div class="spec">
-      <div class="row"><div class="term">armar una pista</div><div class="desc">Toca la pestaña de una pista para armarla — solo graba una a la vez. La pista armada es donde <code>rec</code> deja la toma.</div></div>
-      <div class="row"><div class="term">renombrar una pista</div><div class="desc">Mantén pulsada una pestaña para renombrarla (1–32 caracteres). Por defecto son <code>trk_01…trk_04</code>.</div></div>
-      <div class="row"><div class="term">dos bandas de zoom</div><div class="desc">Una vista general de las cuatro pistas y una banda ampliada para la activa — cada una con su propio zoom. Pellizca para hacer zoom; encaja en pasos fijos con un clic háptico.</div></div>
-      <div class="row"><div class="term">scrub y nudge</div><div class="desc">Arrastra una banda para rascar la cinta — está ahí mientras te mueves, y sigue sonando desde ahí. Doble toque a la izquierda o a la derecha del cabezal para moverlo un paso de rejilla.</div></div>
-      <div class="row"><div class="term">tiempo o compases</div><div class="desc">La regla se lee en <code>MM:SS</code> o en <code>bar.beat</code> — tú decides. Toca el timecode para cambiarla.</div></div>
+      <div class="row"><div class="term">armar una pista</div><div class="desc">Toca la pestaña de una pista para armarla, solo graba una a la vez. La pista armada es donde <code>rec</code> deja la toma.</div></div>
+      <div class="row"><div class="term">dos bandas de zoom</div><div class="desc">Una vista general de las cuatro pistas y una banda ampliada para la activa, cada una con su propio zoom. Pellizca para hacer zoom; encaja en pasos fijos con un clic háptico.</div></div>
+      <div class="row"><div class="term">scrub y nudge</div><div class="desc">Arrastra una banda para rascar la cinta, está ahí mientras te mueves, y sigue sonando desde ahí. Doble toque a la izquierda o a la derecha del cabezal para moverlo un paso de rejilla.</div></div>
+      <div class="row"><div class="term">tiempo o compases</div><div class="desc">La regla se lee en <code>MM:SS</code> o en <code>bar.beat</code>, tú decides. Toca el timecode para cambiarla.</div></div>
       <div class="row"><div class="term">los límites</div><div class="desc">Una cinta llega hasta <strong>10 minutos</strong>, con hasta <strong>128 regiones</strong> por pista. De sobra para un instrumento; no es un DAW.</div></div>
     </div>
   </section>
@@ -210,12 +209,12 @@
   <!-- 3 -->
   <section class="sec" id="speed">
     <div class="head"><span class="no">03</span><h3>Velocidad de cinta</h3></div>
-    <p class="intro">Varispeed de cinta de verdad. Frénala y el tono baja; acelérala y sube. No hay interruptor de "mantener el tono" — nunca fue la idea.</p>
+    <p class="intro">Varispeed de cinta de verdad. Frénala y el tono baja; acelérala y sube. No hay interruptor de "mantener el tono", nunca fue la idea.</p>
     <div class="spec">
-      <div class="row"><div class="term">varispeed</div><div class="desc"><code>0.25× to 2×</code>, en toda la cinta, con el tono acoplado. Toca la cabecera <code>SPEED</code> para abrir el fader de bend — unidad en el centro, rápido arriba, lento abajo.</div></div>
+      <div class="row"><div class="term">varispeed</div><div class="desc"><code>0.25× to 2×</code>, en toda la cinta, con el tono acoplado. Toca la cabecera <code>SPEED</code> para abrir el fader de bend, unidad en el centro, rápido arriba, lento abajo.</div></div>
       <div class="row"><div class="term">candado</div><div class="desc">El candado bajo el fader: abierto = momentáneo (suelta y planea de vuelta a 1×); cerrado = fijo (la cinta se queda en esa velocidad y la recuerda).</div></div>
-      <div class="row"><div class="term">scratch</div><div class="desc">Arrastra la banda como un vinilo — muévela, está ahí, y continúa desde donde paras.</div></div>
-      <div class="row"><div class="term">grabado a esa velocidad</div><div class="desc">Graba con la velocidad doblada y queda <strong>impresa en la toma</strong>. Graba a media velocidad, reprodúcelo a velocidad normal, y suena una octava arriba — el viejo truco del cuatro pistas, intacto.</div></div>
+      <div class="row"><div class="term">scratch</div><div class="desc">Arrastra la banda como un vinilo, muévela, está ahí, y continúa desde donde paras.</div></div>
+      <div class="row"><div class="term">grabado a esa velocidad</div><div class="desc">Graba con la velocidad doblada y queda <strong>impresa en la toma</strong>. Graba a media velocidad, reprodúcelo a velocidad normal, y suena una octava arriba, el viejo truco del cuatro pistas, intacto.</div></div>
     </div>
   </section>
 
@@ -225,7 +224,7 @@
     <p class="intro">No destructiva, y sobrevive al cierre de la app. Selecciona una región y aparece la barra de edición con solo los movimientos que tienen sentido en ese momento.</p>
     <div class="spec">
       <div class="row"><div class="term">cortar</div><div class="desc">La tijera divide una región por el cabezal.</div></div>
-      <div class="row"><div class="term">unir</div><div class="desc">Funde una región con su vecina en una sola — sana el corte, sin costura. Para ti es un movimiento; por debajo vuelve a estar entera.</div></div>
+      <div class="row"><div class="term">unir</div><div class="desc">Funde una región con su vecina en una sola, sana el corte, sin costura. Para ti es un movimiento; por debajo vuelve a estar entera.</div></div>
       <div class="row"><div class="term">recortar · mover</div><div class="desc">Arrastra los bordes de una región para recortarla; arrastra el bloque para moverla, encajando en la rejilla.</div></div>
       <div class="row"><div class="term">duplicar · borrar</div><div class="desc">Duplica la región seleccionada, o bórrala. </div></div>
       <div class="row"><div class="term">levantar · soltar</div><div class="desc">Levanta una región al portapapeles y suéltala de vuelta en el cabezal.</div></div>
@@ -238,14 +237,14 @@
   <!-- 5 -->
   <section class="sec" id="mix">
     <div class="head"><span class="no">05</span><h3>El mezclador</h3></div>
-    <p class="intro">Pasa a <code>mix</code> y las cuatro pistas se convierten en cuatro tiras de canal. Sin tira de master — las cuatro llenan el ancho, solo sonido por pista. Todo llega vivo al motor según lo tocas.</p>
+    <p class="intro">Pasa a <code>mix</code> y las cuatro pistas se convierten en cuatro tiras de canal. Sin tira de master, las cuatro llenan el ancho, solo sonido por pista. Todo llega vivo al motor según lo tocas.</p>
     <div class="spec">
-      <div class="row"><div class="term">fader · medidor</div><div class="desc">Un fader vertical con su propio medidor de nivel integrado. La cabeza teal es lo único que puedes mover — esa es la regla de color en toda la app.</div></div>
+      <div class="row"><div class="term">fader · medidor</div><div class="desc">Un fader vertical con su propio medidor de nivel integrado. La cabeza teal es lo único que puedes mover, esa es la regla de color en toda la app.</div></div>
       <div class="row"><div class="term">pan</div><div class="desc">Todo a la izquierda, centro, todo a la derecha, y todo lo de en medio.</div></div>
-      <div class="row"><div class="term">in</div><div class="desc">Trim de entrada por pista — fija el nivel de grabación a la entrada. Unidad por defecto.</div></div>
-      <div class="row"><div class="term">sd1 · sd2</div><div class="desc">Dos potenciómetros de envío, uno por bus de efectos — cuánto de la pista alimenta <a href="#fx">FX1</a> y FX2.</div></div>
+      <div class="row"><div class="term">in</div><div class="desc">Trim de entrada por pista, fija el nivel de grabación a la entrada. Unidad por defecto.</div></div>
+      <div class="row"><div class="term">sd1 · sd2</div><div class="desc">Dos potenciómetros de envío, uno por bus de efectos, cuánto de la pista alimenta <a href="#fx">FX1</a> y FX2.</div></div>
       <div class="row"><div class="term">mute</div><div class="desc"><code>M</code> silencia la tira; el nombre de la pista se apaga en gris y se tacha.</div></div>
-      <div class="row"><div class="term">fundir</div><div class="desc">Funde dos pistas en una para liberar un carril — el movimiento del OP-1. Elige destino, y la fuente se pliega dentro a unidad y se vacía. Se puede deshacer.</div></div>
+      <div class="row"><div class="term">fundir</div><div class="desc">Funde dos pistas en una para liberar un carril, el movimiento del OP-1. Elige destino, y la fuente se pliega dentro a unidad y se vacía. Se puede deshacer.</div></div>
     </div>
   </section>
 
@@ -254,26 +253,26 @@
     <div class="head"><span class="no">06</span><h3>Los efectos</h3></div>
     <p class="intro">Dos buses de envío en paralelo, <code>FX1</code> y <code>FX2</code>; cada uno carga uno de los tres efectos que escribimos en C++. <a href="index.html#fx">Míralos dibujados en la portada.</a></p>
     <div class="spec">
-      <div class="row"><div class="term">tapesat</div><div class="desc">Saturación de cinta magnética, modelada sobre la física real de cómo distorsiona la cinta. Macros <code>drive · tone · bias · age</code> — sube <code>age</code> y la cinta se cansa.</div></div>
-      <div class="row"><div class="term">delay</div><div class="desc">Un delay de cinta que arrastra y ondea como el de verdad. Macros <code>time · fbk · tone · wow</code> — <code>wow</code> es el vaivén de tono, <code>fbk</code> el emborronado.</div></div>
-      <div class="row"><div class="term">reverb</div><div class="desc">Una reverb de ocho líneas. La sala está construida con realimentación — una red de delays realimentados — así que es un espacio, no la grabación de uno. Macros <code>decay · tone · drip · damp</code>.</div></div>
-      <div class="row"><div class="term">activo · bypass</div><div class="desc">Enciende o apaga un bus; el efecto sigue cargado en bypass. El cambio de efecto va con crossfade — sin pop.</div></div>
-      <div class="row"><div class="term">impreso dentro</div><div class="desc">Lo que oyes es lo que hay. Al exportar, los efectos quedan horneados en la toma — no hay un render aparte que suene distinto.</div></div>
+      <div class="row"><div class="term">tapesat</div><div class="desc">Saturación de cinta magnética, modelada sobre la física real de cómo distorsiona la cinta. Macros <code>drive · tone · bias · age</code>, sube <code>age</code> y la cinta se cansa.</div></div>
+      <div class="row"><div class="term">delay</div><div class="desc">Un delay de cinta que arrastra y ondea como el de verdad. Macros <code>time · fbk · tone · wow</code>, <code>wow</code> es el vaivén de tono, <code>fbk</code> el emborronado.</div></div>
+      <div class="row"><div class="term">reverb</div><div class="desc">Una reverb de ocho líneas. La sala está construida con realimentación, una red de delays realimentados, así que es un espacio, no la grabación de uno. Macros <code>decay · tone · drip · damp</code>.</div></div>
+      <div class="row"><div class="term">activo · bypass</div><div class="desc">Enciende o apaga un bus; el efecto sigue cargado en bypass. El cambio de efecto va con crossfade, sin pop.</div></div>
+      <div class="row"><div class="term">impreso dentro</div><div class="desc">Lo que oyes es lo que hay. Al exportar, los efectos quedan horneados en la toma, no hay un render aparte que suene distinto.</div></div>
     </div>
   </section>
 
   <!-- 7 -->
   <section class="sec" id="tapes">
     <div class="head"><span class="no">07</span><h3>Cintas</h3></div>
-    <p class="intro">Cada proyecto es una cinta. Guarda tantas como quieras — cada una es su propia pequeña máquina, con su tempo, sus ediciones y su mezcla.</p>
+    <p class="intro">Cada proyecto es una cinta. Guarda tantas como quieras, cada una es su propia pequeña máquina, con su tempo, sus ediciones y su mezcla.</p>
     <figure class="secfig">
       <div class="phone"><img src="img/app-tapes-menu.png" alt="El menú TAPES: nueva cinta, duplicar, renombrar, borrar"></div>
-      <figcaption>el menú TAPES — nueva, duplicar, renombrar, borrar. la activa brilla en teal.</figcaption>
+      <figcaption>el menú TAPES, nueva, duplicar, renombrar, borrar. la activa brilla en teal.</figcaption>
     </figure>
     <div class="spec">
       <div class="row"><div class="term">nueva cinta</div><div class="desc"><code>+ NEW TAPE</code> levanta una nueva, autonombrada <code>tape_001</code>, <code>tape_002</code>…</div></div>
       <div class="row"><div class="term">abrir</div><div class="desc">Toca la tarjeta de una cinta para cargarla. Cada tarjeta muestra su nombre y cuándo la tocaste por última vez.</div></div>
-      <div class="row"><div class="term">duplicar · renombrar · borrar</div><div class="desc">Copia una cinta para ramificar una idea, renómbrala ahí mismo, o bórrala (con confirmación en dos pasos — borrar una cinta es permanente).</div></div>
+      <div class="row"><div class="term">duplicar · renombrar · borrar</div><div class="desc">Copia una cinta para ramificar una idea, renómbrala ahí mismo, o bórrala (con confirmación en dos pasos, borrar una cinta es permanente).</div></div>
       <div class="row"><div class="term">cambiar de cinta</div><div class="desc">Cambia de cinta con el transporte parado. Tus ediciones, loops e historial de deshacer se guardan con cada una.</div></div>
     </div>
   </section>
@@ -281,7 +280,7 @@
   <!-- 8 -->
   <section class="sec" id="export">
     <div class="head"><span class="no">08</span><h3>Exportar</h3></div>
-    <p class="intro">El botón <code>eject</code> saca tu trabajo — a Archivos, AirDrop, Voice Memos, un DAW, donde llegue la hoja de compartir.</p>
+    <p class="intro">El botón <code>eject</code> saca tu trabajo, a Archivos, AirDrop, Voice Memos, un DAW, donde llegue la hoja de compartir.</p>
     <figure class="secfig">
       <div class="phone"><img src="img/app-export.png" alt="El panel de eject: master o stems, WAV o M4A, cinta o loop"></div>
       <figcaption>master o stems, WAV o M4A, cinta entera o un loop. y eject.</figcaption>
@@ -297,40 +296,40 @@
   <!-- 9 -->
   <section class="sec" id="sync">
     <div class="head"><span class="no">09</span><h3>Sincroniza con tu equipo</h3></div>
-    <p class="intro">TapeDesk se engancha al resto de la sala — como reloj, o siguiendo a uno.</p>
+    <p class="intro">TapeDesk se engancha al resto de la sala, como reloj, o siguiendo a uno.</p>
     <figure class="secfig">
       <div class="phone"><img src="img/app-settings-sync.png" alt="La pestaña SYNC: MIDI clock off/out/in y Ableton Link"></div>
-      <figcaption>la pestaña SYNC — MIDI clock <code>off / out / in</code>, y Ableton Link.</figcaption>
+      <figcaption>la pestaña SYNC, MIDI clock <code>off / out / in</code>, y Ableton Link.</figcaption>
     </figure>
     <div class="spec">
-      <div class="row"><div class="term">midi clock</div><div class="desc"><code>OFF · OUT · IN</code>. <code>OUT</code> gobierna tu equipo externo; <code>IN</code> lo sigue — el transporte y el tempo de TapeDesk van montados en el reloj entrante, con start/stop y posición de canción. Por USB o MIDI Bluetooth.</div></div>
+      <div class="row"><div class="term">midi clock</div><div class="desc"><code>OFF · OUT · IN</code>. <code>OUT</code> gobierna tu equipo externo; <code>IN</code> lo sigue, el transporte y el tempo de TapeDesk van montados en el reloj entrante, con start/stop y posición de canción. Por USB o MIDI Bluetooth.</div></div>
       <div class="row"><div class="term">ableton link</div><div class="desc">Tempo y start/stop, sincronizados por el aire con las apps Link de tu misma Wi-Fi. Sin cables, sin pantalla de configuración.</div></div>
-      <div class="row"><div class="term">de uno en uno</div><div class="desc">MIDI y Link son mutuamente excluyentes — elige el que use tu equipo. Cuando un reloj externo manda en el tempo, el control de tempo se aparta.</div></div>
+      <div class="row"><div class="term">de uno en uno</div><div class="desc">MIDI y Link son mutuamente excluyentes, elige el que use tu equipo. Cuando un reloj externo manda en el tempo, el control de tempo se aparta.</div></div>
     </div>
   </section>
 
   <!-- 10 -->
   <section class="sec" id="system">
     <div class="head"><span class="no">10</span><h3>Pantalla de bloqueo y entrada</h3></div>
-    <p class="intro">Se comporta como una app de audio de verdad en el teléfono — controlable con la pantalla bloqueada, y encantada de oír la interfaz que enchufes.</p>
+    <p class="intro">Se comporta como una app de audio de verdad en el teléfono, controlable con la pantalla bloqueada, y encantada de oír la interfaz que enchufes.</p>
     <div class="spec">
       <div class="row"><div class="term">pantalla de bloqueo</div><div class="desc">Transporte en la pantalla de bloqueo y en el Centro de control, con carátula sacada del icono de app que elijas. <code>Next</code> conmuta el loop; <code>Previous</code> rebobina.</div></div>
-      <div class="row"><div class="term">monitorización en vivo</div><div class="desc">Enchufa una interfaz de audio USB y iOS la enruta — TapeDesk la recoge y te deja oírla en vivo, mezclada con la cinta, mientras tocas.</div></div>
-      <div class="row"><div class="term">cómo funciona la entrada</div><div class="desc">Tú no eliges la entrada — la elige iOS. Micrófono integrado hasta que enchufas una interfaz; entonces toma el mando. (Con salida Bluetooth, la monitorización llega ~200 ms tarde — cablea para un timing fino.)</div></div>
+      <div class="row"><div class="term">monitorización en vivo</div><div class="desc">Enchufa una interfaz de audio USB y iOS la enruta, TapeDesk la recoge y te deja oírla en vivo, mezclada con la cinta, mientras tocas.</div></div>
+      <div class="row"><div class="term">cómo funciona la entrada</div><div class="desc">Tú no eliges la entrada, la elige iOS. Micrófono integrado hasta que enchufas una interfaz; entonces toma el mando. (Con salida Bluetooth, la monitorización llega ~200 ms tarde, cablea para un timing fino.)</div></div>
     </div>
   </section>
 
   <!-- 11 -->
   <section class="sec" id="settings">
     <div class="head"><span class="no">11</span><h3>Ajustes</h3></div>
-    <p class="intro">Un panel a pantalla completa, cuatro pestañas — <code>TIME · SYNC · APP · ABOUT</code>. Sin cuenta, sin nube, nada donde iniciar sesión.</p>
+    <p class="intro">Un panel a pantalla completa, cuatro pestañas, <code>TIME · SYNC · APP · ABOUT</code>. Sin cuenta, sin nube, nada donde iniciar sesión.</p>
     <div class="spec">
       <div class="row"><div class="term">time · visualización</div><div class="desc">Muestra la regla y el timecode en <code>TIME</code> o <code>BARS</code>.</div></div>
       <div class="row"><div class="term">time · tempo</div><div class="desc">Fija el BPM con una rueda jog o marcándolo a toques (<code>40–240</code>). Se apaga en gris cuando manda un reloj externo.</div></div>
-      <div class="row"><div class="term">time · compás</div><div class="desc">Cualquier métrica desde un dial doble — numerador <code>1–16</code>, denominador <code>2 / 4 / 8 / 16</code>.</div></div>
+      <div class="row"><div class="term">time · compás</div><div class="desc">Cualquier métrica desde un dial doble, numerador <code>1–16</code>, denominador <code>2 / 4 / 8 / 16</code>.</div></div>
       <div class="row"><div class="term">time · metrónomo</div><div class="desc"><code>ON / OFF</code>. Sigue el varispeed, calla mientras rascas, y nunca te sorprende al abrir.</div></div>
-      <div class="row"><div class="term">sync</div><div class="desc">MIDI Clock y Ableton Link — mira <a href="#sync">Sincronización</a>.</div></div>
-      <div class="row"><div class="term">app · idioma</div><div class="desc">Elige <code>System</code> para seguir al teléfono, o fíjalo a mano — localizado por completo en <strong>English, Español, Français, Deutsch, Italiano y 日本語</strong>.</div></div>
+      <div class="row"><div class="term">sync</div><div class="desc">MIDI Clock y Ableton Link, mira <a href="#sync">Sincronización</a>.</div></div>
+      <div class="row"><div class="term">app · idioma</div><div class="desc">Elige <code>System</code> para seguir al teléfono, o fíjalo a mano, localizado por completo en <strong>English, Español, Français, Deutsch, Italiano y 日本語</strong>.</div></div>
       <div class="row"><div class="term">app · icono</div><div class="desc">Cuatro acabados de icono para la pantalla de inicio: <code>Cream · Dark · Olive · Wine</code>.</div></div>
       <div class="row"><div class="term">about</div><div class="desc">Versión y build, la placa <code>Data Not Collected</code> (que abre la página de privacidad de este sitio), más <code>Rate</code> en App Store y <code>Support</code> para escribirle a un humano.</div></div>
     </div>
@@ -344,7 +343,7 @@
   <!-- 12 -->
   <section class="sec" id="promises">
     <div class="head"><span class="no">12</span><h3>Las promesas</h3></div>
-    <p class="intro">Lo aburrido, lo que sostiene todo — dicho claro.</p>
+    <p class="intro">Lo aburrido, lo que sostiene todo, dicho claro.</p>
     <div class="spec">
       <div class="row"><div class="term">datos no recopilados</div><div class="desc">Sin analíticas, sin rastreo, sin telemetría, sin cuentas. La etiqueta de privacidad de la App Store dice "Data Not Collected", y es literalmente cierto. <a href="privacy.html">Lee la política.</a></div></div>
       <div class="row"><div class="term">se queda en el teléfono</div><div class="desc">Tus grabaciones nunca salen del dispositivo a través de TapeDesk. La única red que usa es Ableton Link, en tu red local.</div></div>

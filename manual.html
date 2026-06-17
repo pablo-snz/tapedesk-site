@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Manual — TapeDesk</title>
+<title>The Manual · TapeDesk</title>
 <meta name="description" content="Everything TapeDesk does, screen by screen: record, varispeed, edit, mix, three tape effects, export, MIDI and Ableton Link sync, settings. The whole machine, written down.">
-<meta property="og:title" content="TapeDesk — The Manual">
+<meta property="og:title" content="TapeDesk · The Manual">
 <meta property="og:description" content="The whole machine, written down. Every screen, every control, exactly what it does.">
 <link rel="icon" href="img/mark.svg">
 <link rel="apple-touch-icon" href="img/mark-1024.png">
@@ -17,7 +17,7 @@
 <link rel="alternate" hreflang="ja" href="manual.ja.html">
 <link rel="alternate" hreflang="x-default" href="manual.html">
 <script>
-  // The app's MANUAL button passes ?theme=dark — same machine, lights off.
+  // The app's MANUAL button passes ?theme=dark, same machine, lights off.
   // On <html> (not <body>) so the class lands before first paint: no flash.
   if (new URLSearchParams(location.search).get('theme') === 'dark')
     document.documentElement.classList.add('dark');
@@ -130,7 +130,7 @@
 <body>
 
 <div class="ledger"><div class="lwrap">
-  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> — The Manual</span>
+  <span class="lhs"><img src="img/mark-1024.png" alt=""> <b>TAPEDESK</b> · The Manual</span>
   <span>No. 02 · MMXXVI · iPhone / iOS 17+</span>
 </div></div>
 
@@ -157,7 +157,7 @@
   <section class="hero">
     <p class="eyebrow">The Manual</p>
     <h1>Everything it does.</h1>
-    <p>TapeDesk hides nothing behind a menu — one screen for tape, one for mixing, and everything else a tap away. This is the whole machine, written down: every screen, every control, exactly what it does. <strong>No marketing in here. Just the manual.</strong></p>
+    <p>TapeDesk hides nothing behind a menu, one screen for tape, one for mixing, and everything else a tap away. This is the whole machine, written down: every screen, every control, exactly what it does. <strong>No marketing in here. Just the manual.</strong></p>
   </section>
 
   <nav class="toc">
@@ -183,13 +183,13 @@
     <div class="head"><span class="no">01</span><h3>Record &amp; play</h3></div>
     <p class="intro">Five buttons along the bottom. That's the whole transport. Nothing to set up before you can capture an idea.</p>
     <div class="spec">
-      <div class="row"><div class="term">rec</div><div class="desc">Tap to record onto the armed track. Tap again to stop. Recording is <strong>additive</strong> — play over what's there and the layers stack (sound-on-sound).</div></div>
+      <div class="row"><div class="term">rec</div><div class="desc">Tap to record onto the armed track. Tap again to stop. Recording is <strong>additive</strong>, play over what's there and the layers stack (sound-on-sound).</div></div>
       <div class="row"><div class="term">play · stop · rew</div><div class="desc">Play from where you left off; stop freezes the playhead; rewind jumps to the tape start. Pick up exactly where you stopped.</div></div>
       <div class="row"><div class="term">count-in</div><div class="desc">Arm from a stopped tape and a count-in plays before recording starts. Its length follows your time signature.</div></div>
-      <div class="row"><div class="term">threshold rec</div><div class="desc">Long-press <code>rec</code> to set a trigger level (<code>-60…0 dB</code>). Recording starts itself the moment your input crosses it — no scramble to hit the button. Tap <code>play</code> to start anyway.</div></div>
-      <div class="row"><div class="term">loop</div><div class="desc">The rightmost button arms the loop. With a loop on, <code>rec</code> becomes a live looper — see <a href="#edit">Editing</a>.</div></div>
+      <div class="row"><div class="term">threshold rec</div><div class="desc">Long-press <code>rec</code> to set a trigger level (<code>-60…0 dB</code>). Recording starts itself the moment your input crosses it, no scramble to hit the button. Tap <code>play</code> to start anyway.</div></div>
+      <div class="row"><div class="term">loop</div><div class="desc">The rightmost button arms the loop. With a loop on, <code>rec</code> becomes a live looper, see <a href="#edit">Editing</a>.</div></div>
       <div class="row"><div class="term">it keeps playing</div><div class="desc">Background audio continues with the screen off. Pull your headphones, take a call, walk to another room. It handles the interruption and keeps the tape rolling.</div></div>
-      <div class="row"><div class="term">crash recovery</div><div class="desc">If the app ever dies mid-take, it offers the unsaved recording back on next launch — recover it or discard it. Nothing silently lost.</div></div>
+      <div class="row"><div class="term">crash recovery</div><div class="desc">If the app ever dies mid-take, it offers the unsaved recording back on next launch, recover it or discard it. Nothing silently lost.</div></div>
     </div>
   </section>
 
@@ -198,11 +198,10 @@
     <div class="head"><span class="no">02</span><h3>Four tracks &amp; the timeline</h3></div>
     <p class="intro">Four tracks, a tape ruler, a hard playhead. Each track keeps its own colour so you always know whose audio you're looking at.</p>
     <div class="spec">
-      <div class="row"><div class="term">arm a track</div><div class="desc">Tap a track tab to arm it — only one records at a time. The armed track is where <code>rec</code> lays the take.</div></div>
-      <div class="row"><div class="term">rename a track</div><div class="desc">Long-press a tab to rename it (1–32 characters). Defaults are <code>trk_01…trk_04</code>.</div></div>
-      <div class="row"><div class="term">two zoom bands</div><div class="desc">An overview of all four tracks and a zoomed band for the active one — each zooms independently. Pinch to zoom; it clicks through fixed steps with a haptic detent.</div></div>
-      <div class="row"><div class="term">scrub &amp; nudge</div><div class="desc">Drag a band to scrub the tape — it's there as you move, and plays on from there. Double-tap left or right of the playhead to nudge it one grid step.</div></div>
-      <div class="row"><div class="term">time or bars</div><div class="desc">The ruler reads in <code>MM:SS</code> or in <code>bar.beat</code> — your call. Tap the timecode to flip it.</div></div>
+      <div class="row"><div class="term">arm a track</div><div class="desc">Tap a track tab to arm it, only one records at a time. The armed track is where <code>rec</code> lays the take.</div></div>
+      <div class="row"><div class="term">two zoom bands</div><div class="desc">An overview of all four tracks and a zoomed band for the active one, each zooms independently. Pinch to zoom; it clicks through fixed steps with a haptic detent.</div></div>
+      <div class="row"><div class="term">scrub &amp; nudge</div><div class="desc">Drag a band to scrub the tape, it's there as you move, and plays on from there. Double-tap left or right of the playhead to nudge it one grid step.</div></div>
+      <div class="row"><div class="term">time or bars</div><div class="desc">The ruler reads in <code>MM:SS</code> or in <code>bar.beat</code>, your call. Tap the timecode to flip it.</div></div>
       <div class="row"><div class="term">the limits</div><div class="desc">A tape runs up to <strong>10 minutes</strong>, with up to <strong>128 regions</strong> per track. Plenty for an instrument; not a DAW.</div></div>
     </div>
   </section>
@@ -210,12 +209,12 @@
   <!-- 3 -->
   <section class="sec" id="speed">
     <div class="head"><span class="no">03</span><h3>Tape speed</h3></div>
-    <p class="intro">Real tape varispeed. Slow it and the pitch sinks; speed it up and it climbs. There is no "keep pitch" switch — that was never the point.</p>
+    <p class="intro">Real tape varispeed. Slow it and the pitch sinks; speed it up and it climbs. There is no "keep pitch" switch, that was never the point.</p>
     <div class="spec">
-      <div class="row"><div class="term">varispeed</div><div class="desc"><code>0.25× to 2×</code>, across the whole tape, pitch coupled. Tap the <code>SPEED</code> header to open the bend fader — unity at the centre, fast at the top, slow at the bottom.</div></div>
+      <div class="row"><div class="term">varispeed</div><div class="desc"><code>0.25× to 2×</code>, across the whole tape, pitch coupled. Tap the <code>SPEED</code> header to open the bend fader, unity at the centre, fast at the top, slow at the bottom.</div></div>
       <div class="row"><div class="term">lock</div><div class="desc">The padlock under the fader: open = momentary (let go and it glides back to 1×); closed = sticky (the tape commits to that speed and remembers it).</div></div>
-      <div class="row"><div class="term">scratch</div><div class="desc">Drag the band like a record — move it, it's there, it carries on from where you stop.</div></div>
-      <div class="row"><div class="term">recorded at speed</div><div class="desc">Record with the speed bent and it's <strong>printed into the take</strong>. Record at half speed, play it back at full, and it's an octave up — the old four-track trick, intact.</div></div>
+      <div class="row"><div class="term">scratch</div><div class="desc">Drag the band like a record, move it, it's there, it carries on from where you stop.</div></div>
+      <div class="row"><div class="term">recorded at speed</div><div class="desc">Record with the speed bent and it's <strong>printed into the take</strong>. Record at half speed, play it back at full, and it's an octave up, the old four-track trick, intact.</div></div>
     </div>
   </section>
 
@@ -225,7 +224,7 @@
     <p class="intro">Non-destructive, and it survives the app closing. Select a region and the edit bar appears with only the moves that make sense right then.</p>
     <div class="spec">
       <div class="row"><div class="term">cut</div><div class="desc">The scissors splits a region at the playhead.</div></div>
-      <div class="row"><div class="term">join</div><div class="desc">Fuse a region with its neighbour back into one — it heals the cut, seamlessly. To you it's one move; underneath it's whole again.</div></div>
+      <div class="row"><div class="term">join</div><div class="desc">Fuse a region with its neighbour back into one, it heals the cut, seamlessly. To you it's one move; underneath it's whole again.</div></div>
       <div class="row"><div class="term">trim · move</div><div class="desc">Drag a region's edges to trim it; drag the block to move it, snapping to the grid.</div></div>
       <div class="row"><div class="term">duplicate · delete</div><div class="desc">Duplicate a selected region, or delete it. </div></div>
       <div class="row"><div class="term">lift · drop</div><div class="desc">Lift a region to the clipboard and drop it back at the playhead.</div></div>
@@ -238,14 +237,14 @@
   <!-- 5 -->
   <section class="sec" id="mix">
     <div class="head"><span class="no">05</span><h3>The mixer</h3></div>
-    <p class="intro">Flip to <code>mix</code> and the four tracks become four channel strips. No master strip — the four fill the width, per-track sound only. Everything is live to the engine as you touch it.</p>
+    <p class="intro">Flip to <code>mix</code> and the four tracks become four channel strips. No master strip, the four fill the width, per-track sound only. Everything is live to the engine as you touch it.</p>
     <div class="spec">
-      <div class="row"><div class="term">fader · meter</div><div class="desc">A vertical fader with its own level meter built in. The teal cap is the one thing you can move — that's the colour rule across the whole app.</div></div>
+      <div class="row"><div class="term">fader · meter</div><div class="desc">A vertical fader with its own level meter built in. The teal cap is the one thing you can move, that's the colour rule across the whole app.</div></div>
       <div class="row"><div class="term">pan</div><div class="desc">Hard left, centre, hard right, and everywhere between.</div></div>
-      <div class="row"><div class="term">in</div><div class="desc">Per-track input trim — set the record level going in. Unity by default.</div></div>
-      <div class="row"><div class="term">sd1 · sd2</div><div class="desc">Two send knobs, one per effect bus — how much of the track feeds <a href="#fx">FX1</a> and FX2.</div></div>
+      <div class="row"><div class="term">in</div><div class="desc">Per-track input trim, set the record level going in. Unity by default.</div></div>
+      <div class="row"><div class="term">sd1 · sd2</div><div class="desc">Two send knobs, one per effect bus, how much of the track feeds <a href="#fx">FX1</a> and FX2.</div></div>
       <div class="row"><div class="term">mute</div><div class="desc"><code>M</code> mutes the strip; the track name greys out and strikes through.</div></div>
-      <div class="row"><div class="term">merge</div><div class="desc">Bounce two tracks into one to free a lane — the OP-1 move. Pick a destination, and the source folds in at unity and clears. Undoable.</div></div>
+      <div class="row"><div class="term">merge</div><div class="desc">Bounce two tracks into one to free a lane, the OP-1 move. Pick a destination, and the source folds in at unity and clears. Undoable.</div></div>
     </div>
   </section>
 
@@ -254,26 +253,26 @@
     <div class="head"><span class="no">06</span><h3>The effects</h3></div>
     <p class="intro">Two parallel send buses, <code>FX1</code> and <code>FX2</code>, each loads one of three effects we wrote in C++. <a href="index.html#fx">See them drawn on the home page.</a></p>
     <div class="spec">
-      <div class="row"><div class="term">tapesat</div><div class="desc">Magnetic-tape saturation, modelled on the real physics of how tape distorts. Macros <code>drive · tone · bias · age</code> — push <code>age</code> and the tape gets tired.</div></div>
-      <div class="row"><div class="term">delay</div><div class="desc">A tape delay that drags and wavers like the real thing. Macros <code>time · fbk · tone · wow</code> — <code>wow</code> is the pitch waver, <code>fbk</code> the smear.</div></div>
-      <div class="row"><div class="term">reverb</div><div class="desc">An eight-line reverb. The room is built from feedback — a feedback delay network — so it's a space, not a recording of one. Macros <code>decay · tone · drip · damp</code>.</div></div>
-      <div class="row"><div class="term">active · bypass</div><div class="desc">Toggle a bus on or off; the effect stays loaded when bypassed. Switching effects is crossfaded — no pop.</div></div>
-      <div class="row"><div class="term">printed in</div><div class="desc">What you hear is what you get. On export the effects are baked into the take — there's no separate render where it comes out different.</div></div>
+      <div class="row"><div class="term">tapesat</div><div class="desc">Magnetic-tape saturation, modelled on the real physics of how tape distorts. Macros <code>drive · tone · bias · age</code>, push <code>age</code> and the tape gets tired.</div></div>
+      <div class="row"><div class="term">delay</div><div class="desc">A tape delay that drags and wavers like the real thing. Macros <code>time · fbk · tone · wow</code>, <code>wow</code> is the pitch waver, <code>fbk</code> the smear.</div></div>
+      <div class="row"><div class="term">reverb</div><div class="desc">An eight-line reverb. The room is built from feedback, a feedback delay network, so it's a space, not a recording of one. Macros <code>decay · tone · drip · damp</code>.</div></div>
+      <div class="row"><div class="term">active · bypass</div><div class="desc">Toggle a bus on or off; the effect stays loaded when bypassed. Switching effects is crossfaded, no pop.</div></div>
+      <div class="row"><div class="term">printed in</div><div class="desc">What you hear is what you get. On export the effects are baked into the take, there's no separate render where it comes out different.</div></div>
     </div>
   </section>
 
   <!-- 7 -->
   <section class="sec" id="tapes">
     <div class="head"><span class="no">07</span><h3>Tapes</h3></div>
-    <p class="intro">Every project is a tape. Keep as many as you like — each is its own little machine with its own tempo, edits and mix.</p>
+    <p class="intro">Every project is a tape. Keep as many as you like, each is its own little machine with its own tempo, edits and mix.</p>
     <figure class="secfig">
       <div class="phone"><img src="img/app-tapes-menu.png" alt="The TAPES menu: new tape, duplicate, rename, delete"></div>
-      <figcaption>the TAPES menu — new, duplicate, rename, delete. the active one glows teal.</figcaption>
+      <figcaption>the TAPES menu, new, duplicate, rename, delete. the active one glows teal.</figcaption>
     </figure>
     <div class="spec">
       <div class="row"><div class="term">new tape</div><div class="desc"><code>+ NEW TAPE</code> spins up a fresh one, auto-named <code>tape_001</code>, <code>tape_002</code>…</div></div>
       <div class="row"><div class="term">open</div><div class="desc">Tap a tape's card to load it. Each card shows its name and when you last touched it.</div></div>
-      <div class="row"><div class="term">duplicate · rename · delete</div><div class="desc">Copy a tape to branch an idea, rename it inline, or delete it (with a two-step confirm — deleting a tape is permanent).</div></div>
+      <div class="row"><div class="term">duplicate · rename · delete</div><div class="desc">Copy a tape to branch an idea, rename it inline, or delete it (with a two-step confirm, deleting a tape is permanent).</div></div>
       <div class="row"><div class="term">switching</div><div class="desc">Swap tapes when the transport is stopped. Your edits, loops and undo history are saved with each one.</div></div>
     </div>
   </section>
@@ -281,7 +280,7 @@
   <!-- 8 -->
   <section class="sec" id="export">
     <div class="head"><span class="no">08</span><h3>Export</h3></div>
-    <p class="intro">The <code>eject</code> button gets your work out — to Files, AirDrop, Voice Memos, a DAW, wherever the share sheet reaches.</p>
+    <p class="intro">The <code>eject</code> button gets your work out, to Files, AirDrop, Voice Memos, a DAW, wherever the share sheet reaches.</p>
     <figure class="secfig">
       <div class="phone"><img src="img/app-export.png" alt="The eject panel: master or stems, WAV or M4A, tape or loop"></div>
       <figcaption>master or stems, WAV or M4A, whole tape or one loop. then eject.</figcaption>
@@ -297,40 +296,40 @@
   <!-- 9 -->
   <section class="sec" id="sync">
     <div class="head"><span class="no">09</span><h3>Sync to your gear</h3></div>
-    <p class="intro">TapeDesk locks to the rest of the room — as the clock, or following one.</p>
+    <p class="intro">TapeDesk locks to the rest of the room, as the clock, or following one.</p>
     <figure class="secfig">
       <div class="phone"><img src="img/app-settings-sync.png" alt="The SYNC tab: MIDI clock off/out/in and Ableton Link"></div>
-      <figcaption>the SYNC tab — MIDI clock <code>off / out / in</code>, and Ableton Link.</figcaption>
+      <figcaption>the SYNC tab, MIDI clock <code>off / out / in</code>, and Ableton Link.</figcaption>
     </figure>
     <div class="spec">
-      <div class="row"><div class="term">midi clock</div><div class="desc"><code>OFF · OUT · IN</code>. <code>OUT</code> drives external gear; <code>IN</code> follows it — TapeDesk's transport and tempo ride the incoming clock, with start/stop and song position. Over USB or Bluetooth MIDI.</div></div>
+      <div class="row"><div class="term">midi clock</div><div class="desc"><code>OFF · OUT · IN</code>. <code>OUT</code> drives external gear; <code>IN</code> follows it, TapeDesk's transport and tempo ride the incoming clock, with start/stop and song position. Over USB or Bluetooth MIDI.</div></div>
       <div class="row"><div class="term">ableton link</div><div class="desc">Tempo and start/stop, synced wirelessly with Link apps on the same Wi-Fi. No cables, no setup screen.</div></div>
-      <div class="row"><div class="term">one at a time</div><div class="desc">MIDI and Link are mutually exclusive — pick the one your setup uses. When an external clock owns the tempo, the tempo control steps aside.</div></div>
+      <div class="row"><div class="term">one at a time</div><div class="desc">MIDI and Link are mutually exclusive, pick the one your setup uses. When an external clock owns the tempo, the tempo control steps aside.</div></div>
     </div>
   </section>
 
   <!-- 10 -->
   <section class="sec" id="system">
     <div class="head"><span class="no">10</span><h3>Lock screen &amp; input</h3></div>
-    <p class="intro">It behaves like a real audio app on the phone — controllable with the screen locked, and happy to hear an interface you plug in.</p>
+    <p class="intro">It behaves like a real audio app on the phone, controllable with the screen locked, and happy to hear an interface you plug in.</p>
     <div class="spec">
       <div class="row"><div class="term">lock screen</div><div class="desc">Transport on the lock screen and in Control Center, with artwork drawn from your chosen app icon. <code>Next</code> toggles the loop; <code>Previous</code> rewinds.</div></div>
-      <div class="row"><div class="term">live monitoring</div><div class="desc">Plug in a USB audio interface and iOS routes it in — TapeDesk picks it up and lets you hear it live, mixed with the tape, while you play.</div></div>
-      <div class="row"><div class="term">how input works</div><div class="desc">You don't pick the input — iOS does. Built-in mic until you plug an interface in, then it takes over. (On Bluetooth output, monitoring lags ~200 ms — wire up for tight timing.)</div></div>
+      <div class="row"><div class="term">live monitoring</div><div class="desc">Plug in a USB audio interface and iOS routes it in, TapeDesk picks it up and lets you hear it live, mixed with the tape, while you play.</div></div>
+      <div class="row"><div class="term">how input works</div><div class="desc">You don't pick the input, iOS does. Built-in mic until you plug an interface in, then it takes over. (On Bluetooth output, monitoring lags ~200 ms, wire up for tight timing.)</div></div>
     </div>
   </section>
 
   <!-- 11 -->
   <section class="sec" id="settings">
     <div class="head"><span class="no">11</span><h3>Settings</h3></div>
-    <p class="intro">One full-screen panel, four tabs — <code>TIME · SYNC · APP · ABOUT</code>. No account, no cloud, nothing to log into.</p>
+    <p class="intro">One full-screen panel, four tabs, <code>TIME · SYNC · APP · ABOUT</code>. No account, no cloud, nothing to log into.</p>
     <div class="spec">
       <div class="row"><div class="term">time · display</div><div class="desc">Show the ruler and timecode in <code>TIME</code> or <code>BARS</code>.</div></div>
       <div class="row"><div class="term">time · tempo</div><div class="desc">Set the BPM with a jog wheel or by tapping it in (<code>40–240</code>). Greyed out when an external clock is in charge.</div></div>
-      <div class="row"><div class="term">time · signature</div><div class="desc">Any meter from a dual dial — numerator <code>1–16</code>, denominator <code>2 / 4 / 8 / 16</code>.</div></div>
+      <div class="row"><div class="term">time · signature</div><div class="desc">Any meter from a dual dial, numerator <code>1–16</code>, denominator <code>2 / 4 / 8 / 16</code>.</div></div>
       <div class="row"><div class="term">time · metronome</div><div class="desc"><code>ON / OFF</code>. It follows varispeed, stays quiet while you scratch, and never surprises you on open.</div></div>
-      <div class="row"><div class="term">sync</div><div class="desc">MIDI Clock and Ableton Link — see <a href="#sync">Sync</a>.</div></div>
-      <div class="row"><div class="term">app · language</div><div class="desc">Pick <code>System</code> to follow the phone, or set it by hand — fully localised in <strong>English, Español, Français, Deutsch, Italiano and 日本語</strong>.</div></div>
+      <div class="row"><div class="term">sync</div><div class="desc">MIDI Clock and Ableton Link, see <a href="#sync">Sync</a>.</div></div>
+      <div class="row"><div class="term">app · language</div><div class="desc">Pick <code>System</code> to follow the phone, or set it by hand, fully localised in <strong>English, Español, Français, Deutsch, Italiano and 日本語</strong>.</div></div>
       <div class="row"><div class="term">app · icon</div><div class="desc">Four icon skins for the home screen: <code>Cream · Dark · Olive · Wine</code>.</div></div>
       <div class="row"><div class="term">about</div><div class="desc">Version and build, the <code>Data Not Collected</code> plate (which opens this site's privacy page), plus <code>Rate</code> on the App Store and <code>Support</code> to email a human.</div></div>
     </div>
@@ -344,7 +343,7 @@
   <!-- 12 -->
   <section class="sec" id="promises">
     <div class="head"><span class="no">12</span><h3>The promises</h3></div>
-    <p class="intro">The boring, load-bearing stuff — said plainly.</p>
+    <p class="intro">The boring, load-bearing stuff, said plainly.</p>
     <div class="spec">
       <div class="row"><div class="term">data not collected</div><div class="desc">No analytics, no tracking, no telemetry, no accounts. The App Store privacy label is "Data Not Collected", and it's literally true. <a href="privacy.html">Read the policy.</a></div></div>
       <div class="row"><div class="term">it stays on the phone</div><div class="desc">Your recordings never leave the device through TapeDesk. The only network it uses is Ableton Link, on your local network.</div></div>
