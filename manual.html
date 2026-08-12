@@ -221,15 +221,17 @@
   <!-- 4 -->
   <section class="sec" id="edit">
     <div class="head"><span class="no">04</span><h3>Editing</h3></div>
-    <p class="intro">Non-destructive, and it survives the app closing. Select a region and the edit bar appears with only the moves that make sense right then.</p>
+    <p class="intro">Non-destructive, and it survives the app closing. Tap a region and the edit bar appears with only the moves that make sense right then. Two of them do most of the work, <code>cut</code>, and <code>lift</code> · <code>drop</code>.</p>
     <div class="spec">
       <div class="row"><div class="term">cut</div><div class="desc">The scissors splits a region at the playhead.</div></div>
       <div class="row"><div class="term">join</div><div class="desc">Fuse a region with its neighbour back into one, it heals the cut, seamlessly. To you it's one move; underneath it's whole again.</div></div>
-      <div class="row"><div class="term">trim · move</div><div class="desc">Drag a region's edges to trim it; drag the block to move it, snapping to the grid.</div></div>
-      <div class="row"><div class="term">duplicate · delete</div><div class="desc">Duplicate a selected region, or delete it. </div></div>
-      <div class="row"><div class="term">lift · drop</div><div class="desc">Lift a region to the clipboard and drop it back at the playhead.</div></div>
-      <div class="row"><div class="term">undo</div><div class="desc">Step back the last edit or take.</div></div>
-      <div class="row"><div class="term">loop</div><div class="desc">Drag the loop handles to set in and out; the loop wraps with a short equal-power crossfade so the seam never clicks.</div></div>
+      <div class="row"><div class="term">lift · drop</div><div class="desc"><code>lift</code> takes the selected region off the tape and holds it. <code>drop</code> lays it back down at the playhead, on the armed track. That pair is the move tool.</div></div>
+      <div class="row"><div class="term">moving a part</div><div class="desc">Lift it, put the playhead where you want it, drop. Arm a different track before you drop and the part changes lane. There is no drag-to-move: on the tape, a drag scrubs.</div></div>
+      <div class="row"><div class="term">copies</div><div class="desc">Dropping doesn't empty the clipboard. Drop, move the playhead, drop again, and you're stamping copies of the same take. That's duplication here.</div></div>
+      <div class="row"><div class="term">getting rid of things</div><div class="desc">A region has no delete button. Lift it and don't drop it, it's off the tape. For a whole lane, the trash beside the scissors clears the active track in one tap, and <code>undo</code> is sitting right there.</div></div>
+      <div class="row"><div class="term">rev</div><div class="desc">Reverse the selected region. The audio is baked backwards and a small <code>◁</code> marks it. Hit it again and it bakes forward.</div></div>
+      <div class="row"><div class="term">undo · redo</div><div class="desc">Step back the last edit or take, and forward again. Undo belongs to the armed track, it undoes what happened where you're working.</div></div>
+      <div class="row"><div class="term">loop</div><div class="desc">Drag the loop handles to set in and out, or select a region and hit <code>loop</code> to snap the loop to exactly that region. The loop wraps with a short equal-power crossfade so the seam never clicks.</div></div>
       <div class="row"><div class="term">live looper</div><div class="desc">With a loop on, <code>rec</code> records only the part you play and lets you hear the layers build pass after pass. Stop and it commits a single mixed loop. Sound-on-sound, live.</div></div>
     </div>
   </section>
