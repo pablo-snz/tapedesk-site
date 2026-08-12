@@ -221,13 +221,17 @@
   <!-- 4 -->
   <section class="sec" id="edit">
     <div class="head"><span class="no">04</span><h3>Bearbeiten</h3></div>
-    <p class="intro">Nicht-destruktiv, und es überlebt das Schließen der App. Wähle eine Region, und die Bearbeitungsleiste erscheint, nur mit den Zügen, die in dem Moment Sinn ergeben.</p>
+    <p class="intro">Nicht-destruktiv, und es überlebt das Schließen der App. Tippe auf eine Region, und die Bearbeitungsleiste erscheint, nur mit den Zügen, die in dem Moment Sinn ergeben. Zwei davon erledigen die meiste Arbeit, <code>schneiden</code>, und <code>anheben</code> · <code>ablegen</code>.</p>
     <div class="spec">
       <div class="row"><div class="term">schneiden</div><div class="desc">Die Schere teilt eine Region am Abspielkopf.</div></div>
       <div class="row"><div class="term">verbinden</div><div class="desc">Verschmilz eine Region mit ihrer Nachbarin wieder zu einer, der Schnitt heilt, spurlos. Für dich ist es ein Zug; darunter ist sie wieder ganz.</div></div>
-      <div class="row"><div class="term">anheben · ablegen</div><div class="desc">Heb eine Region in die Zwischenablage und leg sie am Abspielkopf wieder ab.</div></div>
-      <div class="row"><div class="term">rückgängig</div><div class="desc">Nimmt die letzte Bearbeitung oder Aufnahme zurück.</div></div>
-      <div class="row"><div class="term">loop</div><div class="desc">Zieh die Loop-Griffe, um In- und Out-Punkt zu setzen; der Loop faltet sich mit einer kurzen Equal-Power-Überblendung um, damit die Naht nie knackt.</div></div>
+      <div class="row"><div class="term">anheben · ablegen</div><div class="desc"><code>anheben</code> nimmt die gewählte Region vom Band und hält sie fest. <code>ablegen</code> setzt sie am Abspielkopf wieder ab, auf der scharfen Spur. Dieses Paar ist das Verschiebe-Werkzeug.</div></div>
+      <div class="row"><div class="term">eine stelle verschieben</div><div class="desc">Heb sie an, setz den Abspielkopf dorthin, wo du sie haben willst, leg sie ab. Schalte vorher eine andere Spur scharf, und die Stelle wechselt die Bahn. Ziehen zum Verschieben gibt es nicht: auf dem Band scrubbt ein Zug.</div></div>
+      <div class="row"><div class="term">kopien</div><div class="desc">Ablegen leert die Zwischenablage nicht. Leg ab, schieb den Abspielkopf weiter, leg wieder ab, und du stempelst Kopien derselben Aufnahme. Das ist hier das Duplizieren.</div></div>
+      <div class="row"><div class="term">etwas loswerden</div><div class="desc">Eine Region hat keinen Löschen-Knopf. Heb sie an und leg sie nicht ab, dann ist sie vom Band herunter. Für eine ganze Spur: der Papierkorb neben der Schere leert die aktive mit einem Tipp, und <code>rückgängig</code> steht direkt daneben.</div></div>
+      <div class="row"><div class="term">rev</div><div class="desc">Dreht die gewählte Region um. Das Audio wird rückwärts gedruckt, ein kleines <code>◁</code> markiert es. Noch einmal tippen, und es liegt wieder vorwärts.</div></div>
+      <div class="row"><div class="term">rückgängig · wiederholen</div><div class="desc">Nimmt die letzte Bearbeitung oder Aufnahme zurück, und wieder vor. Rückgängig gehört zur scharfen Spur, es nimmt zurück, was dort passiert ist, wo du gerade arbeitest.</div></div>
+      <div class="row"><div class="term">loop</div><div class="desc">Zieh die Loop-Griffe, um In- und Out-Punkt zu setzen, oder wähle eine Region und tippe <code>loop</code>, damit der Loop genau auf ihr sitzt; der Loop faltet sich mit einer kurzen Equal-Power-Überblendung um, damit die Naht nie knackt.</div></div>
       <div class="row"><div class="term">live-looper</div><div class="desc">Mit aktivem Loop nimmt <code>rec</code> nur den Teil auf, den du spielst, und lässt dich die Schichten Durchgang für Durchgang wachsen hören. Stopp, und ein einzelner gemischter Loop wird festgeschrieben. Sound-on-Sound, live.</div></div>
     </div>
   </section>

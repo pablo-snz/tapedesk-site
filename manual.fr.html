@@ -221,13 +221,17 @@
   <!-- 4 -->
   <section class="sec" id="edit">
     <div class="head"><span class="no">04</span><h3>Montage</h3></div>
-    <p class="intro">Non destructif, et ça survit à la fermeture de l'app. Sélectionnez une région et la barre de montage apparaît, avec seulement les gestes qui ont du sens à ce moment-là.</p>
+    <p class="intro">Non destructif, et ça survit à la fermeture de l'app. Touchez une région et la barre de montage apparaît, avec seulement les gestes qui ont du sens à ce moment-là. Deux d'entre eux font l'essentiel du travail, <code>couper</code>, et <code>soulever</code> · <code>déposer</code>.</p>
     <div class="spec">
       <div class="row"><div class="term">couper</div><div class="desc">Les ciseaux coupent une région au curseur.</div></div>
       <div class="row"><div class="term">joindre</div><div class="desc">Fusionnez une région avec sa voisine pour n'en refaire qu'une, la coupe se referme, sans couture. Pour vous c'est un geste ; en dessous, la région est entière à nouveau.</div></div>
-      <div class="row"><div class="term">soulever · déposer</div><div class="desc">Soulevez une région vers le presse-papiers et déposez-la au curseur.</div></div>
-      <div class="row"><div class="term">annuler</div><div class="desc">Revenez en arrière sur le dernier montage ou la dernière prise.</div></div>
-      <div class="row"><div class="term">boucle</div><div class="desc">Faites glisser les poignées de boucle pour poser l'entrée et la sortie ; la boucle se referme avec un court crossfade à puissance constante, la couture ne claque jamais.</div></div>
+      <div class="row"><div class="term">soulever · déposer</div><div class="desc"><code>soulever</code> retire la région sélectionnée de la bande et la garde en main. <code>déposer</code> la repose au curseur, sur la piste armée. C'est cette paire qui déplace les choses.</div></div>
+      <div class="row"><div class="term">déplacer une partie</div><div class="desc">Soulevez-la, placez le curseur où vous la voulez, déposez. Armez une autre piste avant de déposer et la partie change de couloir. Il n'y a pas de glisser-déplacer : sur la bande, un glissement fait du scrub.</div></div>
+      <div class="row"><div class="term">copies</div><div class="desc">Déposer ne vide pas le presse-papiers. Déposez, avancez le curseur, déposez encore, et vous tamponnez des copies de la même prise. Dupliquer, ici, c'est ça.</div></div>
+      <div class="row"><div class="term">se débarrasser de quelque chose</div><div class="desc">Une région n'a pas de bouton supprimer. Soulevez-la et ne la déposez pas, elle est hors de la bande. Pour vider une piste entière, la corbeille à côté des ciseaux efface la piste active d'une touche, et <code>annuler</code> est juste là.</div></div>
+      <div class="row"><div class="term">rev</div><div class="desc">Inverse la région sélectionnée. L'audio est imprimé à l'envers et un petit <code>◁</code> le signale. Touchez encore et il repart à l'endroit.</div></div>
+      <div class="row"><div class="term">annuler · rétablir</div><div class="desc">Revenez en arrière sur le dernier montage ou la dernière prise, puis en avant. Annuler appartient à la piste armée, il défait ce qui s'est passé là où vous travaillez.</div></div>
+      <div class="row"><div class="term">boucle</div><div class="desc">Faites glisser les poignées de boucle pour poser l'entrée et la sortie, ou sélectionnez une région et touchez <code>loop</code> pour caler la boucle exactement dessus ; la boucle se referme avec un court crossfade à puissance constante, la couture ne claque jamais.</div></div>
       <div class="row"><div class="term">live looper</div><div class="desc">Boucle active, <code>rec</code> n'enregistre que la partie que vous jouez et vous laisse entendre les couches s'empiler, passage après passage. Arrêtez : il valide une seule boucle, mixée. Du sound-on-sound, en direct.</div></div>
     </div>
   </section>
