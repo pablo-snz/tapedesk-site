@@ -81,11 +81,11 @@ def placeholder(kind, pid, meta, desc):
         shape = "sheet"
     else:
         shape = "photo"
-    label = " · ".join([pid, kind] + ([device] if device else []) + rest)
-    boxes = "".join(f'<div class="ph {shape}"><span class="id">{html.escape(label) if i == 0 else ""}</span></div>'
+    meta_txt = " · ".join([kind] + ([device] if device else []) + rest)
+    boxes = "".join(f'<div class="ph {shape}"><span class="id">{html.escape(pid) if i == 0 else ""}</span></div>'
                     for i in range(count))
     return (f'<figure class="phfig {shape}{" multi" if count > 1 else ""}"><div class="phrow">{boxes}</div>'
-            f'<figcaption>{inline(desc)}</figcaption></figure>')
+            f'<figcaption><span class="pmeta">{html.escape(meta_txt)}</span>{inline(desc)}</figcaption></figure>')
 
 
 def phone_svg(name, content, label):
@@ -192,7 +192,7 @@ for lvl, num, title, hid in heads:
     n = num.rstrip(".")
     label = inline(lower_title(title))
     cls = "l3" if lvl == 3 else "l2"
-    toc.append(f'<a class="{cls}" href="#{hid}"><span class="tn">{n}</span>{label}</a>')
+    toc.append(f'<a class="{cls}" href="#{hid}"><span class="tn">{n}</span><span class="tt">{label}</span></a>')
 
 TEMPLATE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "manual_template.html"), encoding="utf-8").read()
 page = TEMPLATE.replace("{{TOC}}", "\n".join(toc)).replace("{{BODY}}", "\n".join(body))
