@@ -32,7 +32,10 @@ def replace(m):
     for name in candidates(m["id"]):
         if os.path.exists(os.path.join(SHOTS, name)):
             alt = m["alt"].replace('"', "&quot;")
+            from PIL import Image
+            w, h = Image.open(os.path.join(SHOTS, name)).size
             return (f'<img class="shot {m["shape"]}" src="img/shots/{name}" '
+                    f'width="{w}" height="{h}" '
                     f'alt="{alt}" loading="lazy" decoding="async">')
     return m.group(0)
 
