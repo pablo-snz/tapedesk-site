@@ -105,6 +105,8 @@
   .ph.pad{aspect-ratio:4/3}
   .ph.video{aspect-ratio:16/9}
   .ph.sq{aspect-ratio:1/1}
+  .shot{display:block;width:100%;height:auto;border-radius:var(--r-sheet);border:1px solid var(--line2)}
+  .bone .shot{border-color:var(--bone-line)}
   .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
   .shots.two{grid-template-columns:repeat(2,minmax(0,340px))}
   .shots.phones{grid-template-columns:repeat(3,minmax(0,196px))}
@@ -118,6 +120,7 @@
   .tbl .p{font-family:var(--mono);font-size:13px;color:var(--ink2);white-space:nowrap;width:1%;padding-top:15px}
   .tbl .d{color:var(--ink2)}
   .tblwrap{overflow-x:auto}
+  @media(max-width:620px){.tbl .p{white-space:normal}.tbl .n{white-space:normal}.tbl{font-size:15px}.tbl td{padding-right:12px}}
 
   .bone{background:var(--bone);color:var(--on-bone);border-bottom:none}
   .bone .txt p{color:var(--bone-ink2)}
@@ -1471,9 +1474,9 @@
     <p>Tocar una región saca la barra de edición: cortar · unir · levantar · soltar · <code>rev</code> · deshacer. Con una interfaz de varios canales, <code>multi</code> graba varias entradas a la vez, cada canal en la pista que le asignes. <code>bounce</code> funde dos pistas en una.</p>
   </div>
   <div class="shots phones">
-    <div><div class="ph phone"><span class="id">ph-02 · iphone</span><span class="what">tape sonando: seis pistas con tomas, cabezal a mitad de cinta, transporte abajo.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-02-light-en.png" alt="tape sonando: seis pistas con tomas, cabezal a mitad de cinta, transporte abajo." loading="lazy" decoding="async"></div>
     <div><div class="ph phone"><span class="id">ph-03 · iphone</span><span class="what">speed abierto, fader inclinado a 0.50x, candado cerrado.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-04 · iphone</span><span class="what">Una región seleccionada con la barra de edición a la vista.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-04-light-en.png" alt="Una región seleccionada con la barra de edición a la vista." loading="lazy" decoding="async"></div>
   </div>
   <div class="shots two" style="margin-top:24px">
     <div><div class="ph pad"><span class="id">ph-05 · ipad horizontal</span><span class="what">multi: rejilla canal → pista con tres canales de una interfaz repartidos.</span></div></div>
@@ -1506,9 +1509,9 @@
     <p>Cada motor lleva además su propio inserto en la pestaña <code class="motor">fx</code>: chorus · drive · phaser · delay · space · dirt · au. Con <code>au</code> entra un efecto auv3 de otra app dentro del sonido.</p>
   </div>
   <div class="shots phones">
-    <div><div class="ph phone"><span class="id">ph-07 · iphone</span><span class="what">Pestaña synth de drift, los cuatro macros dibujados.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-08 · iphone</span><span class="what">Panel de presets abierto: familias, motores con su dibujo, lista de presets.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-09 · iphone</span><span class="what">Pestaña adsr, envolventes amp y filt.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-07-dark-en.png" alt="Pestaña synth de drift, los cuatro macros dibujados." loading="lazy" decoding="async"></div>
+    <div><img class="shot phone" src="img/shots/ph-08-dark-en.png" alt="Panel de presets abierto: familias, motores con su dibujo, lista de presets." loading="lazy" decoding="async"></div>
+    <div><img class="shot phone" src="img/shots/ph-09-dark-en.png" alt="Pestaña adsr, envolventes amp y filt." loading="lazy" decoding="async"></div>
   </div>
 
   <h3>keys · chords · seq</h3>
@@ -1518,9 +1521,9 @@
     <p><code class="touch">seq</code> tiene tres modos. <code>arp</code> arpegia lo que mantengas pulsado, sobre un anillo de 16 pasos. <code>step</code> es un secuenciador de 16 pasos. <code>ping</code> es una mesa de billar: las bolas rebotan entre campanas y cada rebote dispara una nota.</p>
   </div>
   <div class="shots phones">
-    <div><div class="ph phone"><span class="id">ph-10 · iphone</span><span class="what">keys con una escala de fábrica y dos notas pulsadas.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-11 · iphone</span><span class="what">chords en scale, un pad pulsado con un modificador.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-12 · iphone</span><span class="what">seq en ping, varias bolas rebotando entre campanas.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-10-dark-en.png" alt="keys con una escala de fábrica y dos notas pulsadas." loading="lazy" decoding="async"></div>
+    <div><img class="shot phone" src="img/shots/ph-11-dark-en.png" alt="chords en scale, un pad pulsado con un modificador." loading="lazy" decoding="async"></div>
+    <div><img class="shot phone" src="img/shots/ph-12-dark-en.png" alt="seq en ping, varias bolas rebotando entre campanas." loading="lazy" decoding="async"></div>
   </div>
 
   <h3>kit</h3>
@@ -1528,15 +1531,15 @@
     <p>Una rejilla de 24 pads en dos bancos. Un pad vacío abre el importador, con cuatro orígenes: tu biblioteca, un archivo o un vídeo del sistema, el micro, o una pista de la cinta. <code>chop</code> trocea una muestra por los puntos que marques y reparte los trozos en los pads libres.</p>
   </div>
   <div class="shots two">
-    <div><div class="ph pad"><span class="id">ph-13 · ipad horizontal</span><span class="what">kit con el banco a cargado y la forma de onda de un pad arriba.</span></div></div>
-    <div><div class="ph pad"><span class="id">ph-14 · ipad horizontal</span><span class="what">chop: una muestra con sus puntos de corte marcados.</span></div></div>
+    <div><img class="shot pad" src="img/shots/ph-13-dark-en.png" alt="kit con el banco a cargado y la forma de onda de un pad arriba." loading="lazy" decoding="async"></div>
+    <div><img class="shot pad" src="img/shots/ph-14-dark-en.png" alt="chop: una muestra con sus puntos de corte marcados." loading="lazy" decoding="async"></div>
   </div>
 </div></section>
 
 <section id="track"><div class="wrap">
   <div class="head"><h2>track</h2><a class="ref" href="manual.es.html">manual, sección 4</a></div>
   <div class="shots mixed" style="margin-top:0">
-    <div><div class="ph phone"><span class="id">ph-15 · iphone</span><span class="what">track: pestañas de pista arriba, toma grande en medio, keys abajo.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-15-light-en.png" alt="track: pestañas de pista arriba, toma grande en medio, keys abajo." loading="lazy" decoding="async"></div>
     <div class="txt">
       <p><code>track</code> pone la fila de pistas de <code>tape</code> arriba, el teclado de <code>synth</code> abajo, y la toma de la pista armada en grande entre los dos. Tocas el motor y grabas esa pista sin cambiar de pantalla.</p>
       <p><code>rec source</code>, en el panel de monitor, decide si <code class="rec">rec</code> graba el synth o la entrada física. En <code>tape</code> y <code>mix</code> siempre se graba la entrada.</p>
@@ -1602,9 +1605,9 @@
 </svg>
 </figure>
   <div class="shots phones">
-    <div><div class="ph phone"><span class="id">ph-16 · iphone</span><span class="what">mix con seis tiras, un canal muteado.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-17 · iphone</span><span class="what">Fx1 con tapesat cargado, age alto.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-18 · iphone</span><span class="what">eq maestro con las cuatro bandas movidas.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-16-light-en.png" alt="mix con seis tiras, un canal muteado." loading="lazy" decoding="async"></div>
+    <div><img class="shot phone" src="img/shots/ph-17-light-en.png" alt="fx1 con tapesat cargado y sus cuatro mandos." loading="lazy" decoding="async"></div>
+    <div><img class="shot phone" src="img/shots/ph-18-light-en.png" alt="eq maestro con las cuatro bandas movidas." loading="lazy" decoding="async"></div>
   </div>
 </div></section>
 
@@ -1615,7 +1618,7 @@
     <p><code>eject</code> abre tres filas de dos opciones: <code>master</code> o <code>stems</code> · <code>wav</code> o <code>m4a</code> · <code>tape</code> o <code class="loop">loop</code>. El archivo sale por la hoja de compartir de iOS. El render pasa por el mismo motor que la reproducción.</p>
   </div>
   <div class="shots phones">
-    <div><div class="ph phone"><span class="id">ph-19 · iphone</span><span class="what">Lista de cintas con cuatro o cinco proyectos, uno cargado.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-19-dark-en.png" alt="Lista de cintas con cuatro o cinco proyectos, uno cargado." loading="lazy" decoding="async"></div>
     <div><div class="ph phone"><span class="id">ph-20 · iphone</span><span class="what">Panel de eject abierto con stems · wav · loop.</span></div></div>
   </div>
 </div></section>
@@ -1628,8 +1631,8 @@
     <p><code>midi learn</code> asigna un mando físico a un control de la app: transporte, fader, pan, envíos y mute de cada pista, macros del synth y de los efectos, bandas del eq.</p>
   </div>
   <div class="shots phones">
-    <div><div class="ph phone"><span class="id">ph-21 · iphone</span><span class="what">ajustes ▸ sync con midi clock y link.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-22 · iphone</span><span class="what">midi learn activo, placas set sobre el mixer.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-21-light-en.png" alt="ajustes ▸ sync con midi clock y link." loading="lazy" decoding="async"></div>
+    <div><img class="shot phone" src="img/shots/ph-22-light-en.png" alt="midi learn activo, placas set sobre el mixer." loading="lazy" decoding="async"></div>
     <div><div class="ph sq"><span class="id">ph-23 · foto</span><span class="what">El iPhone junto a un teclado midi por usb, en una mesa real.</span></div></div>
   </div>
 </div></section>
@@ -1655,8 +1658,8 @@
   </div>
   <div class="shots phones">
     <div><div class="ph phone"><span class="id">ph-26 · iphone</span><span class="what">Pantalla de bloqueo con el transporte de TapeDesk.</span></div></div>
-    <div><div class="ph phone"><span class="id">ph-27 · iphone</span><span class="what">La misma pantalla de tape en claro y en oscuro, lado a lado.</span></div></div>
-    <div><div class="ph sq"><span class="id">ph-28 · iconos</span><span class="what">Los cuatro acabados de icono en fila.</span></div></div>
+    <div><img class="shot phone" src="img/shots/ph-27-light-en.png" alt="la misma pantalla de tape partida por la mitad: claro a la izquierda, oscuro a la derecha." loading="lazy" decoding="async"></div>
+    <div><img class="shot sq" src="img/shots/ph-28-light-en.png" alt="los cuatro acabados de icono: cream · dark · olive · wine." loading="lazy" decoding="async"></div>
   </div>
 </div></section>
 
