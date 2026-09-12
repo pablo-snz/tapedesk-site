@@ -98,6 +98,18 @@
   .ph.pad{width:min(100%,320px);aspect-ratio:4/3}
   .ph.sheet{width:100%;aspect-ratio:16/8}
   .ph.photo{width:min(100%,280px);aspect-ratio:4/3}
+  img.ph{display:block;background:none;border-style:solid;border-color:var(--line2);height:auto;aspect-ratio:auto}
+  img.ph.phone{width:260px}
+  /* Una fila de teléfonos se reparte el ancho: cuatro caben anchos, cinco caben
+     estrechos, y en los dos casos la fila NO se parte. */
+  .phfig.multi .phrow{flex-wrap:nowrap;gap:12px}
+  .phfig.multi img.ph.phone{width:auto;flex:1 1 0;min-width:0;max-width:168px}
+  img.ph.pad{width:min(100%,460px)}
+  img.ph.photo{width:min(100%,340px)}
+  .phfig:has(img.ph) figcaption{max-width:460px}
+  /* La línea "imagen · iphone" le dice al que saca la foto lo que tiene que
+     sacar. Cuando la foto ya está puesta, al lector le sobra. */
+  .phfig:has(img.ph) .pmeta{display:none}
   .phfig figcaption{font-size:14px;color:var(--ink3);margin-top:10px;max-width:290px;line-height:1.45}
   .phfig .pmeta{display:block;font-family:var(--mono);font-size:10.5px;color:var(--line);margin-bottom:2px}
   .phfig.pad figcaption,.phfig.sheet figcaption{max-width:340px}

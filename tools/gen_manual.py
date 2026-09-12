@@ -62,6 +62,21 @@ def inline(text, first_code_class=None):
 
 PH_RE = re.compile(r"^> \*\*\[(imagen|gif|vídeo|foto) (m[\d.]+-\d+)(?: · ([^\]]*))?\]\*\* (.*)$")
 
+SHOTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "img", "manual")
+LANG = os.environ.get("MANUAL_LANG", "en")
+
+
+def shot_for(pid, index, count):
+    """La captura de un hueco, si ya existe. Los huecos de varias van numeradas."""
+    stem = pid if count == 1 else f"{pid}-{index + 1}"
+    for name in (f"{stem}-{LANG}.png", f"{stem}.png"):
+        path = os.path.join(SHOTS_DIR, name)
+        if os.path.exists(path):
+            from PIL import Image
+            w, h = Image.open(path).size
+            return name, w, h
+    return None
+
 
 def placeholder(kind, pid, meta, desc):
     meta = meta or ""
@@ -82,8 +97,18 @@ def placeholder(kind, pid, meta, desc):
     else:
         shape = "photo"
     meta_txt = " · ".join([kind] + ([device] if device else []) + rest)
-    boxes = "".join(f'<div class="ph {shape}"><span class="id">{html.escape(pid) if i == 0 else ""}</span></div>'
-                    for i in range(count))
+    alt = html.escape(re.sub(r"[`*]", "", desc), quote=True)
+    cajas = []
+    for i in range(count):
+        shot = shot_for(pid, i, count)
+        if shot:
+            name, w, h = shot
+            cajas.append(f'<img class="ph {shape}" src="img/manual/{name}" width="{w}" height="{h}" '
+                         f'alt="{alt if i == 0 else ""}" loading="lazy" decoding="async">')
+        else:
+            cajas.append(f'<div class="ph {shape}"><span class="id">'
+                         f'{html.escape(pid) if i == 0 else ""}</span></div>')
+    boxes = "".join(cajas)
     return (f'<figure class="phfig {shape}{" multi" if count > 1 else ""}"><div class="phrow">{boxes}</div>'
             f'<figcaption><span class="pmeta">{html.escape(meta_txt)}</span>{inline(desc)}</figcaption></figure>')
 
