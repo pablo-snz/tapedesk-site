@@ -1688,7 +1688,7 @@
 <script>
   const nav=document.querySelector('.places');
   const ajustaAncla=()=>{document.documentElement.style.scrollPaddingTop=
-    (Math.floor(nav.getBoundingClientRect().height)-2)+'px';};
+    (Math.floor(nav.getBoundingClientRect().height)-6)+'px';};
   ajustaAncla(); addEventListener('resize',ajustaAncla);
   const links=[...document.querySelectorAll('.places a')];
   const byId=new Map(links.map(a=>[a.hash.slice(1),a]));
