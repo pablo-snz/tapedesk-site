@@ -1,0 +1,7 @@
+{"_doc": "On-screen word in a language -> the English control name whose colour class (CODE_CLASS in gen_manual.py) it takes. Words taken from the app's string catalogues.",
+ "fr": {"entrée": "in"}, "de": {"eingabe": "in"}, "it": {"ing.": "in"}, "pt-BR": {"entrada": "in"}, "nl": {"ingang": "in"}, "pl": {"wejście": "in"}, "tr": {"giriş": "in"}, "id": {"input": "in"},
+ "ru": {"цикл": "loop", "вход": "in", "корпус": "body", "воздух": "air", "запись": "rec"},
+ "ja": {"ループ": "loop", "入力": "in", "低音": "low", "胴鳴り": "body", "厚み": "body", "存在感": "pres", "空気感": "air"},
+ "ko": {"루프": "loop", "입력": "in", "저음": "low", "몸통": "body", "두께": "body", "존재감": "pres", "공기감": "air"},
+ "zh-Hans": {"循环": "loop", "输入": "in", "低频": "low", "箱体": "body", "厚度": "body", "临场": "pres", "空气": "air"},
+ "zh-Hant": {"循環": "loop", "輸入": "in", "低頻": "low", "箱體": "body", "厚度": "body", "臨場": "pres", "空氣": "air"}}

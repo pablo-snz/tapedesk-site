@@ -1,0 +1,858 @@
+{
+  "_doc": "privacy.html per language. Keys: title, date, facts [[label,value]x4], sections [[heading,body]x8]. Body may contain the mailto <a>, keep it exactly. Also: description (meta).",
+  "en": {
+    "title": "Privacy",
+    "date": "Last updated: 24 September 2026",
+    "facts": [
+      [
+        "Collected",
+        "nothing"
+      ],
+      [
+        "Analytics",
+        "none"
+      ],
+      [
+        "Accounts",
+        "none"
+      ],
+      [
+        "Network",
+        "local only: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "The short version",
+        "TapeDesk runs entirely on your iPhone or iPad. It does not collect, store, send, sell or share personal information or usage data. There are no analytics, no ads, no tracking and no accounts. Your recordings are never seen by anyone but you."
+      ],
+      [
+        "What is collected",
+        "Nothing. The App Store privacy label for TapeDesk is \"Data Not Collected\"."
+      ],
+      [
+        "Recordings and tapes",
+        "Everything you record and every tape you make is stored on your device, and in your own iCloud or device backups if you have them turned on. That part is between you and Apple. TapeDesk never sends your audio anywhere."
+      ],
+      [
+        "Microphone",
+        "TapeDesk asks for the microphone to record audio onto its tracks. The audio is written to files on your device and is never uploaded."
+      ],
+      [
+        "Local network and Bluetooth",
+        "TapeDesk connects to no server. The local network is used for Ableton Link, to share tempo with other music apps nearby, and for network MIDI. Bluetooth is used to pair a MIDI controller. All of it stays between your devices and never reaches the internet or the developer."
+      ],
+      [
+        "Children",
+        "TapeDesk collects no data from anyone, so it collects none from children."
+      ],
+      [
+        "Changes",
+        "If this policy changes, the new version will be posted on this page with a new date."
+      ],
+      [
+        "Contact",
+        "Questions about privacy or anything else: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ],
+    "description": "TapeDesk collects no data. The privacy policy."
+  },
+  "es": {
+    "title": "Privacidad",
+    "date": "Última actualización: 24 de septiembre de 2026",
+    "facts": [
+      [
+        "Datos recogidos",
+        "ninguno"
+      ],
+      [
+        "Analítica",
+        "ninguna"
+      ],
+      [
+        "Cuentas",
+        "ninguna"
+      ],
+      [
+        "Red",
+        "solo local: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "En corto",
+        "TapeDesk funciona entero en tu iPhone o iPad. No recoge, guarda, envía, vende ni comparte información personal ni datos de uso. No hay analítica, ni anuncios, ni seguimiento, ni cuentas. Tus grabaciones no las ve nadie más que tú."
+      ],
+      [
+        "Qué se recoge",
+        "Nada. La etiqueta de privacidad de TapeDesk en la App Store es «Datos no recopilados»."
+      ],
+      [
+        "Grabaciones y cintas",
+        "Todo lo que grabas y cada cinta que haces se guarda en tu dispositivo, y en tus copias de iCloud o del dispositivo si las tienes activadas. Eso queda entre tú y Apple. TapeDesk no envía tu audio a ningún sitio."
+      ],
+      [
+        "Micrófono",
+        "TapeDesk pide el micrófono para grabar audio en sus pistas. El audio se escribe en archivos de tu dispositivo y nunca se sube."
+      ],
+      [
+        "Red local y Bluetooth",
+        "TapeDesk no se conecta a ningún servidor. La red local se usa para Ableton Link, que comparte el tempo con otras apps de música cercanas, y para el MIDI por red. El Bluetooth se usa para emparejar un controlador MIDI. Todo se queda entre tus dispositivos y nunca llega a internet ni al desarrollador."
+      ],
+      [
+        "Menores",
+        "TapeDesk no recoge datos de nadie, así que tampoco de menores."
+      ],
+      [
+        "Cambios",
+        "Si esta política cambia, la versión nueva se publicará en esta página con una fecha nueva."
+      ],
+      [
+        "Contacto",
+        "Preguntas sobre privacidad o sobre cualquier otra cosa: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ],
+    "description": "TapeDesk no recoge ningún dato. La política de privacidad."
+  },
+  "ru": {
+    "title": "Конфиденциальность",
+    "date": "Обновлено 24 сентября 2026 г.",
+    "facts": [
+      [
+        "Собирается",
+        "ничего"
+      ],
+      [
+        "Аналитика",
+        "нет"
+      ],
+      [
+        "Учётные записи",
+        "нет"
+      ],
+      [
+        "Сеть",
+        "только локальная: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "Коротко",
+        "TapeDesk работает целиком на вашем iPhone или iPad. Приложение не собирает, не хранит, не отправляет, не продаёт и никому не передаёт личные данные или данные об использовании. В нём нет аналитики, рекламы, отслеживания и учётных записей. Ваши записи не видит никто, кроме вас."
+      ],
+      [
+        "Что собирается",
+        "Ничего. В App Store у TapeDesk метка конфиденциальности «Данные не собираются»."
+      ],
+      [
+        "Записи и плёнки",
+        "Всё, что вы записываете, и все ваши плёнки хранятся на вашем устройстве, а также в вашем iCloud или резервных копиях устройства, если они у вас включены. Это касается только вас и Apple. TapeDesk никуда не отправляет ваш звук."
+      ],
+      [
+        "Микрофон",
+        "TapeDesk запрашивает доступ к микрофону, чтобы записывать звук на дорожки. Звук сохраняется в файлы на вашем устройстве и никуда не загружается."
+      ],
+      [
+        "Локальная сеть и Bluetooth",
+        "TapeDesk не подключается ни к какому серверу. Локальная сеть нужна для Ableton Link, чтобы делиться темпом с другими музыкальными приложениями рядом, и для сетевого MIDI. Bluetooth нужен, чтобы подключить MIDI-контроллер. Всё это остаётся между вашими устройствами и никогда не попадает ни в интернет, ни к разработчику."
+      ],
+      [
+        "Дети",
+        "TapeDesk не собирает данных ни о ком, поэтому не собирает их и о детях."
+      ],
+      [
+        "Изменения",
+        "Если эта политика изменится, новая версия появится на этой странице с новой датой."
+      ],
+      [
+        "Связь",
+        "Вопросы о конфиденциальности или о чём-то другом: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ],
+    "description": "TapeDesk не собирает никаких данных. Политика конфиденциальности."
+  },
+  "ja": {
+    "title": "プライバシー",
+    "date": "最終更新日：2026年9月24日",
+    "facts": [
+      [
+        "収集するデータ",
+        "なし"
+      ],
+      [
+        "アナリティクス",
+        "なし"
+      ],
+      [
+        "アカウント",
+        "なし"
+      ],
+      [
+        "ネットワーク",
+        "ローカルのみ：Ableton Link、MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "要点",
+        "TapeDesk はすべてお使いの iPhone または iPad の中で動作します。個人情報や利用データを収集、保存、送信、販売、共有することはありません。アナリティクス、広告、トラッキング、アカウントはありません。あなたの録音をあなた以外の人が見ることはありません。"
+      ],
+      [
+        "収集する情報",
+        "ありません。App Store での TapeDesk のプライバシーラベルは「データの収集なし」です。"
+      ],
+      [
+        "録音とテープ",
+        "録音したものと作ったテープはすべてお使いのデバイスに保存されます。iCloud やデバイスのバックアップをオンにしている場合は、そこにも保存されます。これはあなたと Apple の間のことです。TapeDesk があなたの音声をどこかへ送ることはありません。"
+      ],
+      [
+        "マイク",
+        "TapeDesk はトラックに音声を録音するためにマイクへのアクセスを求めます。音声はデバイス上のファイルに書き込まれ、アップロードされることはありません。"
+      ],
+      [
+        "ローカルネットワークと Bluetooth",
+        "TapeDesk はどのサーバーにも接続しません。ローカルネットワークは、近くのほかの音楽アプリとテンポを共有する Ableton Link と、ネットワーク MIDI に使います。Bluetooth は MIDI コントローラーとのペアリングに使います。どれもお使いのデバイス同士の間で完結し、インターネットや開発者に届くことはありません。"
+      ],
+      [
+        "お子さまについて",
+        "TapeDesk は誰からもデータを収集しないため、お子さまからも収集しません。"
+      ],
+      [
+        "変更",
+        "このポリシーを変更する場合は、新しい日付とともにこのページに掲載します。"
+      ],
+      [
+        "お問い合わせ",
+        "プライバシーやそのほかのご質問は <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a> までどうぞ。"
+      ]
+    ],
+    "description": "TapeDesk はデータを収集しません。プライバシーポリシーです。"
+  },
+  "ko": {
+    "title": "개인정보",
+    "date": "최종 업데이트: 2026년 9월 24일",
+    "facts": [
+      [
+        "수집",
+        "없음"
+      ],
+      [
+        "분석",
+        "없음"
+      ],
+      [
+        "계정",
+        "없음"
+      ],
+      [
+        "네트워크",
+        "로컬 전용: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "요약",
+        "TapeDesk는 전부 iPhone 또는 iPad 안에서 동작합니다. 개인정보나 사용 데이터를 수집, 저장, 전송, 판매, 공유하지 않습니다. 분석, 광고, 추적, 계정이 없습니다. 녹음은 사용자 본인 외에는 아무도 보지 않습니다."
+      ],
+      [
+        "수집하는 정보",
+        "없습니다. App Store에서 TapeDesk의 개인정보 보호 라벨은 '데이터가 수집되지 않음'입니다."
+      ],
+      [
+        "녹음과 테이프",
+        "녹음한 모든 내용과 만든 모든 테이프는 기기에 저장되며, iCloud나 기기 백업을 켜 두었다면 그곳에도 저장됩니다. 이 부분은 사용자와 Apple 사이의 일입니다. TapeDesk는 오디오를 어디에도 보내지 않습니다."
+      ],
+      [
+        "마이크",
+        "TapeDesk는 트랙에 오디오를 녹음하기 위해 마이크 접근을 요청합니다. 오디오는 기기의 파일에 기록되며 업로드되지 않습니다."
+      ],
+      [
+        "로컬 네트워크와 Bluetooth",
+        "TapeDesk는 어떤 서버에도 연결하지 않습니다. 로컬 네트워크는 근처의 다른 음악 앱과 템포를 공유하는 Ableton Link와 네트워크 MIDI에 쓰입니다. Bluetooth는 MIDI 컨트롤러를 페어링하는 데 쓰입니다. 모두 사용자의 기기들 사이에서만 오가며 인터넷이나 개발자에게 전달되지 않습니다."
+      ],
+      [
+        "아동",
+        "TapeDesk는 누구에게서도 데이터를 수집하지 않으므로 아동에게서도 수집하지 않습니다."
+      ],
+      [
+        "변경",
+        "이 방침이 바뀌면 새 버전을 새 날짜와 함께 이 페이지에 게시합니다."
+      ],
+      [
+        "문의",
+        "개인정보나 그 밖의 질문은 <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>로 보내 주십시오."
+      ]
+    ],
+    "description": "TapeDesk는 데이터를 수집하지 않습니다. 개인정보 처리방침입니다."
+  },
+  "zh-Hans": {
+    "title": "隐私",
+    "date": "最后更新：2026年9月24日",
+    "facts": [
+      [
+        "收集",
+        "无"
+      ],
+      [
+        "分析",
+        "无"
+      ],
+      [
+        "账户",
+        "无"
+      ],
+      [
+        "网络",
+        "仅限本地：Ableton Link、MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "简要说明",
+        "TapeDesk 完全在你的 iPhone 或 iPad 上运行。它不收集、存储、发送、出售或分享个人信息和使用数据。没有分析，没有广告，没有追踪，也没有账户。你的录音除了你之外没有人看得到。"
+      ],
+      [
+        "收集的内容",
+        "没有。TapeDesk 在 App Store 的隐私标签是“未收集数据”。"
+      ],
+      [
+        "录音和磁带",
+        "你录下的所有内容和做的所有磁带都保存在你的设备上；如果你开启了 iCloud 或设备备份，也会保存在那里。这部分只涉及你和 Apple。TapeDesk 从不把你的音频发送到任何地方。"
+      ],
+      [
+        "麦克风",
+        "TapeDesk 请求使用麦克风，是为了把音频录到音轨上。音频写入你设备上的文件，从不上传。"
+      ],
+      [
+        "本地网络和蓝牙",
+        "TapeDesk 不连接任何服务器。本地网络用于 Ableton Link，与附近的其他音乐 App 共享速度，也用于网络 MIDI。蓝牙用于配对 MIDI 控制器。这些都只在你的设备之间进行，不会到达互联网或开发者。"
+      ],
+      [
+        "儿童",
+        "TapeDesk 不收集任何人的数据，因此也不收集儿童的数据。"
+      ],
+      [
+        "变更",
+        "如果本政策有变更，新版本会连同新的日期发布在本页面上。"
+      ],
+      [
+        "联系",
+        "关于隐私或其他任何问题，请写信至 <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>。"
+      ]
+    ],
+    "description": "TapeDesk 不收集任何数据。隐私政策。"
+  },
+  "zh-Hant": {
+    "title": "隱私權",
+    "date": "最後更新：2026年9月24日",
+    "facts": [
+      [
+        "收集",
+        "無"
+      ],
+      [
+        "分析",
+        "無"
+      ],
+      [
+        "帳號",
+        "無"
+      ],
+      [
+        "網路",
+        "僅限本機：Ableton Link、MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "簡要說明",
+        "TapeDesk 完全在你的 iPhone 或 iPad 上執行。它不收集、儲存、傳送、出售或分享個人資訊和使用資料。沒有分析，沒有廣告，沒有追蹤，也沒有帳號。你的錄音除了你之外沒有人看得到。"
+      ],
+      [
+        "收集的內容",
+        "沒有。TapeDesk 在 App Store 的隱私權標籤是「不收集資料」。"
+      ],
+      [
+        "錄音和磁帶",
+        "你錄下的所有內容和做的所有磁帶都儲存在你的裝置上；如果你開啟了 iCloud 或裝置備份，也會儲存在那裡。這部分只涉及你和 Apple。TapeDesk 從不把你的音訊傳送到任何地方。"
+      ],
+      [
+        "麥克風",
+        "TapeDesk 要求使用麥克風，是為了把音訊錄到音軌上。音訊寫入你裝置上的檔案，從不上傳。"
+      ],
+      [
+        "區域網路和藍牙",
+        "TapeDesk 不連線到任何伺服器。區域網路用於 Ableton Link，與附近的其他音樂 App 共享速度，也用於網路 MIDI。藍牙用於配對 MIDI 控制器。這些都只在你的裝置之間進行，不會到達網際網路或開發者。"
+      ],
+      [
+        "兒童",
+        "TapeDesk 不收集任何人的資料，因此也不收集兒童的資料。"
+      ],
+      [
+        "變更",
+        "如果本政策有變更，新版本會連同新的日期發布在本頁面上。"
+      ],
+      [
+        "聯絡",
+        "關於隱私權或其他任何問題，請寫信至 <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>。"
+      ]
+    ],
+    "description": "TapeDesk 不收集任何資料。隱私權政策。"
+  },
+  "fr": {
+    "description": "TapeDesk ne collecte aucune donnée. La politique de confidentialité.",
+    "title": "Confidentialité",
+    "date": "Dernière mise à jour : 24 septembre 2026",
+    "facts": [
+      [
+        "Collecté",
+        "rien"
+      ],
+      [
+        "Statistiques",
+        "aucune"
+      ],
+      [
+        "Comptes",
+        "aucun"
+      ],
+      [
+        "Réseau",
+        "local uniquement : Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "En bref",
+        "TapeDesk fonctionne entièrement sur votre iPhone ou votre iPad. L’app ne collecte, ne conserve, n’envoie, ne vend et ne partage aucune information personnelle ni aucune donnée d’utilisation. Il n’y a ni statistiques, ni publicité, ni suivi, ni compte. Personne d’autre que vous ne voit vos enregistrements."
+      ],
+      [
+        "Ce qui est collecté",
+        "Rien. L’étiquette de confidentialité de TapeDesk sur l’App Store indique « Données non collectées »."
+      ],
+      [
+        "Enregistrements et bandes",
+        "Tout ce que vous enregistrez et chaque bande que vous créez sont stockés sur votre appareil, ainsi que dans vos sauvegardes iCloud ou de l’appareil si vous les avez activées. Cette partie relève de vous et d’Apple. TapeDesk n’envoie jamais votre audio nulle part."
+      ],
+      [
+        "Microphone",
+        "TapeDesk demande l’accès au microphone pour enregistrer de l’audio sur ses pistes. L’audio est écrit dans des fichiers sur votre appareil et n’est jamais envoyé en ligne."
+      ],
+      [
+        "Réseau local et Bluetooth",
+        "TapeDesk ne se connecte à aucun serveur. Le réseau local sert à Ableton Link, pour partager le tempo avec d’autres apps musicales à proximité, et au MIDI réseau. Le Bluetooth sert à jumeler un contrôleur MIDI. Tout cela reste entre vos appareils et n’atteint jamais internet ni le développeur."
+      ],
+      [
+        "Enfants",
+        "TapeDesk ne collecte aucune donnée auprès de qui que ce soit, donc aucune auprès des enfants."
+      ],
+      [
+        "Modifications",
+        "Si cette politique change, la nouvelle version sera publiée sur cette page avec une nouvelle date."
+      ],
+      [
+        "Contact",
+        "Pour toute question sur la confidentialité ou sur autre chose : <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  },
+  "de": {
+    "description": "TapeDesk erfasst keine Daten. Die Datenschutzerklärung.",
+    "title": "Datenschutz",
+    "date": "Zuletzt aktualisiert: 24. September 2026",
+    "facts": [
+      [
+        "Erfasst",
+        "nichts"
+      ],
+      [
+        "Analyse",
+        "keine"
+      ],
+      [
+        "Konten",
+        "keine"
+      ],
+      [
+        "Netzwerk",
+        "nur lokal: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "Kurz gesagt",
+        "TapeDesk läuft vollständig auf deinem iPhone oder iPad. Die App erfasst, speichert, sendet, verkauft und teilt keine personenbezogenen Daten und keine Nutzungsdaten. Es gibt keine Analyse, keine Werbung, kein Tracking und keine Konten. Deine Aufnahmen sieht niemand außer dir."
+      ],
+      [
+        "Was erfasst wird",
+        "Nichts. Das Datenschutz-Etikett von TapeDesk im App Store lautet „Keine Daten erfasst“."
+      ],
+      [
+        "Aufnahmen und Bänder",
+        "Alles, was du aufnimmst, und jedes Band, das du anlegst, wird auf deinem Gerät gespeichert, und in deinen iCloud- oder Gerätebackups, falls du sie eingeschaltet hast. Dieser Teil liegt zwischen dir und Apple. TapeDesk sendet dein Audio nirgendwohin."
+      ],
+      [
+        "Mikrofon",
+        "TapeDesk fragt nach dem Mikrofon, um Audio auf seine Spuren aufzunehmen. Das Audio wird in Dateien auf deinem Gerät geschrieben und nie hochgeladen."
+      ],
+      [
+        "Lokales Netzwerk und Bluetooth",
+        "TapeDesk verbindet sich mit keinem Server. Das lokale Netzwerk wird für Ableton Link genutzt, um das Tempo mit anderen Musik-Apps in der Nähe zu teilen, und für Netzwerk-MIDI. Bluetooth wird genutzt, um einen MIDI-Controller zu koppeln. All das bleibt zwischen deinen Geräten und erreicht nie das Internet oder den Entwickler."
+      ],
+      [
+        "Kinder",
+        "TapeDesk erfasst von niemandem Daten, also auch nicht von Kindern."
+      ],
+      [
+        "Änderungen",
+        "Wenn sich diese Erklärung ändert, wird die neue Fassung mit neuem Datum auf dieser Seite veröffentlicht."
+      ],
+      [
+        "Kontakt",
+        "Fragen zum Datenschutz oder zu etwas anderem: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  },
+  "it": {
+    "description": "TapeDesk non raccoglie dati. L’informativa sulla privacy.",
+    "title": "Privacy",
+    "date": "Ultimo aggiornamento: 24 settembre 2026",
+    "facts": [
+      [
+        "Raccolto",
+        "niente"
+      ],
+      [
+        "Statistiche",
+        "nessuna"
+      ],
+      [
+        "Account",
+        "nessuno"
+      ],
+      [
+        "Rete",
+        "solo locale: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "In breve",
+        "TapeDesk funziona interamente sul tuo iPhone o iPad. Non raccoglie, conserva, invia, vende né condivide informazioni personali o dati di utilizzo. Non ci sono statistiche, pubblicità, tracciamento né account. Le tue registrazioni non le vede nessuno tranne te."
+      ],
+      [
+        "Cosa viene raccolto",
+        "Niente. L’etichetta sulla privacy di TapeDesk nell’App Store è \"Dati non raccolti\"."
+      ],
+      [
+        "Registrazioni e nastri",
+        "Tutto ciò che registri e ogni nastro che crei restano sul tuo dispositivo, e nei tuoi backup di iCloud o del dispositivo se li hai attivati. Quella parte riguarda te e Apple. TapeDesk non invia mai il tuo audio da nessuna parte."
+      ],
+      [
+        "Microfono",
+        "TapeDesk chiede il microfono per registrare audio sulle sue tracce. L’audio viene scritto in file sul tuo dispositivo e non viene mai caricato online."
+      ],
+      [
+        "Rete locale e Bluetooth",
+        "TapeDesk non si collega a nessun server. La rete locale serve per Ableton Link, per condividere il tempo con altre app musicali vicine, e per il MIDI di rete. Il Bluetooth serve per abbinare un controller MIDI. Tutto resta tra i tuoi dispositivi e non arriva mai a internet né allo sviluppatore."
+      ],
+      [
+        "Minori",
+        "TapeDesk non raccoglie dati da nessuno, quindi nemmeno dai minori."
+      ],
+      [
+        "Modifiche",
+        "Se questa informativa cambia, la nuova versione sarà pubblicata in questa pagina con una nuova data."
+      ],
+      [
+        "Contatti",
+        "Domande sulla privacy o su qualsiasi altra cosa: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  },
+  "pt-BR": {
+    "description": "O TapeDesk não coleta dados. A política de privacidade.",
+    "title": "Privacidade",
+    "date": "Última atualização: 24 de setembro de 2026",
+    "facts": [
+      [
+        "Coletado",
+        "nada"
+      ],
+      [
+        "Análise de dados",
+        "nenhuma"
+      ],
+      [
+        "Contas",
+        "nenhuma"
+      ],
+      [
+        "Rede",
+        "só local: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "Em resumo",
+        "O TapeDesk funciona inteiramente no seu iPhone ou iPad. Ele não coleta, armazena, envia, vende nem compartilha informações pessoais ou dados de uso. Não há análise de dados, anúncios, rastreamento nem contas. Ninguém além de você vê suas gravações."
+      ],
+      [
+        "O que é coletado",
+        "Nada. O rótulo de privacidade do TapeDesk na App Store é \"Dados não coletados\"."
+      ],
+      [
+        "Gravações e fitas",
+        "Tudo o que você grava e cada fita que você cria ficam armazenados no seu dispositivo, e nos seus backups do iCloud ou do dispositivo, se estiverem ativados. Essa parte é entre você e a Apple. O TapeDesk nunca envia seu áudio para lugar nenhum."
+      ],
+      [
+        "Microfone",
+        "O TapeDesk pede acesso ao microfone para gravar áudio nas faixas. O áudio é gravado em arquivos no seu dispositivo e nunca é enviado para a internet."
+      ],
+      [
+        "Rede local e Bluetooth",
+        "O TapeDesk não se conecta a nenhum servidor. A rede local é usada pelo Ableton Link, para compartilhar o andamento com outros apps de música por perto, e pelo MIDI em rede. O Bluetooth é usado para emparelhar um controlador MIDI. Tudo isso fica entre os seus dispositivos e nunca chega à internet nem ao desenvolvedor."
+      ],
+      [
+        "Crianças",
+        "O TapeDesk não coleta dados de ninguém, portanto não coleta dados de crianças."
+      ],
+      [
+        "Alterações",
+        "Se esta política mudar, a nova versão será publicada nesta página com uma nova data."
+      ],
+      [
+        "Contato",
+        "Dúvidas sobre privacidade ou qualquer outra coisa: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  },
+  "nl": {
+    "description": "TapeDesk verzamelt geen gegevens. Het privacybeleid.",
+    "title": "Privacy",
+    "date": "Laatst bijgewerkt: 24 september 2026",
+    "facts": [
+      [
+        "Verzameld",
+        "niets"
+      ],
+      [
+        "Analyse",
+        "geen"
+      ],
+      [
+        "Accounts",
+        "geen"
+      ],
+      [
+        "Netwerk",
+        "alleen lokaal: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "In het kort",
+        "TapeDesk draait volledig op je iPhone of iPad. De app verzamelt, bewaart, verstuurt, verkoopt en deelt geen persoonlijke gegevens of gebruiksgegevens. Er is geen analyse, geen reclame, geen tracking en er zijn geen accounts. Niemand behalve jij ziet je opnames."
+      ],
+      [
+        "Wat er wordt verzameld",
+        "Niets. Het privacylabel van TapeDesk in de App Store is 'Geen gegevens verzameld'."
+      ],
+      [
+        "Opnames en banden",
+        "Alles wat je opneemt en elke band die je maakt, wordt op je apparaat bewaard, en in je iCloud- of apparaatbackups als je die hebt aangezet. Dat deel is tussen jou en Apple. TapeDesk verstuurt je audio nergens naartoe."
+      ],
+      [
+        "Microfoon",
+        "TapeDesk vraagt om de microfoon om audio op te nemen op de tracks. De audio wordt in bestanden op je apparaat geschreven en nooit geüpload."
+      ],
+      [
+        "Lokaal netwerk en Bluetooth",
+        "TapeDesk maakt met geen enkele server verbinding. Het lokale netwerk wordt gebruikt voor Ableton Link, om het tempo te delen met andere muziekapps in de buurt, en voor netwerk-MIDI. Bluetooth wordt gebruikt om een MIDI-controller te koppelen. Dit alles blijft tussen je apparaten en bereikt nooit het internet of de ontwikkelaar."
+      ],
+      [
+        "Kinderen",
+        "TapeDesk verzamelt van niemand gegevens, dus ook niet van kinderen."
+      ],
+      [
+        "Wijzigingen",
+        "Als dit beleid verandert, verschijnt de nieuwe versie op deze pagina met een nieuwe datum."
+      ],
+      [
+        "Contact",
+        "Vragen over privacy of iets anders: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  },
+  "pl": {
+    "description": "TapeDesk nie zbiera żadnych danych. Polityka prywatności.",
+    "title": "Prywatność",
+    "date": "Ostatnia aktualizacja: 24 września 2026 r.",
+    "facts": [
+      [
+        "Zbierane",
+        "nic"
+      ],
+      [
+        "Analityka",
+        "brak"
+      ],
+      [
+        "Konta",
+        "brak"
+      ],
+      [
+        "Sieć",
+        "tylko lokalna: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "W skrócie",
+        "TapeDesk działa w całości na twoim iPhonie lub iPadzie. Nie zbiera, nie przechowuje, nie wysyła, nie sprzedaje i nie udostępnia danych osobowych ani danych o użytkowaniu. Nie ma analityki, reklam, śledzenia ani kont. Twoich nagrań nie widzi nikt poza tobą."
+      ],
+      [
+        "Co jest zbierane",
+        "Nic. Etykieta prywatności TapeDesk w App Store brzmi \"Dane nie są zbierane\"."
+      ],
+      [
+        "Nagrania i taśmy",
+        "Wszystko, co nagrasz, i każda taśma, którą utworzysz, są przechowywane na twoim urządzeniu oraz w twoich kopiach zapasowych iCloud lub urządzenia, jeśli je włączyłeś. Ta część dotyczy tylko ciebie i Apple. TapeDesk nigdzie nie wysyła twojego audio."
+      ],
+      [
+        "Mikrofon",
+        "TapeDesk prosi o dostęp do mikrofonu, żeby nagrywać dźwięk na swoje ścieżki. Dźwięk jest zapisywany w plikach na twoim urządzeniu i nigdy nie jest wysyłany do sieci."
+      ],
+      [
+        "Sieć lokalna i Bluetooth",
+        "TapeDesk nie łączy się z żadnym serwerem. Sieć lokalna służy do Ableton Link, żeby dzielić tempo z innymi aplikacjami muzycznymi w pobliżu, oraz do MIDI przez sieć. Bluetooth służy do parowania kontrolera MIDI. Wszystko to zostaje między twoimi urządzeniami i nigdy nie trafia do internetu ani do twórcy aplikacji."
+      ],
+      [
+        "Dzieci",
+        "TapeDesk nie zbiera danych od nikogo, więc nie zbiera ich też od dzieci."
+      ],
+      [
+        "Zmiany",
+        "Jeśli ta polityka się zmieni, nowa wersja zostanie opublikowana na tej stronie z nową datą."
+      ],
+      [
+        "Kontakt",
+        "Pytania o prywatność albo o cokolwiek innego: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  },
+  "tr": {
+    "description": "TapeDesk hiçbir veri toplamaz. Gizlilik politikası.",
+    "title": "Gizlilik",
+    "date": "Son güncelleme: 24 Eylül 2026",
+    "facts": [
+      [
+        "Toplanan",
+        "hiçbir şey"
+      ],
+      [
+        "Analiz",
+        "yok"
+      ],
+      [
+        "Hesap",
+        "yok"
+      ],
+      [
+        "Ağ",
+        "yalnızca yerel: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "Kısaca",
+        "TapeDesk tamamen iPhone ya da iPad’inde çalışır. Kişisel bilgi ya da kullanım verisi toplamaz, saklamaz, göndermez, satmaz ve paylaşmaz. Analiz, reklam, izleme ve hesap yoktur. Kayıtlarını senden başka kimse görmez."
+      ],
+      [
+        "Neler toplanıyor",
+        "Hiçbir şey. TapeDesk’in App Store’daki gizlilik etiketi \"Veri Toplanmıyor\" şeklindedir."
+      ],
+      [
+        "Kayıtlar ve bantlar",
+        "Kaydettiğin her şey ve oluşturduğun her bant cihazında saklanır, açıksa iCloud ya da cihaz yedeklerinde de bulunur. Bu kısım seninle Apple arasındadır. TapeDesk sesini hiçbir yere göndermez."
+      ],
+      [
+        "Mikrofon",
+        "TapeDesk, parçalarına ses kaydetmek için mikrofon izni ister. Ses, cihazındaki dosyalara yazılır ve hiçbir zaman internete yüklenmez."
+      ],
+      [
+        "Yerel ağ ve Bluetooth",
+        "TapeDesk hiçbir sunucuya bağlanmaz. Yerel ağ, yakındaki başka müzik uygulamalarıyla tempoyu paylaşmak için Ableton Link’te ve ağ üzerinden MIDI’de kullanılır. Bluetooth, bir MIDI denetleyiciyi eşleştirmek için kullanılır. Bunların hepsi cihazların arasında kalır, internete ya da geliştiriciye asla ulaşmaz."
+      ],
+      [
+        "Çocuklar",
+        "TapeDesk kimseden veri toplamaz, dolayısıyla çocuklardan da toplamaz."
+      ],
+      [
+        "Değişiklikler",
+        "Bu politika değişirse yeni sürüm bu sayfada yeni bir tarihle yayımlanır."
+      ],
+      [
+        "İletişim",
+        "Gizlilik ya da başka herhangi bir konudaki soruların için: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  },
+  "id": {
+    "description": "TapeDesk tidak mengumpulkan data apa pun. Kebijakan privasi.",
+    "title": "Privasi",
+    "date": "Terakhir diperbarui: 24 September 2026",
+    "facts": [
+      [
+        "Dikumpulkan",
+        "tidak ada"
+      ],
+      [
+        "Analitik",
+        "tidak ada"
+      ],
+      [
+        "Akun",
+        "tidak ada"
+      ],
+      [
+        "Jaringan",
+        "hanya lokal: Ableton Link, MIDI"
+      ]
+    ],
+    "sections": [
+      [
+        "Singkatnya",
+        "TapeDesk berjalan sepenuhnya di iPhone atau iPad kamu. Aplikasi ini tidak mengumpulkan, menyimpan, mengirim, menjual, atau membagikan informasi pribadi maupun data penggunaan. Tidak ada analitik, iklan, pelacakan, atau akun. Rekamanmu tidak dilihat siapa pun selain kamu."
+      ],
+      [
+        "Apa yang dikumpulkan",
+        "Tidak ada. Label privasi TapeDesk di App Store adalah \"Data Tidak Dikumpulkan\"."
+      ],
+      [
+        "Rekaman dan pita",
+        "Semua yang kamu rekam dan setiap pita yang kamu buat disimpan di perangkatmu, juga di cadangan iCloud atau cadangan perangkatmu kalau kamu menyalakannya. Bagian itu urusan kamu dan Apple. TapeDesk tidak pernah mengirim audiomu ke mana pun."
+      ],
+      [
+        "Mikrofon",
+        "TapeDesk meminta akses mikrofon untuk merekam audio ke treknya. Audio ditulis ke file di perangkatmu dan tidak pernah diunggah."
+      ],
+      [
+        "Jaringan lokal dan Bluetooth",
+        "TapeDesk tidak terhubung ke server mana pun. Jaringan lokal dipakai untuk Ableton Link, agar tempo bisa dibagi dengan aplikasi musik lain di dekatmu, dan untuk MIDI lewat jaringan. Bluetooth dipakai untuk memasangkan kontroler MIDI. Semuanya tetap di antara perangkat-perangkatmu dan tidak pernah sampai ke internet atau ke pengembang."
+      ],
+      [
+        "Anak-anak",
+        "TapeDesk tidak mengumpulkan data dari siapa pun, jadi juga tidak dari anak-anak."
+      ],
+      [
+        "Perubahan",
+        "Jika kebijakan ini berubah, versi barunya akan dipasang di halaman ini dengan tanggal baru."
+      ],
+      [
+        "Kontak",
+        "Pertanyaan soal privasi atau hal lain: <a href=\"mailto:tape.desk.admin@gmail.com\">tape.desk.admin@gmail.com</a>."
+      ]
+    ]
+  }
+}

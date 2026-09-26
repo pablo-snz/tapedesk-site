@@ -1,0 +1,1474 @@
+{
+  "meta.title": {
+    "note": "Título de la pestaña y de los buscadores.",
+    "control": false
+  },
+  "meta.description": {
+    "note": "Descripción para buscadores / vista previa al compartir. Unos 150 caracteres como mucho.",
+    "control": false
+  },
+  "meta.og_description": {
+    "note": "Descripción para buscadores / vista previa al compartir. Unos 150 caracteres como mucho.",
+    "control": false
+  },
+  "top.link.manual": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.privacidad": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.contact": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.english": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.espanol": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.francais": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.deutsch": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.italiano": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.portugues-brasil": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.nederlands": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.polski": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.turkce": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.bahasa-indonesia": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.x": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.x-2": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.x-3": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.x-4": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "top.link.x-5": {
+    "note": "Enlace de texto (top).",
+    "control": false
+  },
+  "hero.col1.line1": {
+    "note": "Portada, junto al logo: una línea corta que no debe partirse. Aprox. el largo del español.",
+    "control": false
+  },
+  "hero.col1.line2": {
+    "note": "Portada, junto al logo: una línea corta que no debe partirse. Aprox. el largo del español.",
+    "control": false
+  },
+  "hero.col2.line1": {
+    "note": "Portada, junto al logo: una línea corta que no debe partirse. Aprox. el largo del español.",
+    "control": false
+  },
+  "hero.col2.line2": {
+    "note": "Portada, junto al logo: una línea corta que no debe partirse. Aprox. el largo del español.",
+    "control": false
+  },
+  "hero.link.manual": {
+    "note": "Enlace de texto (hero).",
+    "control": false
+  },
+  "svg.hero.aria": {
+    "note": "aria-label del dibujo «hero» (solo lector de pantalla). Frase que describe el dibujo.",
+    "control": false
+  },
+  "svg.hero.ui.synth": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 15 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.project": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 4.6 px, anclaje start; no pases de unos 10.",
+    "control": true
+  },
+  "svg.hero.ui.timecode": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 4.6 px, anclaje start; no pases de unos 11.",
+    "control": true
+  },
+  "svg.hero.ui.speed": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 4.6 px, anclaje start; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.adsr": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.filter": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.lfo": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.fx": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 2 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 3.",
+    "control": true
+  },
+  "svg.hero.engine.fold": {
+    "note": "Nombre de motor en su pastilla: no se traduce, la app lo enseña igual en todos los idiomas.",
+    "control": true
+  },
+  "svg.hero.ui.growl": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 6.8 px, anclaje start; no pases de unos 11.",
+    "control": true
+  },
+  "svg.hero.ui.amp": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 4.8 px, anclaje start; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.attack": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.decay": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.sustain": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 10.",
+    "control": true
+  },
+  "svg.hero.ui.release": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 10.",
+    "control": true
+  },
+  "svg.hero.ui.filt": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 4.8 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.keys": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 6 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.chords": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.seq": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 6 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.tonica": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5 px, anclaje start; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.f": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 2 caracteres en español, a 5.6 px, anclaje start; no pases de unos 3.",
+    "control": true
+  },
+  "svg.hero.ui.escala": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5 px, anclaje start; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.mixo": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.6 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.oct-3": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 13 caracteres en español, a 5.6 px, anclaje end; no pases de unos 17.",
+    "control": true
+  },
+  "svg.hero.ui.rew": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.stop": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.start": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.rec": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.loop": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.pista": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.cinta": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.mezcla": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.lift": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 4.8 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.rev": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 4.8 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.mode": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.escala-2": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 5.6 px, anclaje start; no pases de unos 11.",
+    "control": true
+  },
+  "svg.hero.ui.oct-0": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 13 caracteres en español, a 5.6 px, anclaje end; no pases de unos 17.",
+    "control": true
+  },
+  "svg.hero.ui.7-sus": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 4.4 px, anclaje start; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.sus": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.8 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.min": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.8 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.hero.ui.mic": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.6 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.fx-1": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 6.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.fx-2": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 6.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.eq": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 2 caracteres en español, a 6.4 px, anclaje middle; no pases de unos 3.",
+    "control": true
+  },
+  "svg.hero.ui.elegir-efecto-fx1": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 19 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 25.",
+    "control": true
+  },
+  "svg.hero.ui.tapesat": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 10.",
+    "control": true
+  },
+  "svg.hero.ui.delay": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.reverb": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.crush": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.hero.ui.haze": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.hero.ui.wobble": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.hero.ui.shimmer": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 10.",
+    "control": true
+  },
+  "svg.hero.ui.plugins": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 5.2 px, anclaje middle; no pases de unos 10.",
+    "control": true
+  },
+  "svg.hero.ui.cancelar": {
+    "note": "Interfaz de la app dibujada en «hero». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 5 px, anclaje middle; no pases de unos 11.",
+    "control": true
+  },
+  "nav.label": {
+    "note": "aria-label de la barra de secciones (solo lector de pantalla).",
+    "control": false
+  },
+  "nav.modos": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.cinta": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.synth": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.pista": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.mezcla": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.cintas": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.sincro": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.plugin": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.sistema": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "nav.ficha": {
+    "note": "Barra de secciones fija. Una o dos palabras; tiene que caber en una fila en el móvil.",
+    "control": false
+  },
+  "modos.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "modos.ref": {
+    "note": "Enlace al manual desde la cabecera de «modos». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "modos.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "svg.modes.aria": {
+    "note": "aria-label del dibujo «modes» (solo lector de pantalla). Frase que describe el dibujo.",
+    "control": false
+  },
+  "svg.modes.label.grabadora": {
+    "note": "Rótulo del dibujo «modes». El dibujo no parte líneas: 9 caracteres en español, a 17 px, anclaje middle; no pases de unos 12.",
+    "control": false
+  },
+  "svg.modes.ui.project": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 4.6 px, anclaje start; no pases de unos 10.",
+    "control": true
+  },
+  "svg.modes.ui.timecode": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 4.6 px, anclaje start; no pases de unos 11.",
+    "control": true
+  },
+  "svg.modes.ui.speed": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 4.6 px, anclaje start; no pases de unos 7.",
+    "control": true
+  },
+  "svg.modes.ui.mic": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.6 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.modes.ui.rew": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.modes.ui.stop": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.modes.ui.start": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.modes.ui.rec": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.modes.ui.loop": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.modes.ui.cinta": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 4.2 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.modes.label.groovebox": {
+    "note": "Rótulo del dibujo «modes». El dibujo no parte líneas: 9 caracteres en español, a 17 px, anclaje middle; no pases de unos 12.",
+    "control": false
+  },
+  "svg.modes.ui.lift": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 4.8 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.modes.ui.rev": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 4.8 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.modes.ui.synth": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.modes.ui.pista": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.modes.ui.mezcla": {
+    "note": "Interfaz de la app dibujada en «modes». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.modes.label.cinta-y-mezcla": {
+    "note": "Rótulo del dibujo «modes». El dibujo no parte líneas: 14 caracteres en español, a 14 px, anclaje start; no pases de unos 19.",
+    "control": false
+  },
+  "svg.modes.label.se-cambian-en-la-esquina": {
+    "note": "Rótulo del dibujo «modes». El dibujo no parte líneas: 24 caracteres en español, a 12 px, anclaje start; no pases de unos 31.",
+    "control": false
+  },
+  "svg.modes.label.los-cuatro-sitios": {
+    "note": "Rótulo del dibujo «modes». El dibujo no parte líneas: 17 caracteres en español, a 14 px, anclaje start; no pases de unos 22.",
+    "control": false
+  },
+  "svg.modes.label.synth-pista-cinta-mezcla": {
+    "note": "Rótulo del dibujo «modes». El dibujo no parte líneas: 30 caracteres en español, a 12 px, anclaje start; no pases de unos 39.",
+    "control": false
+  },
+  "cinta.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "cinta.ref": {
+    "note": "Enlace al manual desde la cabecera de «cinta». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "cinta.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "cinta.p2": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-02.alt": {
+    "note": "Texto alternativo de la captura ph-02 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-02.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-03.alt": {
+    "note": "Texto alternativo de la captura ph-03 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-03.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-06.alt": {
+    "note": "Texto alternativo de la captura ph-06 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-06.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "synth.ref": {
+    "note": "Enlace al manual desde la cabecera de «synth». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "synth.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "synth.p2": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-08.alt": {
+    "note": "Texto alternativo de la captura ph-08 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-08.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-07.alt": {
+    "note": "Texto alternativo de la captura ph-07 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-07.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-09.alt": {
+    "note": "Texto alternativo de la captura ph-09 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-09.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.drift.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.drift.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.drift.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.poly.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.poly.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.poly.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.fold.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.fold.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.fold.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.fm.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.fm.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.fm.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.pluck.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.pluck.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.pluck.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.mallet.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.mallet.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.mallet.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.wave.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.wave.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.wave.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.cz.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.cz.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.cz.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.ensemble.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.ensemble.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.ensemble.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.noise.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.noise.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.noise.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.dx.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.dx.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.dx.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.sample.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.sample.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.sample.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.tbl.kit.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.kit.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.tbl.kit.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "synth.h3.1": {
+    "note": "Subtítulo dentro de la sección.",
+    "control": false
+  },
+  "synth.p3": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "synth.p4": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-10.alt": {
+    "note": "Texto alternativo de la captura ph-10 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-10.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-11.alt": {
+    "note": "Texto alternativo de la captura ph-11 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-11.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-12.alt": {
+    "note": "Texto alternativo de la captura ph-12 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-12.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "synth.h3.2": {
+    "note": "Subtítulo dentro de la sección.",
+    "control": false
+  },
+  "synth.p5": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-13.alt": {
+    "note": "Texto alternativo de la captura ph-13 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-13.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-14.alt": {
+    "note": "Texto alternativo de la captura ph-14 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-14.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "pista.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "pista.ref": {
+    "note": "Enlace al manual desde la cabecera de «pista». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "pista.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-15.alt": {
+    "note": "Texto alternativo de la captura ph-15 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-15.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-05.alt": {
+    "note": "Texto alternativo de la captura ph-05 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-05.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "mezcla.ref": {
+    "note": "Enlace al manual desde la cabecera de «mezcla». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "mezcla.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "mezcla.p2": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-16.alt": {
+    "note": "Texto alternativo de la captura ph-16 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-16.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-17.alt": {
+    "note": "Texto alternativo de la captura ph-17 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-17.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-17-delay.alt": {
+    "note": "Texto alternativo de la captura ph-17-delay (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-17-delay.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-17-reverb.alt": {
+    "note": "Texto alternativo de la captura ph-17-reverb (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-17-reverb.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-17-crush.alt": {
+    "note": "Texto alternativo de la captura ph-17-crush (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-17-crush.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-17-haze.alt": {
+    "note": "Texto alternativo de la captura ph-17-haze (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-17-haze.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-17-wobble.alt": {
+    "note": "Texto alternativo de la captura ph-17-wobble (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-17-wobble.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-17-shimmer.alt": {
+    "note": "Texto alternativo de la captura ph-17-shimmer (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-17-shimmer.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-18.alt": {
+    "note": "Texto alternativo de la captura ph-18 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-18.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.tapesat.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.tapesat.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.tapesat.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "mezcla.tbl.delay.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.delay.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.delay.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "mezcla.tbl.reverb.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.reverb.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.reverb.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "mezcla.tbl.crush.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.crush.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.crush.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "mezcla.tbl.haze.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.haze.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.haze.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "mezcla.tbl.wobble.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.wobble.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.wobble.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "mezcla.tbl.shimmer.name": {
+    "note": "Nombre de motor o efecto. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.shimmer.params": {
+    "note": "Los cuatro mandos, separados por « · ». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "mezcla.tbl.shimmer.desc": {
+    "note": "Descripción en la tabla. Corta; conserva los <code>.",
+    "control": false
+  },
+  "cintas.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "cintas.ref": {
+    "note": "Enlace al manual desde la cabecera de «cintas». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "cintas.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-19.alt": {
+    "note": "Texto alternativo de la captura ph-19 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-19.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-20.alt": {
+    "note": "Texto alternativo de la captura ph-20 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-20.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "sincro.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "sincro.ref": {
+    "note": "Enlace al manual desde la cabecera de «sincro». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "sincro.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "svg.midi.aria": {
+    "note": "aria-label del dibujo «midi» (solo lector de pantalla). Frase que describe el dibujo.",
+    "control": false
+  },
+  "svg.midi.ui.project": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 4.6 px, anclaje start; no pases de unos 10.",
+    "control": true
+  },
+  "svg.midi.ui.timecode": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 4.6 px, anclaje start; no pases de unos 11.",
+    "control": true
+  },
+  "svg.midi.ui.speed": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 4.6 px, anclaje start; no pases de unos 7.",
+    "control": true
+  },
+  "svg.midi.ui.synth": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.midi.ui.adsr": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.midi.ui.filter": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.midi.ui.lfo": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.midi.ui.fx": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 2 caracteres en español, a 5.6 px, anclaje middle; no pases de unos 3.",
+    "control": true
+  },
+  "svg.midi.engine.fold": {
+    "note": "Nombre de motor en su pastilla: no se traduce, la app lo enseña igual en todos los idiomas.",
+    "control": true
+  },
+  "svg.midi.ui.growl": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 6.8 px, anclaje start; no pases de unos 11.",
+    "control": true
+  },
+  "svg.midi.ui.amp": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 4.8 px, anclaje start; no pases de unos 5.",
+    "control": true
+  },
+  "svg.midi.ui.attack": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.midi.ui.decay": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.midi.ui.sustain": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 10.",
+    "control": true
+  },
+  "svg.midi.ui.release": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 7 caracteres en español, a 4.6 px, anclaje middle; no pases de unos 10.",
+    "control": true
+  },
+  "svg.midi.ui.filt": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 4.8 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.midi.ui.keys": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 6 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.midi.ui.chords": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.midi.ui.seq": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 6 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.midi.ui.tonica": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5 px, anclaje start; no pases de unos 9.",
+    "control": true
+  },
+  "svg.midi.ui.f": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 2 caracteres en español, a 5.6 px, anclaje start; no pases de unos 3.",
+    "control": true
+  },
+  "svg.midi.ui.escala": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 5 px, anclaje start; no pases de unos 9.",
+    "control": true
+  },
+  "svg.midi.ui.mixo": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.6 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.midi.ui.oct-3": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 13 caracteres en español, a 5.6 px, anclaje end; no pases de unos 17.",
+    "control": true
+  },
+  "svg.midi.ui.rew": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.midi.ui.stop": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.midi.ui.start": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.midi.ui.rec": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.midi.ui.loop": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 5.4 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.midi.ui.pista": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.midi.ui.cinta": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 6 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.midi.ui.mezcla": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 6 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "svg.midi.ui.omni": {
+    "note": "Interfaz de la app dibujada en «midi». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 9 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.midi.label.usb-bluetooth-red": {
+    "note": "Rótulo del dibujo «midi». El dibujo no parte líneas: 21 caracteres en español, a 13 px, anclaje end; no pases de unos 27.",
+    "control": false
+  },
+  "fig.ph-21.alt": {
+    "note": "Texto alternativo de la captura ph-21 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-21.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-22.alt": {
+    "note": "Texto alternativo de la captura ph-22 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-22.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "plugin.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "plugin.ref": {
+    "note": "Enlace al manual desde la cabecera de «plugin». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "plugin.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "plugin.p2": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "svg.host.aria": {
+    "note": "aria-label del dibujo «host» (solo lector de pantalla). Frase que describe el dibujo.",
+    "control": false
+  },
+  "svg.host.label.120-bpm": {
+    "note": "Rótulo del dibujo «host». El dibujo no parte líneas: 7 caracteres en español, a 13 px, anclaje start; no pases de unos 10.",
+    "control": false
+  },
+  "svg.host.label.host": {
+    "note": "Rótulo del dibujo «host». El dibujo no parte líneas: 4 caracteres en español, a 12 px, anclaje end; no pases de unos 6.",
+    "control": false
+  },
+  "svg.host.label.in-12": {
+    "note": "Rótulo del dibujo «host». El dibujo no parte líneas: 6 caracteres en español, a 13 px, anclaje start; no pases de unos 9.",
+    "control": false
+  },
+  "svg.host.label.out": {
+    "note": "Rótulo del dibujo «host». El dibujo no parte líneas: 3 caracteres en español, a 13 px, anclaje start; no pases de unos 5.",
+    "control": false
+  },
+  "svg.host.label.reloj": {
+    "note": "Rótulo del dibujo «host». El dibujo no parte líneas: 5 caracteres en español, a 9 px, anclaje start; no pases de unos 7.",
+    "control": false
+  },
+  "svg.host.ui.host": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 10 px, anclaje start; no pases de unos 6.",
+    "control": true
+  },
+  "svg.host.ui.rew": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 10 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.host.ui.stop": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 10 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.host.ui.start": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 10 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.host.ui.rec": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 3 caracteres en español, a 10 px, anclaje middle; no pases de unos 5.",
+    "control": true
+  },
+  "svg.host.ui.loop": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 10 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.host.engine.fold": {
+    "note": "Nombre de motor en su pastilla: no se traduce, la app lo enseña igual en todos los idiomas.",
+    "control": true
+  },
+  "svg.host.ui.tectonic": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 8 caracteres en español, a 10 px, anclaje start; no pases de unos 11.",
+    "control": true
+  },
+  "svg.host.ui.fold": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 8.5 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.host.ui.shape": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 5 caracteres en español, a 8.5 px, anclaje middle; no pases de unos 7.",
+    "control": true
+  },
+  "svg.host.ui.warp": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 4 caracteres en español, a 8.5 px, anclaje middle; no pases de unos 6.",
+    "control": true
+  },
+  "svg.host.ui.motion": {
+    "note": "Interfaz de la app dibujada en «host». Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual). El dibujo no parte líneas: 6 caracteres en español, a 8.5 px, anclaje middle; no pases de unos 9.",
+    "control": true
+  },
+  "sistema.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "sistema.ref": {
+    "note": "Enlace al manual desde la cabecera de «sistema». Debe coincidir con el título de esa sección en el manual del idioma.",
+    "control": false
+  },
+  "sistema.p1": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "sistema.p2": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  },
+  "fig.ph-27.alt": {
+    "note": "Texto alternativo de la captura ph-27 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-27.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "fig.ph-28.alt": {
+    "note": "Texto alternativo de la captura ph-28 (lector de pantalla). Frase completa, describe la captura del idioma.",
+    "control": false
+  },
+  "fig.ph-28.caption": {
+    "note": "Pie bajo la captura: nombre de la pantalla o del mando que se ve. Nombre de control de la app: debe coincidir con la cadena localizada de la app (si la app lo deja en inglés como serigrafía, se deja igual).",
+    "control": true
+  },
+  "ficha.h2": {
+    "note": "Título de sección.",
+    "control": false
+  },
+  "ficha.pistas.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.pistas.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.cinta.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.cinta.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.velocidad.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.velocidad.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.grabacion.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.grabacion.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.synth.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.synth.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.efectos-del-motor.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.efectos-del-motor.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.efectos-de-mezcla.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.efectos-de-mezcla.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.eq-maestro.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.eq-maestro.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.exportar.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.exportar.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.sincro.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.sincro.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.midi.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.midi.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.plugin.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.plugin.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.idiomas.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.sistema.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.sistema.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "ficha.datos.k": {
+    "note": "Etiqueta de la ficha técnica. Una o dos palabras.",
+    "control": false
+  },
+  "ficha.datos.v": {
+    "note": "Valor de la ficha técnica. Cifras y unidades igual; « · » separa.",
+    "control": false
+  },
+  "footer.link.manual": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.privacidad": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.espanol": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.english": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.francais": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.deutsch": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.italiano": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.portugues-brasil": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.nederlands": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.polski": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.turkce": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.bahasa-indonesia": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.x": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.x-2": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.x-3": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.x-4": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.link.x-5": {
+    "note": "Enlace de texto (footer).",
+    "control": false
+  },
+  "footer.print": {
+    "note": "Párrafo. Conserva el HTML en línea (<code>, <b>, enlaces) con sus clases.",
+    "control": false
+  }
+}
