@@ -38,6 +38,11 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;scroll-padding-top:24px}
+  .doc h2[id],.doc h3[id]{cursor:pointer}
+  .enlace{font:13px/1 var(--mono);color:var(--ink3);background:none;border:0;padding:4px 6px;margin-left:4px;cursor:pointer;opacity:0;transition:opacity .15s;vertical-align:middle;letter-spacing:0}
+  .doc h2:hover .enlace,.doc h3:hover .enlace,.enlace:focus-visible{opacity:1}
+  .enlace:hover{color:var(--ink)}
+  @media (hover:none){.enlace{opacity:.55}}
   body{font-family:var(--sans);font-weight:400;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
   a{color:inherit}
@@ -252,14 +257,41 @@
   if (window.matchMedia('(max-width:900px)').matches) toc.removeAttribute('open');
   const enlaces = [...toc.querySelectorAll('a')];
   const porId = new Map(enlaces.map(a => [a.hash.slice(1), a]));
+  // The address always names the section you are reading, so it can be copied
+  // and sent. replaceState: no new history entry per section.
+  const idiomas = [...document.querySelectorAll('a[hreflang]')];
+  idiomas.forEach(a => a.dataset.base = a.getAttribute('href'));
+  function marcarSeccion(id) {
+    if (location.hash.slice(1) !== id) history.replaceState(null, '', '#' + id);
+    idiomas.forEach(a => a.setAttribute('href', a.dataset.base + '#' + id));
+  }
   const vigia = new IntersectionObserver(entradas => {
     entradas.forEach(e => {
       if (!e.isIntersecting) return;
       enlaces.forEach(a => a.classList.remove('on'));
       porId.get(e.target.id)?.classList.add('on');
+      marcarSeccion(e.target.id);
     });
   }, {rootMargin: '0px 0px -80% 0px'});
-  document.querySelectorAll('.doc h2[id],.doc h3[id]').forEach(h => vigia.observe(h));
+  const titulos = [...document.querySelectorAll('.doc h2[id],.doc h3[id]')];
+  const etiquetaEnlace = '{{COPY_LINK}}';
+  titulos.forEach(h => {
+    vigia.observe(h);
+    h.addEventListener('click', () => marcarSeccion(h.id));
+    const boton = document.createElement('button');
+    boton.className = 'enlace';
+    boton.type = 'button';
+    boton.textContent = '#';
+    boton.title = etiquetaEnlace;
+    boton.setAttribute('aria-label', etiquetaEnlace);
+    boton.addEventListener('click', () => {
+      const url = location.href.split('#')[0] + '#' + h.id;
+      const hecho = () => { boton.textContent = '✓'; setTimeout(() => boton.textContent = '#', 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(hecho, () => {});
+    });
+    h.appendChild(boton);
+  });
+  if (location.hash) idiomas.forEach(a => a.setAttribute('href', a.dataset.base + location.hash));
 </script>
 <script>
   (function(){var l=document.documentElement.lang||'en';document.querySelectorAll('.langpick').forEach(function(d){
