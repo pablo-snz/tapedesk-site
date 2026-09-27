@@ -138,7 +138,7 @@
   .hueco{aspect-ratio:4/3;border:1px dashed var(--line);border-radius:var(--r-sheet);display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-family:var(--mono);font-size:11px;color:var(--ink3)}
 
   .fichas{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;margin-top:22px}
-  .u-motores .texto,.u-insertos-de-fx .texto,.u-efectos-de-mezcla .texto,.u-ajustes .texto{max-width:none}
+  .u-engines .texto,.u-fx-inserts .texto,.u-mix-effects .texto,.u-settings .texto{max-width:none}
   .ficha{background:var(--bg2);border:1px solid var(--line2);border-radius:var(--r-sheet);padding:16px 18px 12px}
   .ficha h4{font-family:var(--mono);font-size:16px;font-weight:500;color:var(--ink)}
   .ficha .sub{font-size:14px;color:var(--ink3);margin-top:2px;line-height:1.45}
@@ -152,7 +152,7 @@
 
   .texto ul.terms{list-style:none;margin-left:0;columns:2;column-gap:40px}
   .texto ul.terms li{font-size:15px;margin-top:6px;break-inside:avoid}
-  .u-licencias p{font-size:14px;color:var(--ink3);line-height:1.55}
+  .u-licenses p{font-size:14px;color:var(--ink3);line-height:1.55}
 
   @media(max-width:1120px){
     .unidad.con-figuras{grid-template-columns:minmax(0,1fr)}
@@ -252,6 +252,15 @@
   }
   ponerModo(raiz.dataset.modo);
   botones.forEach(b => b.addEventListener('click', () => ponerModo(b.dataset.modo)));
+
+  // Section addresses used to be Spanish in every language. Old links keep working.
+  const anclasViejas = {"empezar":"getting-started","que-necesitas":"what-you-need","los-dos-modos":"the-two-modes","la-pantalla":"the-screen","tu-primera-toma":"your-first-take","grabar":"recording","armar-y-grabar":"arm-and-record","que-la-toma-empiece-sola":"let-the-take-start-itself","pistas":"tracks","looper-en-vivo":"live-looper","varias-fuentes-a-la-vez":"recording-several-inputs-at-once","grabar-el-synth":"recording-the-synth","de-donde-entra-el-audio":"where-the-audio-comes-in","velocidad-y-loop":"speed-and-loop","velocidad":"speed","moverte-por-la-cinta":"moving-around-the-tape","editar":"editing","la-barra-de-edicion":"the-edit-bar","herramientas-de-la-pista":"track-tools","volcar-dos-pistas-en-una":"bouncing-two-tracks-into-one","elegir-un-sonido":"picking-a-sound","el-sonido-de-cada-pista":"each-tracks-sound","dar-forma-al-sonido":"shaping-the-sound","mezclar":"mixing","tiras-de-canal":"channel-strips","efectos":"effects","plugins-de-otras-apps":"plugins-from-other-apps","eq-maestro":"master-eq","por-donde-pasa-el-sonido":"where-the-sound-goes","cintas-y-exportar":"tapes-and-export","tus-cintas":"your-tapes","exportar":"export","con-otras-apps":"with-other-apps","sincronizar-el-tempo":"syncing-tempo","tocar-con-un-teclado-midi":"playing-from-a-midi-keyboard","tapedesk-como-plugin":"tapedesk-as-a-plugin","fichas":"reference","motores":"engines","insertos-de-fx":"fx-inserts","efectos-de-mezcla":"mix-effects","ajustes":"settings","indice-de-terminos":"index-of-terms","licencias":"licenses"};
+  const vieja = anclasViejas[location.hash.slice(1)];
+  if (vieja) {
+    history.replaceState(null, '', '#' + vieja);
+    addEventListener('DOMContentLoaded', () => document.getElementById(vieja)?.scrollIntoView());
+    document.getElementById(vieja)?.scrollIntoView();
+  }
 
   const toc = document.querySelector('.toc');
   if (window.matchMedia('(max-width:900px)').matches) toc.removeAttribute('open');

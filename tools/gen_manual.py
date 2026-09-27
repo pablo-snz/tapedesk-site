@@ -43,8 +43,8 @@ CODE_ALIAS = __import__("json").load(
 ANCHOR_RE = re.compile(r"\s*\{#([a-z0-9-]+)\}\s*$")
 IMAGE_DIRS = ("img/manual", "img/shots")
 CROP_DIR = "img/manual/recortes"
-INDEX_SLUG = "indice-de-terminos"
-MIX_EFFECTS_SLUG = "efectos-de-mezcla"
+INDEX_SLUG = "index-of-terms"
+MIX_EFFECTS_SLUG = "mix-effects"
 MIX_COLORS = ("g1", "g2", "g3", "g4")
 CODE_CLASS = {"rec": "rec", "loop": "loop", "adsr": "motor", "filter": "motor", "lfo": "motor",
               "fx 1": "g1", "fx 2": "g2", "sd1": "g1", "sd2": "g2", "eq": "g4",
